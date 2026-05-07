@@ -1,0 +1,106 @@
+:root {
+  --gold: #d4af37;
+  --gold-light: #f8dd78;
+  --gold-dark: #8f6d12;
+  --black: #030303;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #d4af37;
+  color: #000;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.gold-glow {
+  box-shadow:
+    0 0 22px rgba(212, 175, 55, 0.55),
+    0 0 80px rgba(212, 175, 55, 0.22);
+}
+
+.premium-border {
+  border: 1px solid rgba(212, 175, 55, 0.22);
+}
+
+@keyframes shine {
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes pulseGold {
+  0% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.shine-effect {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 45%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.55);
+  filter: blur(10px);
+  transform: skewX(-25deg);
+  animation: shine 2.8s infinite;
+}
+
+.float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.pulse-gold {
+  animation: pulseGold 4s ease-in-out infinite;
+}
+
+@keyframes modulesScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

@@ -2,19 +2,23 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Lock,
   Crown,
   Dumbbell,
   Sparkles,
   ShieldCheck,
 } from "lucide-react";
 
-export default function StartPage({ onConsultoria }) {
-  const [loading, setLoading] = useState(false);
+export default function StartPage({ onConsultoria, onMetodo }) {
+  const [loading, setLoading] = useState("");
 
   function entrarConsultoria() {
-    setLoading(true);
-    setTimeout(() => onConsultoria(), 1200);
+    setLoading("consultoria");
+    setTimeout(() => onConsultoria(), 900);
+  }
+
+  function entrarMetodo() {
+    setLoading("metodo");
+    setTimeout(() => onMetodo(), 900);
   }
 
   return (
@@ -116,20 +120,27 @@ export default function StartPage({ onConsultoria }) {
             </div>
           </motion.button>
 
-          <motion.div className="relative w-full overflow-hidden rounded-[32px] border border-[#d4af37]/25 bg-gradient-to-br from-zinc-950/80 via-black to-[#100c05] p-5 text-left opacity-80">
-            <div className="absolute right-5 top-5 rounded-full border border-[#d4af37]/35 bg-black/50 px-3 py-1 text-[9px] font-black tracking-[0.18em] text-[#d4af37]">
-              EM CONSTRUÇÃO
+          <motion.button
+            whileTap={{ scale: 0.985 }}
+            onClick={entrarMetodo}
+            className="relative w-full overflow-hidden rounded-[32px] border border-[#d4af37]/45 bg-gradient-to-br from-zinc-950 via-black to-[#171105] p-5 text-left shadow-[0_0_90px_rgba(212,175,55,0.16)]"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(212,175,55,0.28),transparent_36%)]" />
+            <div className="shine-smooth absolute top-0 h-full w-[38%] bg-gradient-to-r from-transparent via-white/20 to-transparent blur-sm" />
+
+            <div className="absolute right-5 top-5 rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 px-3 py-1 text-[9px] font-black tracking-[0.18em] text-[#d4af37]">
+              LIBERADO
             </div>
 
             <div className="relative z-10 grid grid-cols-[58px_1fr_50px] items-center gap-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/15 text-[#d4af37]">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/40 bg-[#d4af37]/15 text-[#d4af37]">
                 <Dumbbell size={30} />
               </div>
 
               <div>
                 <div className="mb-3 flex items-center gap-2 text-[9px] font-black tracking-[0.22em] text-[#d4af37]">
                   <ShieldCheck size={13} />
-                  PRÓXIMA FASE
+                  ACESSO VITALÍCIO
                 </div>
 
                 <h3 className="text-[27px] font-black leading-[0.9] tracking-[-0.055em]">
@@ -138,16 +149,16 @@ export default function StartPage({ onConsultoria }) {
                 </h3>
 
                 <p className="mt-4 text-[14px] leading-relaxed text-white/68">
-                  Uma parada mais braba, completa e séria está sendo preparada.
-                  Em breve liberado.
+                  Protocolo definição, protocolo ganho de massa, dietas, treinos,
+                  vídeos de execução e grupo exclusivo por R$ 99,90.
                 </p>
               </div>
 
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#d4af37]/35 text-[#d4af37]">
-                <Lock size={23} />
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#d4af37]/70 bg-[#d4af37]/10 text-[#d4af37]">
+                <ArrowRight size={25} />
               </div>
             </div>
-          </motion.div>
+          </motion.button>
         </div>
 
         {loading && (
@@ -170,7 +181,9 @@ export default function StartPage({ onConsultoria }) {
                 transition={{ duration: 1.2, repeat: Infinity }}
                 className="mt-7 text-xs font-black uppercase tracking-[0.45em] text-[#d4af37]"
               >
-                Preparando consultoria
+                {loading === "metodo"
+                  ? "Preparando método do shape"
+                  : "Preparando consultoria"}
               </motion.p>
             </div>
           </motion.div>

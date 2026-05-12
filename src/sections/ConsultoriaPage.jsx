@@ -4,7 +4,6 @@ import {
   ArrowRight,
   ClipboardCheck,
   MessageCircle,
-  TrendingUp,
   Target,
   CheckCircle2,
   Lock,
@@ -34,7 +33,7 @@ const benefits = [
     text: "Suporte para corrigir, ajustar e manter você no caminho certo.",
   },
   {
-    icon: TrendingUp,
+    icon: ShieldCheck,
     title: "EVOLUÇÃO COM MÉTODO",
     text: "Estratégia clara para sair da tentativa e finalmente ter direção.",
   },
@@ -57,21 +56,6 @@ const steps = [
   "Plano de treino personalizado",
   "Estratégia alimentar adaptada",
   "Ajustes durante sua evolução",
-];
-
-const testimonials = [
-  {
-    name: "Lucas M.",
-    text: "Minha vida mudou completamente. Nunca imaginei chegar nesse nível físico.",
-  },
-  {
-    name: "Rafael S.",
-    text: "Treinos inteligentes, dieta prática e suporte surreal.",
-  },
-  {
-    name: "Thiago P.",
-    text: "Ganhei saúde, confiança e um shape absurdo.",
-  },
 ];
 
 export default function ConsultoriaPage({ onVoltar }) {
@@ -123,9 +107,7 @@ export default function ConsultoriaPage({ onVoltar }) {
             transition={{ duration: 0.8 }}
             className="mb-10 flex flex-col items-center text-center"
           >
-            <div className="float-soft flex h-20 w-20 items-center justify-center rounded-[24px] bg-gradient-to-br from-[#fff0a6] via-[#d4af37] to-[#76570b] text-3xl font-black text-black shadow-[0_0_90px_rgba(212,175,55,0.42)]">
-              CP
-            </div>
+            
 
             <h2 className="mt-5 text-[24px] font-black uppercase tracking-[0.25em]">
               CONSULTORIA
@@ -161,13 +143,14 @@ export default function ConsultoriaPage({ onVoltar }) {
             </p>
           </motion.div>
 
+          <BeforeAfterMobile />
+
           <CtaButton
             href={WHATSAPP_LINK}
             text1="Quero minha"
             text2="transformação"
+            compact
           />
-
-          <BeforeAfterMobile />
         </div>
       </section>
 
@@ -292,33 +275,6 @@ export default function ConsultoriaPage({ onVoltar }) {
       </section>
 
       <section className="relative z-10 border-t border-white/10 px-5 py-14">
-        <div className="mx-auto max-w-[580px]">
-          <SectionTitle icon={TrendingUp} title="Resultados que inspiram" />
-
-          <div className="mt-10 space-y-5">
-            {testimonials.map((item) => (
-              <div
-                key={item.name}
-                className="rounded-[28px] border border-[#d4af37]/15 bg-white/[0.035] p-6 shadow-[0_0_50px_rgba(212,175,55,0.05)]"
-              >
-                <div className="mb-4 text-xl tracking-[0.25em] text-[#d4af37]">
-                  ★★★★★
-                </div>
-
-                <p className="text-[15px] leading-relaxed text-white/72">
-                  “{item.text}”
-                </p>
-
-                <p className="mt-5 text-lg font-black text-[#d4af37]">
-                  {item.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative z-10 border-t border-white/10 px-5 py-14">
         <div className="relative mx-auto max-w-[580px] overflow-hidden rounded-[36px] border border-[#d4af37]/25 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.24),transparent_45%),rgba(255,255,255,0.035)] p-8 shadow-[0_0_90px_rgba(212,175,55,0.12)]">
           <div className="shine-smooth absolute top-0 h-full w-[35%] bg-gradient-to-r from-transparent via-white/10 to-transparent blur-sm" />
 
@@ -332,25 +288,12 @@ export default function ConsultoriaPage({ onVoltar }) {
             versão.
           </p>
 
-          <a
+          <CtaButton
             href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noreferrer"
-            className="relative z-10 mt-8 flex w-full items-center justify-between rounded-[24px] bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#9b7310] px-6 py-6 text-black shadow-[0_0_70px_rgba(212,175,55,0.35)]"
-          >
-            <div className="text-left">
-              <p className="text-xs font-black uppercase tracking-[0.2em]">
-                Quero começar agora
-              </p>
-              <h3 className="text-xl font-black uppercase">
-                Minha transformação
-              </h3>
-            </div>
-
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-[#d4af37]">
-              <ArrowRight size={28} />
-            </div>
-          </a>
+            text1="Quero começar agora"
+            text2="minha transformação"
+            compact
+          />
 
           <div className="relative z-10 mt-5 flex items-center justify-center gap-2 text-xs text-white/45">
             <Lock size={14} />
@@ -379,6 +322,7 @@ function CtaButton({ text1, text2, compact = false, href }) {
         <p className="text-sm font-black uppercase tracking-[0.22em]">
           {text1}
         </p>
+
         <h3 className="text-[24px] font-black uppercase leading-none">
           {text2}
         </h3>
@@ -473,7 +417,7 @@ function BeforeAfterMobile() {
         </div>
 
         <div className="absolute right-4 top-4 z-30 rounded-xl border border-[#d4af37]/40 bg-black/85 px-4 py-2 text-xs font-black tracking-[0.2em] backdrop-blur-xl">
-          DEPOIS
+          RESULTADO
         </div>
 
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_60%,rgba(0,0,0,0.78))]" />

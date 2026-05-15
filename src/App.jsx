@@ -1,32 +1,19 @@
-import { useState } from "react";
-import StartPage from "./sections/StartPage";
-import ConsultoriaPage from "./sections/ConsultoriaPage";
-import MetodoShape from "./sections/MetodoShape";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import MetodoShapePortal from "./pages/MetodoShapePortal";
+import SerieBulking from "./pages/SerieBulking";
+import SerieCutting from "./pages/SerieCutting";
 
 export default function App() {
-  const [page, setPage] = useState("start");
-
-  if (page === "start") {
-    return (
-      <StartPage
-        onConsultoria={() => setPage("consultoria")}
-        onMetodo={() => setPage("metodo")}
-      />
-    );
-  }
-
   return (
-    <div className="relative bg-black">
-      <button
-        type="button"
-        onClick={() => setPage("start")}
-        className="fixed left-4 top-4 z-[9999] rounded-full border border-lime-300/40 bg-black/70 px-4 py-3 text-xs font-black uppercase tracking-widest text-lime-300 shadow-[0_0_35px_rgba(212,175,55,0.25)] backdrop-blur-xl"
-      >
-        ← Voltar
-      </button>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MetodoShapePortal />} />
 
-      {page === "consultoria" && <ConsultoriaPage />}
-      {page === "metodo" && <MetodoShape />}
-    </div>
+        <Route path="/bulking" element={<SerieBulking />} />
+
+        <Route path="/cutting" element={<SerieCutting />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

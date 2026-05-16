@@ -4,19 +4,65 @@ import { Crown, Target, CalendarDays, Flame, Dumbbell } from "lucide-react";
 
 const treinoCharles = [
   {
-    dia: "Segunda-feira",
-    grupo: "Pull • Costas + Bíceps",
-    exercicios: [
-      { nome: "Barra fixa", series: 3, reps: 6, descanso: 3 },
-      { nome: "Remada curvada barra", series: 3, reps: 8, descanso: 3 },
-      { nome: "Puxada frente pegada média", series: 3, reps: 8, descanso: 3 },
-      { nome: "Remada unilateral halter", series: 3, reps: 8, descanso: 3 },
-      { nome: "Pullover com polia", series: 3, reps: 10, descanso: 2 },
-      { nome: "Rosca direta barra", series: 3, reps: 10, descanso: 2 },
-      { nome: "Rosca alternada", series: 3, reps: 10, descanso: 2 },
-      { nome: "Rosca martelo drop", series: 3, reps: 10, descanso: 2 },
-    ],
-  },
+  dia: "Segunda-feira",
+  grupo: "Push • Peito + Ombro frontal + Tríceps",
+  exercicios: [
+    {
+      nome: "Supino reto com barra",
+      series: 3,
+      reps: 8,
+      descanso: 3,
+    },
+    {
+      nome: "Supino inclinado halteres",
+      series: 3,
+      reps: 8,
+      descanso: 3,
+    },
+    {
+      nome: "Crucifixo reto",
+      series: 3,
+      reps: 10,
+      descanso: 3,
+    },
+    {
+      nome: "Voado peitoral",
+      series: 3,
+      reps: 10,
+      descanso: 3,
+    },
+    {
+      nome: "Desenvolvimento militar",
+      series: 3,
+      reps: 10,
+      descanso: 2,
+    },
+    {
+      nome: "Elevação frontal halteres",
+      series: 3,
+      reps: 10,
+      descanso: 2,
+    },
+    {
+      nome: "Tríceps corda",
+      series: 3,
+      reps: 10,
+      descanso: 2,
+    },
+    {
+      nome: "Tríceps testa",
+      series: 3,
+      reps: 10,
+      descanso: 2,
+    },
+    {
+      nome: "Francês com barra",
+      series: 3,
+      reps: 10,
+      descanso: 2,
+    },
+  ],
+},
   {
     dia: "Terça-feira",
     grupo: "Pull • Costas + Bíceps",

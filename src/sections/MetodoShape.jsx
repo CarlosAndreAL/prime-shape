@@ -187,16 +187,14 @@ export default function MetodoShape() {
             painel exclusivo e futuras atualizações.
           </p>
 
-          <a
-            href={whatsapp}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-lg font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-105"
-          >
-            <Target size={22} />
-            QUERO ENTRAR AGORA
-            <ArrowRight size={22} />
-          </a>
+          <button
+  onClick={() => window.location.href = "/portal-aluno"}
+  className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-lg font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-105"
+>
+  <Target size={22} />
+  QUERO ENTRAR AGORA
+  <ArrowRight size={22} />
+</button>
 
           <div className="mt-6 flex items-center justify-center gap-2 text-sm text-white/40">
             <ShieldCheck size={16} />

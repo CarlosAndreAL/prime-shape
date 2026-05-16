@@ -1460,36 +1460,7 @@ const cards = [
     },
   ],
 },
-  {
-  id: "treinos",
-  titulo: "Treinos para Definição",
-  subtitulo: "Masculino e feminino",
-  categoria: "Treinos",
-  icon: Dumbbell,
-  imagem:
-    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
-  descricao:
-    "Treinos organizados por nível para manter massa muscular, força e definição.",
-  tipo: "treinos",
-  treinos: [
-    {
-      grupo: "Treinos Homem",
-      itens: [
-        { nome: "Homem Iniciante", dias: treinoHomemIniciante },
-        { nome: "Homem Intermediário", dias: treinoHomemIntermediario },
-        { nome: "Homem Avançado", dias: treinoHomemAvancado },
-      ],
-    },
-    {
-      grupo: "Treinos Mulher",
-      itens: [
-        { nome: "Mulher Iniciante", dias: treinoMulherIniciante },
-        { nome: "Mulher Intermediário", dias: treinoMulherIntermediario },
-        { nome: "Mulher Avançado", dias: treinoMulherAvancado },
-      ],
-    },
-  ],
-},
+  
   {
     id: "execucoes",
     titulo: "Execuções Corretas",
@@ -1511,21 +1482,33 @@ const cards = [
   },
   {
     id: "protocolo",
-    titulo: "Protocolo Charles Definição",
+    titulo: "Protocolo Charles Crescimento",
     subtitulo: "Método oficial",
     categoria: "Protocolo",
     icon: Crown,
     imagem:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop",
     descricao:
-      "A visão geral do método de definição para seguir com foco, rotina e estratégia.",
+  "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
     tipo: "texto",
-    conteudo: [
-      "O Protocolo Charles Definição foi criado para organizar dieta, treino e rotina de forma simples e direta.",
-      "O aluno deve seguir o plano alimentar escolhido, manter treino intenso e acompanhar evolução semanal.",
-      "A definição acontece quando existe consistência no déficit calórico, boa ingestão de proteína e treino bem executado.",
-      "Não é sobre fazer loucura. É sobre repetir o básico bem feito por tempo suficiente.",
-      "O foco é secar com qualidade, preservar massa muscular e construir um físico mais estético.",
+conteudo: [
+  "MEU PROTOCOLO COMPLETO",
+  "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança, performance e evolução física.",
+
+  "HORMONIZAÇÃO",
+  "• 1ml de Durateston — terça-feira",
+  "• 1ml de Deca — terça-feira",
+  "• 30mg de Hemogenin no pré-treino",
+
+  "DISCIPLINA",
+  "Todo o protocolo foi seguido com treino intenso, dieta ajustada, constância e acompanhamento da evolução semanal.",
+
+  "IMPORTANTE",
+  "Esse é apenas o protocolo que EU utilizei durante minha evolução.",
+  "Não recomendo que ninguém utilize qualquer tipo de hormônio por conta própria.",
+
+  "ORIENTAÇÃO PROFISSIONAL",
+  "Se você pretende seguir qualquer protocolo hormonal, procure um médico especializado, faça exames e tenha acompanhamento profissional adequado.",
     ],
   },
 ];
@@ -1800,17 +1783,67 @@ function DietasHomem({ card }) {
 }
 
 function Texto({ card }) {
+  const isProtocolo = card.id === "protocolo";
+
+  if (isProtocolo) {
+    return (
+      <div className="rounded-[34px] border border-[#d4af37]/25 bg-[#d4af37]/10 p-6 md:p-8">
+        <h3 className="text-4xl font-black uppercase text-white">
+          Meu protocolo completo
+        </h3>
+
+        <p className="mt-5 text-base leading-relaxed text-white/70">
+          Meu protocolo foi cuidadosamente estruturado para maximizar os
+          resultados com segurança e eficiência. Aqui está tudo o que utilizei:
+        </p>
+
+        <div className="mt-7 rounded-[28px] border border-white/10 bg-black/35 p-5">
+          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-[#d4af37]">
+            Harmonização
+          </h4>
+
+          <div className="mt-5 grid gap-3">
+            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
+              1ml de Durateston — terça-feira
+            </p>
+
+            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
+              1ml de Deca — terça-feira
+            </p>
+
+            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
+              30mg de Hemogenin no pré-treino
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-[28px] border border-white/10 bg-white/[0.035] p-5">
+          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-[#d4af37]">
+            Importante
+          </h4>
+
+          <p className="mt-4 text-sm leading-relaxed text-white/70">
+            Esse é apenas o protocolo que EU utilizei. Não recomendo que ninguém
+            utilize por conta própria.
+          </p>
+
+          <p className="mt-4 text-sm leading-relaxed text-white/70">
+            Se você está pensando em seguir qualquer protocolo, procure um médico
+            especializado, faça exames e tenha acompanhamento profissional.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="grid gap-4">
       {card.conteudo.map((item, index) => (
         <div
-          key={item}
+          key={index}
           className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5"
         >
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#d4af37]">
-            Parte {index + 1}
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-white/75">{item}</p>
+          <p className="text-sm leading-relaxed text-white/75">{item}</p>
         </div>
       ))}
     </div>

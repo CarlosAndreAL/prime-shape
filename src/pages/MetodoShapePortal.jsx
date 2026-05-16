@@ -5,7 +5,8 @@ import {
   Dumbbell,
   ArrowRight,
   ShieldCheck,
-  Sparkles,
+ Sparkles,
+  ClipboardList,
 } from "lucide-react";
 
 import { useNavigate } from "react-router-dom";
@@ -43,29 +44,18 @@ export default function MetodoShapePortal() {
             Escolha seu protocolo e tenha acesso completo às dietas,
             treinos, execuções e estratégias premium.
           </p>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            <InfoCard
-              icon={ShieldCheck}
-              titulo="Acesso"
-              valor="Premium"
-            />
-
-            <InfoCard
-              icon={Sparkles}
-              titulo="Protocolos"
-              valor="Bulking + Cutting"
-            />
-
-            <InfoCard
-              icon={Dumbbell}
-              titulo="Objetivo"
-              valor="Shape Completo"
-            />
-          </div>
-        </motion.div>
+        </motion.div> 
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <PortalCard
+            titulo="CUTTING"
+            subtitulo="Definição muscular"
+            descricao="Dietas e protocolos completos para secar gordura mantendo massa muscular."
+            imagem="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1400&auto=format&fit=crop"
+            icon={Flame}
+            onClick={() => navigate("/cutting")}
+          />
+
           <PortalCard
             titulo="BULKING"
             subtitulo="Hipertrofia muscular"
@@ -76,12 +66,21 @@ export default function MetodoShapePortal() {
           />
 
           <PortalCard
-            titulo="CUTTING"
-            subtitulo="Definição muscular"
-            descricao="Dietas e treinos para secar gordura mantendo massa muscular."
-            imagem="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1400&auto=format&fit=crop"
-            icon={Flame}
-            onClick={() => navigate("/cutting")}
+            titulo="TREINO CHARLES"
+            subtitulo="Método oficial"
+            descricao="Treinos completos e estratégias do método Charles para evolução máxima."
+            imagem="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1400&auto=format&fit=crop"
+            icon={Crown}
+            onClick={() => navigate("/treino-charles")}
+          />
+
+          <PortalCard
+            titulo="TREINOS"
+            subtitulo="Do iniciante ao avançado"
+            descricao="Treinos masculinos e femininos organizados por nível de evolução."
+            imagem="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1400&auto=format&fit=crop"
+            icon={ClipboardList}
+            onClick={() => navigate("/treinos")}
           />
         </div>
       </section>

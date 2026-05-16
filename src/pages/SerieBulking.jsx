@@ -331,7 +331,7 @@ const dietaMulher2200 = [
 ];
 
 
-const treinoMulherIniciante = [
+export const treinoMulherIniciante = [
   {
     dia: "Segunda-feira",
     grupo: "Quadríceps",
@@ -602,7 +602,7 @@ const treinoMulherIniciante = [
   },
 ];
 
-const treinoMulherIntermediario = [
+export const treinoMulherIntermediario = [
   {
     dia: "Segunda-feira",
     grupo: "Quadríceps",
@@ -909,7 +909,7 @@ const treinoMulherIntermediario = [
   },
 ];
 
-const treinoMulherAvancado = [
+export const treinoMulherAvancado = [
   {
     dia: "Segunda-feira",
     grupo: "Quadríceps",
@@ -1192,7 +1192,7 @@ const treinoMulherAvancado = [
   },
 ];
 
-const treinoHomemIniciante = [
+export const treinoHomemIniciante = [
   {
     dia: "Segunda-feira",
     grupo: "Peitoral • Bíceps • Tríceps",
@@ -1264,7 +1264,7 @@ const treinoHomemIniciante = [
   },
 ];
 
-const treinoHomemIntermediario = [
+export const treinoHomemIntermediario = [
   {
     dia: "Segunda-feira",
     grupo: "Peito • Tríceps",
@@ -1341,7 +1341,7 @@ const treinoHomemIntermediario = [
   },
 ];
 
-const treinoHomemAvancado = [
+export const treinoHomemAvancado = [
   {
     dia: "Segunda-feira",
     grupo: "Peito • Tríceps • Bíceps",
@@ -1463,36 +1463,7 @@ const cards = [
     },
   ],
 },
-   {
-  id: "treinos",
-  titulo: "Treinos para Hipertrofia",
-  subtitulo: "Masculino e feminino",
-  categoria: "Treinos",
-  icon: Dumbbell,
-  imagem:
-    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
-  descricao:
-    "Treinos organizados por nível para evolução de força, volume e hipertrofia.",
-  tipo: "treinos",
-  treinos: [
-  {
-    grupo: "Treinos Homem",
-    itens: [
-      { nome: "Homem Iniciante", dias: treinoHomemIniciante },
-      { nome: "Homem Intermediário", dias: treinoHomemIntermediario },
-      { nome: "Homem Avançado", dias: treinoHomemAvancado },
-    ],
-  },
-  {
-    grupo: "Treinos Mulher",
-    itens: [
-      { nome: "Mulher Iniciante", dias: treinoMulherIniciante },
-      { nome: "Mulher Intermediário", dias: treinoMulherIntermediario },
-      { nome: "Mulher Avançado", dias: treinoMulherAvancado },
-    ],
-  },
-],
-},
+  
   {
     id: "execucoes",
     titulo: "Execuções Corretas",
@@ -1521,14 +1492,26 @@ const cards = [
     imagem:
       "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop",
     descricao:
-      "A visão geral do método para crescer com qualidade, rotina e estratégia.",
+  "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
     tipo: "texto",
-    conteudo: [
-      "O Protocolo Charles Crescimento foi criado para organizar dieta, treino e rotina de quem quer ganhar massa.",
-      "O aluno deve seguir a dieta escolhida, treinar com intensidade e acompanhar a evolução semanal.",
-      "Crescer com qualidade exige superávit calórico controlado, boa ingestão de proteína e treino progressivo.",
-      "Não é comer qualquer coisa. É comer o suficiente, treinar certo e repetir o processo.",
-      "O foco é ganhar volume, força e massa muscular sem transformar o bulking em acúmulo exagerado de gordura.",
+conteudo: [
+  "MEU PROTOCOLO COMPLETO",
+  "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança, performance e evolução física.",
+
+  "HORMONIZAÇÃO",
+  "• 1ml de Durateston — terça-feira",
+  "• 1ml de Deca — terça-feira",
+  "• 30mg de Hemogenin no pré-treino",
+
+  "DISCIPLINA",
+  "Todo o protocolo foi seguido com treino intenso, dieta ajustada, constância e acompanhamento da evolução semanal.",
+
+  "IMPORTANTE",
+  "Esse é apenas o protocolo que EU utilizei durante minha evolução.",
+  "Não recomendo que ninguém utilize qualquer tipo de hormônio por conta própria.",
+
+  "ORIENTAÇÃO PROFISSIONAL",
+  "Se você pretende seguir qualquer protocolo hormonal, procure um médico especializado, faça exames e tenha acompanhamento profissional adequado.",
     ],
   },
 ];
@@ -1794,91 +1777,69 @@ function DietasHomem({ card }) {
 }
 
 function Texto({ card }) {
+  const isProtocolo = card.id === "protocolo";
+
+  if (isProtocolo) {
+    return (
+      <div className="rounded-[34px] border border-[#d4af37]/25 bg-[#d4af37]/10 p-6 md:p-8">
+        <h3 className="text-4xl font-black uppercase text-white">
+          Meu protocolo completo
+        </h3>
+
+        <p className="mt-5 text-base leading-relaxed text-white/70">
+          Meu protocolo foi cuidadosamente estruturado para maximizar os
+          resultados com segurança e eficiência. Aqui está tudo o que utilizei:
+        </p>
+
+        <div className="mt-7 rounded-[28px] border border-white/10 bg-black/35 p-5">
+          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-[#d4af37]">
+            Harmonização
+          </h4>
+
+          <div className="mt-5 grid gap-3">
+            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
+              1ml de Durateston — terça-feira
+            </p>
+
+            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
+              1ml de Deca — terça-feira
+            </p>
+
+            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
+              30mg de Hemogenin no pré-treino
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-[28px] border border-white/10 bg-white/[0.035] p-5">
+          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-[#d4af37]">
+            Importante
+          </h4>
+
+          <p className="mt-4 text-sm leading-relaxed text-white/70">
+            Esse é apenas o protocolo que EU utilizei. Não recomendo que ninguém
+            utilize por conta própria.
+          </p>
+
+          <p className="mt-4 text-sm leading-relaxed text-white/70">
+            Se você está pensando em seguir qualquer protocolo, procure um médico
+            especializado, faça exames e tenha acompanhamento profissional.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="grid gap-4">
       {card.conteudo.map((item, index) => (
         <div
-          key={item}
+          key={index}
           className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5"
         >
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#d4af37]">
-            Parte {index + 1}
-          </p>
-
-          <p className="mt-3 text-sm leading-relaxed text-white/75">{item}</p>
+          <p className="text-sm leading-relaxed text-white/75">{item}</p>
         </div>
       ))}
-    </div>
-  );
-}
-
-function Refeicao({ refeicao }) {
-  const Icon = refeicao.icon || Apple;
-
-  return (
-    <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
-      <div className="flex items-center gap-3">
-        <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
-          <Icon size={24} />
-        </div>
-
-        <div>
-          <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#d4af37]">
-            <Clock size={13} />
-            {refeicao.horario}
-          </p>
-
-          <h4 className="mt-1 text-2xl font-black uppercase">
-            {refeicao.titulo}
-          </h4>
-        </div>
-      </div>
-
-      <div className="mt-6 grid gap-3">
-        {refeicao.alimentos.map((item) => (
-          <div
-            key={item}
-            className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-3"
-          >
-            <CheckCircle2
-              size={18}
-              className="mt-0.5 min-w-[18px] text-[#d4af37]"
-            />
-
-            <p className="text-sm leading-relaxed text-white/75">{item}</p>
-          </div>
-        ))}
-      </div>
-
-      {refeicao.substituicoes?.length > 0 && (
-        <div className="mt-5 rounded-2xl border border-[#d4af37]/15 bg-[#d4af37]/10 p-4">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#d4af37]">
-            Substituições
-          </p>
-
-          <div className="mt-3 grid gap-2">
-            {refeicao.substituicoes.map((item) => (
-              <p key={item} className="text-sm leading-relaxed text-white/65">
-                • {item}
-              </p>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function Resumo({ icon: Icon, titulo, valor }) {
-  return (
-    <div className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5">
-      <Icon className="text-[#d4af37]" size={28} />
-
-      <p className="mt-4 text-3xl font-black">{valor}</p>
-
-      <p className="mt-1 text-xs font-black uppercase tracking-[0.18em] text-white/45">
-        {titulo}
-      </p>
     </div>
   );
 }
@@ -1971,6 +1932,76 @@ function TreinosBulking({ card }) {
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+function Refeicao({ refeicao }) {
+  const Icon = refeicao.icon || Apple;
+
+  return (
+    <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
+      <div className="flex items-center gap-3">
+        <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
+          <Icon size={24} />
+        </div>
+
+        <div>
+          <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#d4af37]">
+            <Clock size={13} />
+            {refeicao.horario}
+          </p>
+
+          <h4 className="mt-1 text-2xl font-black uppercase">
+            {refeicao.titulo}
+          </h4>
+        </div>
+      </div>
+
+      <div className="mt-6 grid gap-3">
+        {refeicao.alimentos.map((item) => (
+          <div
+            key={item}
+            className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-3"
+          >
+            <CheckCircle2
+              size={18}
+              className="mt-0.5 min-w-[18px] text-[#d4af37]"
+            />
+
+            <p className="text-sm leading-relaxed text-white/75">{item}</p>
+          </div>
+        ))}
+      </div>
+
+      {refeicao.substituicoes?.length > 0 && (
+        <div className="mt-5 rounded-2xl border border-[#d4af37]/15 bg-[#d4af37]/10 p-4">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#d4af37]">
+            Substituições
+          </p>
+
+          <div className="mt-3 grid gap-2">
+            {refeicao.substituicoes.map((item) => (
+              <p key={item} className="text-sm leading-relaxed text-white/65">
+                • {item}
+              </p>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Resumo({ icon: Icon, titulo, valor }) {
+  return (
+    <div className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5">
+      <Icon className="text-[#d4af37]" size={28} />
+
+      <p className="mt-4 text-3xl font-black">{valor}</p>
+
+      <p className="mt-1 text-xs font-black uppercase tracking-[0.18em] text-white/45">
+        {titulo}
+      </p>
     </div>
   );
 }

@@ -3,9 +3,17 @@ import axios from "axios";
 export default function Checkout() {
   async function pagar() {
   try {
-    const response = await axios.post(
-      `${API_URL}/pagamentos/criar-preferencia`
-    );
+    const token = localStorage.getItem("prime_shape_token");
+
+const response = await axios.post(
+  "https://prime-shape-x3q0.onrender.com/pagamentos/criar-preferencia",
+  {},
+  {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+);
 
     window.location.href = response.data.init_point;
   } catch (error) {

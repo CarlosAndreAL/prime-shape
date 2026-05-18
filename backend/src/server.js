@@ -3,7 +3,7 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { PrismaClient } = require("@prisma/client");
-const { MercadoPagoConfig, Preference } = require("mercadopago");
+const { MercadoPagoConfig, Preference, Payment } = require("mercadopago");
 
 require("dotenv").config();
 
@@ -205,26 +205,31 @@ app.get("/auth/me", autenticar, async (req, res) => {
   }
 });
 
-app.post("/pagamentos/criar-preferencia", async (req, res) => {
+app.post("/pagamentos/criar-preferencia", autenticar, async (req, res) => {
   try {
     const preference = new Preference(mpClient);
 
     const result = await preference.create({
       body: {
+        external_reference: String(req.usuarioId),
+
         items: [
           {
             title: "Prime Shape Premium",
             quantity: 1,
-            unit_price: 79.9,
+            unit_price: 99.9,
             currency_id: "BRL",
           },
         ],
 
         back_urls: {
-          success: "http://localhost:5173/acesso-liberado",
-          failure: "http://localhost:5173/checkout",
-          pending: "http://localhost:5173/checkout",
+          success: "https://prime-shape-x3q0.onrender.com/acesso-liberado",
+          failure: "https://prime-shape-x3q0.onrender.com/checkout",
+          pending: "https://prime-shape-x3q0.onrender.com/checkout",
         },
+
+        notification_url:
+          "https://prime-shape-x3q0.onrender.com/webhook/mercadopago",
       },
     });
 
@@ -240,6 +245,35 @@ app.post("/pagamentos/criar-preferencia", async (req, res) => {
       ok: false,
       message: "Erro ao criar preferência.",
     });
+  }
+});
+
+app.post("/webhook/mercadopago", async (req, res) => {
+  try {
+    const paymentId = req.body?.data?.id;
+
+    if (!paymentId) {
+      return res.sendStatus(200);
+    }
+
+    const payment = new Payment(mpClient);
+    const pagamento = await payment.get({ id: paymentId });
+
+    if (pagamento.status === "approved") {
+      const usuarioId = Number(pagamento.external_reference);
+
+      await prisma.usuario.update({
+        where: { id: usuarioId },
+        data: { acessoLiberado: true },
+      });
+
+      console.log("✅ Acesso liberado para usuário:", usuarioId);
+    }
+
+    return res.sendStatus(200);
+  } catch (error) {
+    console.error("Erro no webhook Mercado Pago:", error);
+    return res.sendStatus(200);
   }
 });
 

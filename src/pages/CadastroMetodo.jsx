@@ -22,7 +22,7 @@ export default function CadastroMetodo() {
       return;
     }
 
-    const resposta = await fetch("http://localhost:3001/auth/cadastro", {
+    const resposta = await fetch(`${API_URL}/auth/cadastro`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

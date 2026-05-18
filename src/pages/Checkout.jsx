@@ -4,7 +4,7 @@ export default function Checkout() {
   async function pagar() {
   try {
     const response = await axios.post(
-      "http://localhost:3001/pagamentos/criar-preferencia"
+      `${API_URL}/pagamentos/criar-preferencia`
     );
 
     window.location.href = response.data.init_point;

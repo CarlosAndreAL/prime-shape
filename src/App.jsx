@@ -9,6 +9,10 @@ import SerieBulking from "./pages/SerieBulking";
 import SerieCutting from "./pages/SerieCutting";
 import TreinosShape from "./pages/TreinosShape";
 import TreinoCharles from "./pages/TreinoCharles";
+import CadastroMetodo from "./pages/CadastroMetodo";
+import LoginMetodo from "./pages/LoginMetodo";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Checkout from "./pages/Checkout";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -25,12 +29,24 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login-metodo" element={<LoginMetodo />} />
+<Route path="/cadastro-metodo" element={<CadastroMetodo />} />
+
         <Route path="/" element={<HomePage />} />
 
         <Route path="/metodo" element={<MetodoShape />} />
         <Route path="/consultoria" element={<ConsultoriaPage />} />
 
-        <Route path="/portal-aluno" element={<MetodoShapePortal />} />
+        <Route
+  path="/portal-aluno"
+  element={
+    <ProtectedRoute>
+      <MetodoShapePortal />
+    </ProtectedRoute>
+  }
+/>
 
         <Route path="/bulking" element={<SerieBulking />} />
         <Route path="/cutting" element={<SerieCutting />} />

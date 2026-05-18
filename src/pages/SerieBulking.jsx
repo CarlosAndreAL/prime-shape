@@ -1464,25 +1464,7 @@ const cards = [
   ],
 },
   
-  {
-    id: "execucoes",
-    titulo: "Execuções Corretas",
-    subtitulo: "Técnica e postura",
-    categoria: "Execução",
-    icon: Activity,
-    imagem:
-      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1200&auto=format&fit=crop",
-    descricao:
-      "Aprenda como executar os exercícios com controle, amplitude e segurança.",
-    tipo: "texto",
-    conteudo: [
-      "A execução correta vem antes da carga.",
-      "Controle a descida, mantenha postura firme e evite roubar o movimento.",
-      "Use amplitude completa sempre que possível, sem perder estabilidade.",
-      "O músculo alvo precisa trabalhar. Se você sente tudo menos o músculo certo, ajuste a execução.",
-      "Erros comuns: pressa, carga exagerada, encurtar movimento e compensar com lombar ou ombros.",
-    ],
-  },
+  
   {
     id: "protocolo",
     titulo: "Protocolo Charles Crescimento",

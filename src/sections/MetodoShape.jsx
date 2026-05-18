@@ -188,7 +188,7 @@ export default function MetodoShape() {
           </p>
 
           <button
-  onClick={() => window.location.href = "/portal-aluno"}
+  onClick={() => window.location.href = "/cadastro-metodo"}
   className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-lg font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-105"
 >
   <Target size={22} />

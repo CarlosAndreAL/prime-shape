@@ -77,9 +77,7 @@ export default function StartPage({ onConsultoria, onMetodo }) {
           </span>
         </motion.h1>
 
-        <p className="mt-6 max-w-[430px] text-lg leading-relaxed text-white/70">
-          Dois caminhos. O mesmo objetivo: construir o seu melhor shape.
-        </p>
+      
 
         <div className="mt-10 flex w-full flex-col gap-5">
           <motion.button

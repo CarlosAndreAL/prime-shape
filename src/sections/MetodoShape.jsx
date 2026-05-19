@@ -15,44 +15,56 @@ import {
   Zap,
   Gift,
   ArrowRight,
+  BadgeCheck,
 } from "lucide-react";
 
 export default function MetodoShape() {
-  const whatsapp =
-    "https://wa.me/5521985871262?text=Ol%C3%A1%2C%20quero%20entrar%20no%20M%C3%A9todo%20do%20Shape%20por%20R%2499%2C90.";
-
   return (
-    <section className="relative overflow-hidden bg-black px-6 py-28 text-white md:py-36">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.30),transparent_30%),radial-gradient(circle_at_20%_80%,rgba(212,175,55,0.10),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_25%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
-      <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.25)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.25)_1px,transparent_1px)] [background-size:42px_42px]" />
+    <section className="relative overflow-hidden bg-black px-4 py-16 text-white sm:px-6 md:py-28">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.28),transparent_28%),radial-gradient(circle_at_20%_70%,rgba(212,175,55,0.12),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+
+      <div className="pointer-events-none absolute inset-0 opacity-[0.09] [background-image:linear-gradient(rgba(255,255,255,.22)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.22)_1px,transparent_1px)] [background-size:34px_34px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 45 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-5 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#d4af37]">
-            <Sparkles size={14} />
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#d4af37]">
+            <Sparkles size={13} />
             Método Oficial Prime Shape
           </div>
 
-          <h1 className="mx-auto max-w-5xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-white md:text-8xl">
-  O físico que você quer
-  <span className="block text-[#d4af37]">
-    não vem da sorte.
-  </span>
-</h1>
+          <h1 className="mx-auto max-w-5xl text-[2.7rem] font-black uppercase leading-[0.92] tracking-[-0.06em] text-white sm:text-6xl md:text-8xl">
+            O físico que você quer
+            <span className="block text-[#d4af37]">não vem da sorte.</span>
+          </h1>
 
-<h2 className="mt-5 text-2xl font-black uppercase text-white/90 md:text-4xl">
-  Vem do método certo.
-</h2>
+          <h2 className="mt-5 text-xl font-black uppercase text-white/90 sm:text-3xl md:text-4xl">
+            Vem do método certo.
+          </h2>
 
-<p className="mx-auto mt-8 max-w-3xl text-sm leading-relaxed text-white/60 md:text-lg">
-  Treinos, dietas, protocolos e estratégias organizadas para acelerar sua evolução física com uma estrutura criada por quem vive isso na prática.
-</p>
+          <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-white/65 md:text-lg">
+            Treinos, dietas, protocolos e estratégias organizadas para acelerar
+            sua evolução física com uma estrutura criada por quem vive isso na
+            prática.
+          </p>
+
+          <button
+            onClick={() => (window.location.href = "/cadastro-metodo")}
+            className="mt-8 inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-6 py-4 text-sm font-black uppercase text-black shadow-[0_0_55px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] sm:w-auto sm:px-10"
+          >
+            Quero ter acesso
+            <ArrowRight size={20} />
+          </button>
+
+          <p className="mt-4 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white/45">
+            <ShieldCheck size={15} />
+            Acesso vitalício • pagamento único
+          </p>
         </motion.div>
 
         <motion.div
@@ -62,77 +74,79 @@ export default function MetodoShape() {
           viewport={{ once: true }}
           className="mx-auto mt-12 max-w-5xl"
         >
-          <div className="mx-auto max-w-4xl overflow-hidden rounded-[38px] border border-[#d4af37]/25 bg-black shadow-[0_0_160px_rgba(212,175,55,0.22)]">
-  <div className="relative aspect-video w-full bg-black">
-    <video
-      src={charlesVideo}
-      controls
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="h-full w-full object-contain"
-    />
-  </div>
-</div>
+          <div className="mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[#d4af37]/25 bg-black shadow-[0_0_130px_rgba(212,175,55,0.22)] md:rounded-[38px]">
+            <div className="relative aspect-video w-full bg-black">
+              <video
+  src={charlesVideo}
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="h-full w-full object-cover"
+/>
+            </div>
+          </div>
 
-          <p className="mt-4 text-center text-xs font-black uppercase tracking-[0.24em] text-[#d4af37]">
+          <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.2em] text-[#d4af37] md:text-xs">
             Entenda como funciona a estrutura completa do Prime Shape
           </p>
         </motion.div>
 
         <section className="mx-auto mt-14 max-w-4xl text-center">
-          <p className="text-sm font-black uppercase tracking-[0.35em] text-[#d4af37]">
-            ACESSO VITALÍCIO
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#d4af37]">
+            O que você vai receber
           </p>
 
-          <h3 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[-0.05em] md:text-6xl">
+          <h3 className="mt-4 text-3xl font-black uppercase leading-[0.95] tracking-[-0.05em] md:text-6xl">
             Seu objetivo define o protocolo.
             <span className="block text-[#d4af37]">
               O método mostra o caminho.
             </span>
           </h3>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/65">
-            Tudo organizado dentro de uma plataforma premium:
-dietas, treinos, protocolos, execuções, estratégias e acesso exclusivo para acelerar sua evolução física.
+          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-white/65 md:text-lg">
+            Tudo organizado dentro de uma plataforma premium: dietas, treinos,
+            protocolos, execuções, estratégias e acesso exclusivo para acelerar
+            sua evolução física.
           </p>
         </section>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           <CardMetodo
             icon={Flame}
-            titulo="PROTOCOLO DEFINIÇÃO"
-            descricao="Cutting completo para secar, definir e melhorar o visual do shape com estratégia."
+            titulo="On Season"
+            subtitulo="Protocolo de definição"
+            descricao="Para quem quer secar, trincar e atingir um físico definido que chama atenção."
             itens={[
-              "Dietas de cutting",
-              "Treinos para definição",
-              "Execução correta dos exercícios",
-              "Estratégia para perder gordura",
+              "Foco em queima de gordura",
+              "Planilhas de treino otimizadas",
+              "Fichas de nutrição práticas",
+              "Estratégia para preservar massa magra",
             ]}
           />
 
           <CardMetodo
             icon={Dumbbell}
-            titulo="PROTOCOLO GANHO DE MASSA"
-            descricao="Bulking estruturado para crescer com qualidade, ganhar volume e construir força."
+            titulo="Freaky Season"
+            subtitulo="Protocolo de volume"
+            descricao="Para quem quer ficar denso, forte e construir um físico de respeito."
             itens={[
-              "Dietas de bulking",
-              "Treinos para hipertrofia",
-              "Divisão por nível",
-              "Sugestão de suplementos",
+              "Estratégia de ganho de massa muscular",
+              "Treinos de força e progressão de carga",
+              "Planilhas voltadas para bulking limpo",
+              "Método para crescer com controle",
             ]}
           />
         </div>
 
-        <section className="mt-20">
+        <section className="mt-16">
           <Titulo
-            tag="O QUE VAI TER DENTRO"
+            tag="O que vai ter dentro"
             titulo="Tudo organizado em um único lugar"
             texto="Da alimentação ao treino. Da execução ao protocolo. Tudo separado de forma simples, premium e fácil de acessar."
           />
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
             <Feature icon={Utensils} title="Dietas Cutting" />
             <Feature icon={Utensils} title="Dietas Bulking" />
             <Feature icon={Dumbbell} title="Treino do Charles" />
@@ -145,7 +159,7 @@ dietas, treinos, protocolos, execuções, estratégias e acesso exclusivo para a
           </div>
         </section>
 
-        <section className="mt-20 grid gap-5 md:grid-cols-3">
+        <section className="mt-16 grid gap-4 md:grid-cols-3">
           <MiniCard
             numero="01"
             titulo="Treine com direção"
@@ -164,40 +178,41 @@ dietas, treinos, protocolos, execuções, estratégias e acesso exclusivo para a
         </section>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.94 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mt-20 overflow-hidden rounded-[40px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.20),transparent_45%),rgba(255,255,255,0.03)] p-8 text-center shadow-[0_0_180px_rgba(212,175,55,0.22)] md:p-10"
+          className="mt-16 overflow-hidden rounded-[30px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.20),transparent_45%),rgba(255,255,255,0.03)] p-6 text-center shadow-[0_0_150px_rgba(212,175,55,0.22)] md:rounded-[40px] md:p-10"
         >
-          <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#d4af37] text-black shadow-[0_0_60px_rgba(212,175,55,0.5)]">
-            <Crown size={42} />
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#d4af37] text-black shadow-[0_0_60px_rgba(212,175,55,0.5)] md:h-24 md:w-24">
+            <Crown size={38} />
           </div>
 
-          <p className="mt-8 text-sm font-black uppercase tracking-[0.3em] text-[#d4af37]">
-             ACESSO COMPLETO PRIME SHAPE
+          <p className="mt-7 text-xs font-black uppercase tracking-[0.24em] text-[#d4af37]">
+            Acesso completo Prime Shape
           </p>
 
           <h3 className="mt-4 text-5xl font-black leading-none">R$ 99,90</h3>
 
-          <p className="mt-3 text-xl font-bold uppercase tracking-[0.18em] text-[#d4af37]">
-            ACESSO VITALÍCIO
+          <p className="mt-3 text-base font-bold uppercase tracking-[0.18em] text-[#d4af37] md:text-xl">
+            Acesso vitalício
           </p>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/60">
-            Pagamento único com acesso vitalício à plataforma, protocolos, treinos, dietas e futuras atualizações do Prime Shape.
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/60 md:text-lg">
+            Pagamento único com acesso vitalício à plataforma, protocolos,
+            treinos, dietas e futuras atualizações do Prime Shape.
           </p>
 
           <button
-  onClick={() => window.location.href = "/cadastro-metodo"}
-  className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-lg font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(212,175,55,0.45)]"
->
-  <Target size={22} />
-  LIBERAR MEU ACESSO
-  <ArrowRight size={22} />
-</button>
+            onClick={() => (window.location.href = "/cadastro-metodo")}
+            className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-6 py-4 text-sm font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] md:w-auto md:px-10 md:py-5 md:text-lg"
+          >
+            <Target size={21} />
+            Quero ter acesso
+            <ArrowRight size={21} />
+          </button>
 
-          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-white/40">
+          <div className="mt-5 flex items-center justify-center gap-2 text-xs text-white/45 md:text-sm">
             <ShieldCheck size={16} />
             Pagamento único • acesso imediato • acesso vitalício
           </div>
@@ -205,7 +220,7 @@ dietas, treinos, protocolos, execuções, estratégias e acesso exclusivo para a
 
         <div className="mt-10 flex items-center justify-center gap-2 text-[#d4af37]">
           <Lock size={18} />
-          <p className="text-center text-sm font-bold uppercase tracking-[0.18em]">
+          <p className="text-center text-xs font-bold uppercase tracking-[0.18em] md:text-sm">
             Plataforma premium Prime Shape
           </p>
         </div>
@@ -221,7 +236,7 @@ function Titulo({ tag, titulo, texto }) {
         {tag}
       </p>
 
-      <h3 className="mt-3 text-4xl font-black uppercase leading-none md:text-5xl">
+      <h3 className="mt-3 text-3xl font-black uppercase leading-none md:text-5xl">
         {titulo}
       </h3>
 
@@ -232,30 +247,38 @@ function Titulo({ tag, titulo, texto }) {
   );
 }
 
-function CardMetodo({ icon: Icon, titulo, descricao, itens }) {
+function CardMetodo({ icon: Icon, titulo, subtitulo, descricao, itens }) {
   return (
     <motion.div
-      whileHover={{
-  y: -10,
-  scale: 1.015,
-}}
-      className="rounded-[34px] border border-[#d4af37]/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-8 shadow-[0_0_70px_rgba(212,175,55,0.06)]"
+      whileHover={{ y: -6, scale: 1.01 }}
+      className="rounded-[26px] border border-[#d4af37]/18 bg-black/55 p-5 shadow-[0_0_60px_rgba(212,175,55,0.07)] backdrop-blur md:p-7"
     >
-      <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[#d4af37] text-black">
-        <Icon size={30} />
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#d4af37] text-black">
+        <Icon size={27} />
       </div>
 
-      <h3 className="mt-6 text-3xl font-black uppercase">{titulo}</h3>
+      <h3 className="mt-5 text-3xl font-black uppercase leading-none tracking-[-0.04em] text-[#d4af37] md:text-5xl">
+        {titulo}
+      </h3>
 
-      <p className="mt-4 text-lg leading-relaxed text-white/60">
+      <h4 className="mt-3 text-xl font-black uppercase text-white md:text-2xl">
+        {subtitulo}
+      </h4>
+
+      <p className="mt-4 text-sm leading-relaxed text-white/65 md:text-base">
         {descricao}
       </p>
 
-      <div className="mt-6 space-y-3">
+      <div className="my-5 h-px w-full bg-white/10" />
+
+      <div className="space-y-3">
         {itens.map((item) => (
-          <div key={item} className="flex items-center gap-3 text-sm text-white/70">
-            <CheckCircle2 size={18} className="text-[#d4af37]" />
-            {item}
+          <div key={item} className="flex items-start gap-3 text-sm text-white/75">
+            <CheckCircle2
+              size={17}
+              className="mt-0.5 min-w-[17px] text-[#d4af37]"
+            />
+            <span>{item}</span>
           </div>
         ))}
       </div>
@@ -265,22 +288,24 @@ function CardMetodo({ icon: Icon, titulo, descricao, itens }) {
 
 function Feature({ icon: Icon, title }) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-      <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
-        <Icon size={22} />
+    <div className="flex min-h-[84px] items-center gap-4 rounded-[22px] border border-white/10 bg-white/[0.035] p-4 transition hover:border-[#d4af37]/30 hover:bg-[#d4af37]/5">
+      <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#d4af37]/12 text-[#d4af37]">
+        <Icon size={21} />
       </div>
 
-      <p className="font-bold uppercase tracking-[0.08em]">{title}</p>
+      <p className="text-sm font-black uppercase tracking-[0.1em] text-white">
+        {title}
+      </p>
     </div>
   );
 }
 
 function MiniCard({ numero, titulo, texto }) {
   return (
-    <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
-      <p className="text-4xl font-black text-[#d4af37]">{numero}</p>
-      <h4 className="mt-4 text-xl font-black uppercase">{titulo}</h4>
-      <p className="mt-3 text-sm leading-relaxed text-white/55">{texto}</p>
+    <div className="rounded-[24px] border border-white/10 bg-white/[0.035] p-5">
+      <p className="text-3xl font-black text-[#d4af37]">{numero}</p>
+      <h4 className="mt-3 text-lg font-black uppercase">{titulo}</h4>
+      <p className="mt-2 text-sm leading-relaxed text-white/55">{texto}</p>
     </div>
   );
 }

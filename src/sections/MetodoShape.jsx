@@ -22,8 +22,8 @@ export default function MetodoShape() {
     "https://wa.me/5521985871262?text=Ol%C3%A1%2C%20quero%20entrar%20no%20M%C3%A9todo%20do%20Shape%20por%20R%2499%2C90.";
 
   return (
-    <section className="relative overflow-hidden bg-black px-6 py-24 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.24),transparent_35%),radial-gradient(circle_at_15%_70%,rgba(212,175,55,0.10),transparent_32%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+    <section className="relative overflow-hidden bg-black px-6 py-28 text-white md:py-36">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.30),transparent_30%),radial-gradient(circle_at_20%_80%,rgba(212,175,55,0.10),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_25%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.25)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.25)_1px,transparent_1px)] [background-size:42px_42px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -39,16 +39,20 @@ export default function MetodoShape() {
             Método Oficial Prime Shape
           </div>
 
-          <h2 className="text-5xl font-black uppercase leading-none md:text-7xl">
-            MÉTODO DO
-            <span className="block text-[#d4af37]">SHAPE</span>
-          </h2>
+          <h1 className="mx-auto max-w-5xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-white md:text-8xl">
+  O físico que você quer
+  <span className="block text-[#d4af37]">
+    não vem da sorte.
+  </span>
+</h1>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/60">
-            O protocolo completo criado pelo Charles para quem quer definir,
-            ganhar massa e evoluir com treino, dieta, execução correta e painel
-            exclusivo online.
-          </p>
+<h2 className="mt-5 text-2xl font-black uppercase text-white/90 md:text-4xl">
+  Vem do método certo.
+</h2>
+
+<p className="mx-auto mt-8 max-w-3xl text-sm leading-relaxed text-white/60 md:text-lg">
+  Treinos, dietas, protocolos e estratégias organizadas para acelerar sua evolução física com uma estrutura criada por quem vive isso na prática.
+</p>
         </motion.div>
 
         <motion.div
@@ -58,7 +62,7 @@ export default function MetodoShape() {
           viewport={{ once: true }}
           className="mx-auto mt-12 max-w-5xl"
         >
-          <div className="mx-auto max-w-4xl overflow-hidden rounded-[38px] border border-[#d4af37]/25 bg-black shadow-[0_0_120px_rgba(212,175,55,0.18)]">
+          <div className="mx-auto max-w-4xl overflow-hidden rounded-[38px] border border-[#d4af37]/25 bg-black shadow-[0_0_160px_rgba(212,175,55,0.22)]">
   <div className="relative aspect-video w-full bg-black">
     <video
       src={charlesVideo}
@@ -73,7 +77,7 @@ export default function MetodoShape() {
 </div>
 
           <p className="mt-4 text-center text-xs font-black uppercase tracking-[0.24em] text-[#d4af37]">
-            Assista ao Charles explicando como funciona o método
+            Entenda como funciona a estrutura completa do Prime Shape
           </p>
         </motion.div>
 
@@ -83,17 +87,15 @@ export default function MetodoShape() {
           </p>
 
           <h3 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[-0.05em] md:text-6xl">
-            Definição ou ganho de massa:
+            Seu objetivo define o protocolo.
             <span className="block text-[#d4af37]">
-              você escolhe o caminho.
+              O método mostra o caminho.
             </span>
           </h3>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/65">
-            Dentro da plataforma você vai ter dois protocolos principais:
-            Protocolo Definição e Protocolo Ganho de Massa. Além disso, recebe
-            dietas, treinos por nível, vídeos de execução, grupo exclusivo,
-            sugestões de suplementos e painel do aluno.
+            Tudo organizado dentro de uma plataforma premium:
+dietas, treinos, protocolos, execuções, estratégias e acesso exclusivo para acelerar sua evolução física.
           </p>
         </section>
 
@@ -126,8 +128,8 @@ export default function MetodoShape() {
         <section className="mt-20">
           <Titulo
             tag="O QUE VAI TER DENTRO"
-            titulo="Uma plataforma completa"
-            texto="Não é só uma dieta ou um treino jogado. É um painel online com tudo organizado para o aluno seguir."
+            titulo="Tudo organizado em um único lugar"
+            texto="Da alimentação ao treino. Da execução ao protocolo. Tudo separado de forma simples, premium e fácil de acessar."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -146,18 +148,18 @@ export default function MetodoShape() {
         <section className="mt-20 grid gap-5 md:grid-cols-3">
           <MiniCard
             numero="01"
-            titulo="Escolha seu objetivo"
-            texto="Definição ou ganho de massa. O método te mostra o caminho certo."
+            titulo="Treine com direção"
+            texto="Pare de montar treino aleatório e siga uma estrutura organizada."
           />
           <MiniCard
             numero="02"
-            titulo="Siga o protocolo"
-            texto="Treino, dieta, execução e rotina organizados dentro da plataforma."
+            titulo="Tudo em um lugar"
+            texto="Treinos, dietas e protocolos separados de forma simples e premium."
           />
           <MiniCard
             numero="03"
-            titulo="Evolua com direção"
-            texto="Você para de treinar no escuro e começa a seguir uma estratégia."
+            titulo="Evolução constante"
+            texto="Mais estratégia, mais constância e uma evolução física organizada."
           />
         </section>
 
@@ -166,14 +168,14 @@ export default function MetodoShape() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mt-20 overflow-hidden rounded-[40px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.20),transparent_45%),rgba(255,255,255,0.03)] p-8 text-center shadow-[0_0_110px_rgba(212,175,55,0.16)] md:p-10"
+          className="mt-20 overflow-hidden rounded-[40px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.20),transparent_45%),rgba(255,255,255,0.03)] p-8 text-center shadow-[0_0_180px_rgba(212,175,55,0.22)] md:p-10"
         >
           <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#d4af37] text-black shadow-[0_0_60px_rgba(212,175,55,0.5)]">
             <Crown size={42} />
           </div>
 
           <p className="mt-8 text-sm font-black uppercase tracking-[0.3em] text-[#d4af37]">
-            Oferta de lançamento
+             ACESSO COMPLETO PRIME SHAPE
           </p>
 
           <h3 className="mt-4 text-5xl font-black leading-none">R$ 99,90</h3>
@@ -183,16 +185,15 @@ export default function MetodoShape() {
           </p>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/60">
-            Pagamento único. Acesso ao Método do Shape, protocolos completos,
-            painel exclusivo e futuras atualizações.
+            Pagamento único com acesso vitalício à plataforma, protocolos, treinos, dietas e futuras atualizações do Prime Shape.
           </p>
 
           <button
   onClick={() => window.location.href = "/cadastro-metodo"}
-  className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-lg font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-105"
+  className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-lg font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(212,175,55,0.45)]"
 >
   <Target size={22} />
-  QUERO ENTRAR AGORA
+  LIBERAR MEU ACESSO
   <ArrowRight size={22} />
 </button>
 
@@ -234,8 +235,11 @@ function Titulo({ tag, titulo, texto }) {
 function CardMetodo({ icon: Icon, titulo, descricao, itens }) {
   return (
     <motion.div
-      whileHover={{ y: -6 }}
-      className="rounded-[34px] border border-[#d4af37]/15 bg-white/[0.03] p-8 shadow-[0_0_70px_rgba(212,175,55,0.06)]"
+      whileHover={{
+  y: -10,
+  scale: 1.015,
+}}
+      className="rounded-[34px] border border-[#d4af37]/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-8 shadow-[0_0_70px_rgba(212,175,55,0.06)]"
     >
       <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[#d4af37] text-black">
         <Icon size={30} />

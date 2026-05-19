@@ -32,7 +32,7 @@ const response = await axios.post(
     <main className="min-h-screen bg-black flex items-center justify-center px-6">
       <div className="w-full max-w-xl rounded-[40px] border border-[#d4af37]/20 bg-[#0a0a0a] p-10 text-white">
         <p className="text-xs font-black uppercase tracking-[0.25em] text-[#d4af37]">
-          Prime Shape
+          Shape Prime
         </p>
 
         <h1 className="mt-4 text-5xl font-black uppercase leading-none">
@@ -51,7 +51,7 @@ const response = await axios.post(
               </p>
 
               <h2 className="mt-2 text-3xl font-black">
-                PRIME SHAPE PREMIUM
+                SHAPE PRIME PREMIUM
               </h2>
             </div>
 

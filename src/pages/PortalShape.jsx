@@ -28,7 +28,7 @@ export default function PortalShape() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#d4af37]">
               <Sparkles size={13} />
-              PRIME SHAPE PREMIUM
+              SHAPE PRIME PREMIUM
             </div>
 
             <h1 className="mt-5 text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] md:text-7xl">
@@ -39,7 +39,7 @@ export default function PortalShape() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/60 md:text-base">
-              Agora você faz parte do Prime Shape. Escolha o protocolo que deseja seguir e desbloqueie sua evolução.
+              Agora você faz parte do Shape Prime. Escolha o protocolo que deseja seguir e desbloqueie sua evolução.
             </p>
           </div>
 
@@ -254,7 +254,7 @@ function MiniCard({ titulo }) {
       </h3>
 
       <p className="mt-3 text-sm leading-relaxed text-white/55">
-        Conteúdo premium liberado dentro da plataforma Prime Shape.
+        Conteúdo premium liberado dentro da plataforma Shape Prime.
       </p>
     </motion.div>
   );

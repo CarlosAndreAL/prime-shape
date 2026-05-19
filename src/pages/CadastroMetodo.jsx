@@ -58,7 +58,7 @@ localStorage.setItem("prime_shape_usuario", JSON.stringify(dados.usuario));
         
         <div className="mb-10 text-center">
           <p className="text-sm font-black uppercase tracking-[0.35em] text-[#d4af37]">
-            PRIME SHAPE
+            SHAPE PRIME
           </p>
 
           <h1 className="mt-4 text-5xl font-black uppercase leading-none">

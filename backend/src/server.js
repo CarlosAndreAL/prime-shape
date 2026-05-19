@@ -18,7 +18,7 @@ const mpClient = new MercadoPagoConfig({
 });
 
 app.get("/", (req, res) => {
-  res.json({ ok: true, message: "Prime Shape Backend Online" });
+  res.json({ ok: true, message: "Shape Prime Backend Online" });
 });
 
 app.post("/auth/cadastro", async (req, res) => {
@@ -215,7 +215,7 @@ app.post("/pagamentos/criar-preferencia", autenticar, async (req, res) => {
 
         items: [
           {
-            title: "Prime Shape Premium",
+            title: "Shape Prime Premium",
             quantity: 1,
             unit_price: 99.9,
             currency_id: "BRL",

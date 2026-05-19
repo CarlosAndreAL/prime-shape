@@ -60,7 +60,7 @@ export default function BeforeAfter() {
         </div>
 
         <div style={styles.textSide}>
-          <span style={styles.badge}>PRIME SHAPE</span>
+          <span style={styles.badge}>SHAPE PRIME</span>
 
           <h2 style={styles.title}>
             Eu sei disso porque fui exatamente você.
@@ -77,7 +77,7 @@ export default function BeforeAfter() {
           </p>
 
           <p style={styles.text}>
-            Foi por isso que eu criei o PRIME SHAPE. Pra encurtar anos de erro
+            Foi por isso que eu criei o SHAPE PRIME. Pra encurtar anos de erro
             em poucos meses.
           </p>
 

@@ -9,7 +9,7 @@ export default function LoginMetodo() {
   }
 
   async function entrar() {
-    const resposta = await fetch("http://localhost:3001/auth/login", {
+    const resposta = await fetch(`${API_URL}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -35,7 +35,7 @@ export default function LoginMetodo() {
       <div className="relative z-10 mx-auto max-w-2xl rounded-[40px] border border-[#d4af37]/20 bg-[#050505]/90 p-10 shadow-[0_0_80px_rgba(212,175,55,0.08)] backdrop-blur-xl">
         <div className="mb-10 text-center">
           <p className="text-sm font-black uppercase tracking-[0.35em] text-[#d4af37]">
-            PRIME SHAPE
+            SHAPE PRIME
           </p>
 
           <h1 className="mt-4 text-5xl font-black uppercase leading-none">

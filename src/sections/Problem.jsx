@@ -27,7 +27,7 @@ export default function Problem() {
 
         <p style={styles.text}>
           Não era falta de vontade. Era falta de direção.
-          E é isso que o PRIME SHAPE vai te entregar.
+          E é isso que o SHAPE PRIME vai te entregar.
         </p>
 
         <button style={styles.button}>

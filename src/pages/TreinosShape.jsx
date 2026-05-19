@@ -54,7 +54,7 @@ export default function TreinosShape() {
         >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37]">
             <Crown size={14} />
-            Treinos premium Prime Shape
+            Treinos premium Shape Prime
           </div>
 
           <h1 className="text-5xl font-black uppercase leading-[0.9] tracking-[-0.07em] md:text-8xl">

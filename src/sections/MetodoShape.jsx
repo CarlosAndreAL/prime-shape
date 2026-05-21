@@ -37,16 +37,27 @@ export default function MetodoShape() {
             Método Oficial Shape Prime
           </div>
 
-          <h1 className="mx-auto max-w-4xl text-[34px] font-black uppercase leading-[0.93] tracking-[-0.045em] text-white sm:text-5xl md:text-8xl">
-            Saia do físico comum
-            <span className="block text-[#d4af37]">
-              construa um shape
-            </span>
-            <span className="block text-white">
-              que chama atenção.
-            </span>
-          </h1>
+          <h1 className="mx-auto max-w-[320px] font-black uppercase leading-[0.92] tracking-[-0.05em] sm:max-w-3xl md:max-w-5xl">
+  <span className="block text-[2.2rem] text-white sm:text-6xl md:text-8xl">
+    SAIA DO FÍSICO
+  </span>
 
+  <span className="block text-[2.2rem] text-white sm:text-6xl md:text-8xl">
+    COMUM
+  </span>
+
+  <span className="mt-1 block bg-gradient-to-r from-[#fff4b5] via-[#d4af37] to-[#8f6d12] bg-clip-text text-[2.15rem] text-transparent sm:text-6xl md:text-8xl">
+    CONSTRUA SEU
+  </span>
+
+  <span className="block bg-gradient-to-r from-[#fff4b5] via-[#d4af37] to-[#8f6d12] bg-clip-text text-[2.15rem] text-transparent sm:text-6xl md:text-8xl">
+    SHAPE
+  </span>
+
+  <span className="mt-1 block text-[2rem] text-white sm:text-6xl md:text-8xl">
+    DE RESPEITO.
+  </span>
+</h1>
           <p className="mx-auto mt-5 max-w-2xl text-[13px] leading-relaxed text-white/65 md:mt-7 md:text-lg">
             Treinos, dietas e protocolos prontos para você parar de perder tempo
             e finalmente evoluir de verdade.
@@ -126,20 +137,24 @@ export default function MetodoShape() {
              <div className="relative flex items-center justify-center">
   <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle,rgba(212,175,55,0.16),transparent_70%)] blur-3xl" />
 
-  <div className="relative overflow-hidden rounded-[2.5rem] border border-[#d4af37]/20 bg-black/70 p-4 shadow-[0_0_80px_rgba(212,175,55,0.12)]">
-    
-    <div className="absolute left-6 top-4 z-20 rounded-full border border-white/10 bg-black/70 px-4 py-1 text-xs font-black uppercase tracking-[0.22em] text-white backdrop-blur-xl">
-      Antes
-    </div>
+  <div className="relative overflow-hidden rounded-[2.7rem] border border-[#d4af37]/15 bg-black/90 p-3 shadow-[0_0_120px_rgba(212,175,55,0.10)] backdrop-blur-2xl">
 
-    
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_55%)]" />
 
-    <img
-      src="/evolucao-charles.jpg"
-      alt="Evolução Charles"
-      className="relative z-10 w-full rounded-[2rem] object-cover"
-    />
+  <div className="absolute left-5 top-5 z-20 rounded-full border border-white/10 bg-black/70 px-4 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-white backdrop-blur-xl">
+    Antes
   </div>
+
+  <div className="absolute bottom-5 right-5 z-20 rounded-full border border-[#d4af37]/20 bg-[#d4af37]/10 px-4 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#d4af37] backdrop-blur-xl">
+    Depois
+  </div>
+
+  <img
+    src="/evolucao-charles.jpg"
+    alt="Evolução Charles"
+    className="relative z-10 w-full rounded-[2rem] object-cover brightness-[0.97] contrast-[1.04]"
+  />
+</div>
 </div>
             </div>
           </motion.div>

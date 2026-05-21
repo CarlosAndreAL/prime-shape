@@ -20,40 +20,43 @@ import {
 
 export default function MetodoShape() {
   return (
-    <section className="relative overflow-hidden bg-black px-4 py-16 text-white md:px-6 md:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.24),transparent_32%),radial-gradient(circle_at_20%_80%,rgba(212,175,55,0.08),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+    <section className="relative overflow-hidden bg-black px-4 py-14 text-white md:px-6 md:py-28">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.20),transparent_30%),radial-gradient(circle_at_20%_80%,rgba(212,175,55,0.08),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.25)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.25)_1px,transparent_1px)] [background-size:42px_42px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 45 }}
+          initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="mx-auto max-w-4xl rounded-[34px] border border-[#d4af37]/20 bg-black/35 px-5 py-8 text-center shadow-[0_0_90px_rgba(212,175,55,0.12)] backdrop-blur-xl md:px-10 md:py-12"
         >
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-[9px] font-black uppercase tracking-[0.18em] text-[#d4af37] md:text-[11px]">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-[8px] font-black uppercase tracking-[0.16em] text-[#d4af37] md:text-[11px]">
             <Sparkles size={13} />
             Método Oficial Shape Prime
           </div>
 
-          <h1 className="mx-auto max-w-6xl text-[38px] font-black uppercase leading-[0.9] tracking-[-0.05em] text-white sm:text-5xl md:text-8xl">
+          <h1 className="mx-auto max-w-4xl text-[34px] font-black uppercase leading-[0.93] tracking-[-0.045em] text-white sm:text-5xl md:text-8xl">
             Saia do físico comum
             <span className="block text-[#d4af37]">
-              e construa um shape que chama atenção.
+              construa um shape
+            </span>
+            <span className="block text-white">
+              que chama atenção.
             </span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/60 md:mt-8 md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-[13px] leading-relaxed text-white/65 md:mt-7 md:text-lg">
             Treinos, dietas e protocolos prontos para você parar de perder tempo
             e finalmente evoluir de verdade.
           </p>
 
           <button
             onClick={() => (window.location.href = "/cadastro-metodo")}
-            className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-6 py-4 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] md:w-auto md:px-10 md:py-5 md:text-sm"
+            className="mt-7 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-5 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] md:w-auto md:px-10 md:py-5 md:text-sm"
           >
-            QUERO COMEÇAR MEU SHAPE
+            QUERO BOTAR O SHAPE
             <ArrowRight size={20} />
           </button>
         </motion.div>
@@ -63,9 +66,9 @@ export default function MetodoShape() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mx-auto mt-12 max-w-sm md:mt-16"
+          className="mx-auto mt-10 max-w-[340px] md:mt-16"
         >
-          <div className="overflow-hidden rounded-[34px] border border-[#d4af37]/25 bg-black shadow-[0_0_120px_rgba(212,175,55,0.18)]">
+          <div className="overflow-hidden rounded-[32px] border border-[#d4af37]/25 bg-black shadow-[0_0_120px_rgba(212,175,55,0.18)]">
             <div className="relative aspect-[9/16] w-full bg-black">
               <video
                 src={charlesVideo}
@@ -78,26 +81,72 @@ export default function MetodoShape() {
             </div>
           </div>
 
-          <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.18em] text-[#d4af37] md:text-xs">
+          <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-[#d4af37] md:text-xs">
             Entenda como funciona a estrutura completa do Shape Prime
           </p>
         </motion.div>
 
-        <section className="mx-auto mt-16 max-w-4xl text-center md:mt-20">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#d4af37] md:text-sm">
-            EVOLUÇÃO CHARLES
-          </p>
+        <section className="mx-auto mt-14 max-w-5xl md:mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-[34px] border border-[#d4af37]/25 bg-[linear-gradient(135deg,rgba(212,175,55,0.14),rgba(255,255,255,0.035),rgba(0,0,0,0.35))] p-6 shadow-[0_0_120px_rgba(212,175,55,0.14)] md:rounded-[44px] md:p-10"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.22),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.06),transparent_28%)]" />
+            <div className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[#d4af37]/20 blur-[80px]" />
 
-          <h2 className="mt-4 text-3xl font-black uppercase leading-[0.95] tracking-[-0.04em] md:text-6xl">
-            Eu não nasci com shape.
-            <span className="block text-[#d4af37]">Eu construí isso.</span>
-          </h2>
+            <div className="relative z-10 grid gap-7 md:grid-cols-[1fr_0.9fr] md:items-center">
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#d4af37] md:text-xs">
+                  EVOLUÇÃO CHARLES
+                </p>
 
-          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-white/65 md:text-lg">
-            Depois de errar treino, alimentação e estratégia, eu organizei tudo
-            em um método direto, simples de seguir e pensado para quem quer
-            evoluir de verdade.
-          </p>
+                <h2 className="mt-4 text-3xl font-black uppercase leading-[0.9] tracking-[-0.04em] md:text-6xl">
+                  Eu não nasci com shape.
+                  <span className="block text-[#d4af37]">
+                    Eu construí isso.
+                  </span>
+                </h2>
+
+                <p className="mt-5 text-sm leading-relaxed text-white/65 md:text-lg">
+                  Depois de errar treino, alimentação e estratégia, eu organizei
+                  tudo em um método que realmente funciona.
+                </p>
+
+                <div className="mt-6 rounded-3xl border border-[#d4af37]/20 bg-black/30 p-5">
+                  <p className="text-xl font-black uppercase leading-tight text-white md:text-3xl">
+                    Se funcionou pra mim,
+                    <span className="block text-[#d4af37]">
+                      pode funcionar pra você.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+             <div className="relative flex items-center justify-center">
+  <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle,rgba(212,175,55,0.16),transparent_70%)] blur-3xl" />
+
+  <div className="relative overflow-hidden rounded-[2.5rem] border border-[#d4af37]/20 bg-black/70 p-4 shadow-[0_0_80px_rgba(212,175,55,0.12)]">
+    
+    <div className="absolute left-6 top-4 z-20 rounded-full border border-white/10 bg-black/70 px-4 py-1 text-xs font-black uppercase tracking-[0.22em] text-white backdrop-blur-xl">
+      Antes
+    </div>
+
+    <div className="absolute bottom-4 right-6 z-20 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/15 px-4 py-1 text-xs font-black uppercase tracking-[0.22em] text-[#f4d45c] backdrop-blur-xl">
+      Depois
+    </div>
+
+    <img
+      src="/evolucao-charles.jpg"
+      alt="Evolução Charles"
+      className="relative z-10 w-full rounded-[2rem] object-cover"
+    />
+  </div>
+</div>
+            </div>
+          </motion.div>
         </section>
 
         <div className="mt-12 grid gap-5 md:mt-16 md:grid-cols-2">
@@ -304,6 +353,7 @@ function OfertaPrincipal() {
     </motion.div>
   );
 }
+
 function Titulo({ tag, titulo, texto }) {
   return (
     <div className="text-center">

@@ -238,52 +238,48 @@ export default function MetodoShape() {
 function OfertaPrincipal() {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.94 }}
+      initial={{ opacity: 0, scale: 0.96 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="mt-14 overflow-hidden rounded-[34px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.20),transparent_45%),rgba(255,255,255,0.03)] p-5 text-center shadow-[0_0_130px_rgba(212,175,55,0.18)] md:mt-20 md:rounded-[40px] md:p-12"
+      className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-[30px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_45%),rgba(255,255,255,0.03)] p-5 text-center shadow-[0_0_100px_rgba(212,175,55,0.16)] md:mt-20 md:rounded-[40px] md:p-10"
     >
-      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-[#d4af37] text-black shadow-[0_0_50px_rgba(212,175,55,0.45)] md:h-24 md:w-24 md:rounded-full">
-        <Crown size={32} />
-      </div>
-
-      <p className="mt-6 text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37] md:mt-8 md:text-sm">
+      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37] md:text-xs">
         Oferta especial
       </p>
 
-      <h2 className="mx-auto mt-4 max-w-4xl text-3xl font-black uppercase leading-[0.95] tracking-[-0.04em] md:text-6xl">
+      <h2 className="mx-auto mt-3 max-w-3xl text-2xl font-black uppercase leading-[0.95] md:text-5xl">
         Quanto vale ter um shape
         <span className="block text-[#d4af37]">
           que você tenha orgulho?
         </span>
       </h2>
 
-      <div className="mx-auto mt-6 max-w-2xl rounded-[26px] border border-white/10 bg-black/35 p-5 text-left md:mt-8 md:p-6">
-        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-white/45 md:text-sm">
+      <div className="mx-auto mt-5 max-w-xl rounded-[24px] border border-white/10 bg-black/35 p-4 text-left">
+        <p className="text-[9px] font-black uppercase tracking-[0.16em] text-white/45">
           Você poderia gastar facilmente:
         </p>
 
-        <div className="mt-4 grid gap-2 text-sm font-bold text-white/70 md:mt-5">
+        <div className="mt-3 grid gap-2 text-xs font-bold text-white/70 md:text-sm">
           <p>❌ R$200+ em consultoria</p>
           <p>❌ R$150 em treino</p>
           <p>❌ R$100+ em dieta</p>
         </div>
       </div>
 
-      <p className="mt-6 text-[10px] font-black uppercase tracking-[0.22em] text-white/45 md:mt-8 md:text-sm">
+      <p className="mt-5 text-[9px] font-black uppercase tracking-[0.18em] text-white/45 md:text-xs">
         Mas hoje você entra no Shape Prime por apenas:
       </p>
 
-      <h3 className="mt-3 text-5xl font-black leading-none text-[#d4af37] md:mt-4 md:text-7xl">
+      <h3 className="mt-2 text-5xl font-black leading-none text-[#d4af37] md:text-7xl">
         R$ 79,90
       </h3>
 
-      <p className="mt-3 text-sm font-bold uppercase tracking-[0.16em] text-white md:text-xl">
+      <p className="mt-2 text-xs font-bold uppercase tracking-[0.14em] text-white md:text-lg">
         pagamento único • acesso vitalício
       </p>
 
-      <div className="mx-auto mt-6 grid max-w-3xl gap-3 text-left md:mt-8 md:grid-cols-2">
+      <div className="mx-auto mt-5 grid max-w-2xl gap-2 text-left md:grid-cols-2">
         <OfertaItem texto="Acesso vitalício" />
         <OfertaItem texto="Atualizações futuras" />
         <OfertaItem texto="Treinos completos" />
@@ -294,21 +290,20 @@ function OfertaPrincipal() {
 
       <button
         onClick={() => (window.location.href = "/cadastro-metodo")}
-        className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-6 py-4 text-xs font-black uppercase tracking-[0.13em] text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] md:mt-10 md:w-auto md:px-10 md:py-5 md:text-lg"
+        className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-5 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] md:w-auto md:px-10 md:py-5 md:text-base"
       >
-        <Target size={20} />
+        <Target size={19} />
         QUERO COMEÇAR MINHA EVOLUÇÃO
-        <ArrowRight size={20} />
+        <ArrowRight size={19} />
       </button>
 
-      <div className="mt-5 flex items-center justify-center gap-2 text-xs text-white/40 md:text-sm">
-        <ShieldCheck size={16} />
+      <div className="mt-4 flex items-center justify-center gap-2 text-[11px] text-white/40 md:text-sm">
+        <ShieldCheck size={14} />
         Pagamento único • acesso imediato • acesso vitalício
       </div>
     </motion.div>
   );
 }
-
 function Titulo({ tag, titulo, texto }) {
   return (
     <div className="text-center">
@@ -416,8 +411,8 @@ function Faq({ pergunta, resposta }) {
 
 function OfertaItem({ texto }) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 p-4 text-sm font-bold text-white/75">
-      <CheckCircle2 size={18} className="min-w-[18px] text-[#d4af37]" />
+    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 p-3 text-xs font-bold text-white/75 md:p-4 md:text-sm">
+      <CheckCircle2 size={16} className="min-w-[16px] text-[#d4af37]" />
       {texto}
     </div>
   );

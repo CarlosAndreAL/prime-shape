@@ -92,10 +92,8 @@ export default function MetodoShape() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[34px] border border-[#d4af37]/25 bg-[linear-gradient(135deg,rgba(212,175,55,0.14),rgba(255,255,255,0.035),rgba(0,0,0,0.35))] p-6 shadow-[0_0_120px_rgba(212,175,55,0.14)] md:rounded-[44px] md:p-10"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(212,175,55,0.22),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.06),transparent_28%)]" />
-            <div className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-[#d4af37]/20 blur-[80px]" />
+            className="relative overflow-hidden rounded-[34px] border border-[#d4af37]/20 bg-black/70 p-6 shadow-[0_0_120px_rgba(212,175,55,0.10)] backdrop-blur-xl md:rounded-[44px] md:p-10"          >
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.10),transparent_45%)]" />           
 
             <div className="relative z-10 grid gap-7 md:grid-cols-[1fr_0.9fr] md:items-center">
               <div>
@@ -134,9 +132,7 @@ export default function MetodoShape() {
       Antes
     </div>
 
-    <div className="absolute bottom-4 right-6 z-20 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/15 px-4 py-1 text-xs font-black uppercase tracking-[0.22em] text-[#f4d45c] backdrop-blur-xl">
-      Depois
-    </div>
+    
 
     <img
       src="/evolucao-charles.jpg"

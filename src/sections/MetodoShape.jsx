@@ -13,57 +13,49 @@ import {
   Users,
   Utensils,
   Zap,
+  Gift,
   ArrowRight,
-  Book,
+  HelpCircle,
 } from "lucide-react";
 
 export default function MetodoShape() {
   return (
-    <section className="relative overflow-hidden bg-[#0F1115] px-4 py-16 text-[#F5F5F5] sm:px-6 md:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.22),transparent_28%),radial-gradient(circle_at_20%_70%,rgba(245,158,11,0.10),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.04),transparent_28%),linear-gradient(180deg,#0F1115_0%,#090A0D_55%,#0F1115_100%)]" />
-
-      <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.18)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.18)_1px,transparent_1px)] [background-size:34px_34px]" />
+    <section className="relative overflow-hidden bg-black px-6 py-28 text-white md:py-36">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.30),transparent_30%),radial-gradient(circle_at_20%_80%,rgba(212,175,55,0.10),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_25%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.25)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.25)_1px,transparent_1px)] [background-size:42px_42px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 45 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.12)]">
-            <Sparkles size={13} />
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-5 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#d4af37]">
+            <Sparkles size={14} />
             Método Oficial Shape Prime
           </div>
 
-          <h1 className="mx-auto max-w-5xl text-[2.7rem] font-black uppercase leading-[0.92] tracking-[-0.06em] text-[#F5F5F5] sm:text-6xl md:text-8xl">
-            O físico que você quer
-            <span className="block text-[#D4AF37]">não vem da sorte.</span>
+          <h1 className="mx-auto max-w-6xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-white md:text-8xl">
+            Saia do físico comum
+            <span className="block text-[#d4af37]">
+              e construa um shape que chama atenção.
+            </span>
           </h1>
 
-          <h2 className="mt-5 text-xl font-black uppercase text-[#F5F5F5] sm:text-3xl md:text-4xl">
-            Vem do método certo.
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-[#A0A7B4] md:text-lg">
-            Treinos, dietas, protocolos e estratégias organizadas para acelerar
-            sua evolução física com uma estrutura criada por quem vive isso na
-            prática.
+          <p className="mx-auto mt-8 max-w-3xl text-sm leading-relaxed text-white/60 md:text-lg">
+            Treinos, dietas e protocolos prontos para você parar de perder tempo
+            e finalmente evoluir de verdade.
           </p>
 
           <button
             onClick={() => (window.location.href = "/cadastro-metodo")}
-            className="mt-8 inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-[#F59E0B] px-6 py-4 text-sm font-black uppercase text-black shadow-[0_0_55px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_65px_rgba(245,158,11,0.42)] sm:w-auto sm:px-10"
+            className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-sm font-black uppercase tracking-[0.16em] text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_70px_rgba(212,175,55,0.5)]"
           >
-            Quero ter acesso
-            <ArrowRight size={20} />
+            QUERO COMEÇAR MEU SHAPE
+            <ArrowRight size={22} />
           </button>
-
-          <p className="mt-4 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#A0A7B4]">
-            <ShieldCheck size={15} />
-            Acesso vitalício • pagamento único
-          </p>
         </motion.div>
 
         <motion.div
@@ -71,292 +63,171 @@ export default function MetodoShape() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mx-auto mt-12 max-w-5xl"
+          className="mx-auto mt-14 max-w-5xl"
         >
-          <div className="mx-auto max-w-[390px] overflow-hidden rounded-[28px] border border-[#D4AF37]/25 bg-black shadow-[0_0_130px_rgba(212,175,55,0.20)] md:max-w-[430px] md:rounded-[38px]">
-            <div className="relative aspect-[9/16] w-full overflow-hidden bg-black">
+          <div className="mx-auto max-w-4xl overflow-hidden rounded-[38px] border border-[#d4af37]/25 bg-black shadow-[0_0_160px_rgba(212,175,55,0.22)]">
+            <div className="relative aspect-video w-full bg-black">
               <video
                 src={charlesVideo}
+                controls
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
 
-          <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.2em] text-[#D4AF37] md:text-xs">
+          <p className="mt-4 text-center text-xs font-black uppercase tracking-[0.24em] text-[#d4af37]">
             Entenda como funciona a estrutura completa do Shape Prime
           </p>
         </motion.div>
 
-        <section className="mx-auto mt-14 max-w-4xl text-center">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#D4AF37]">
-            O que você vai receber
+        <section className="mx-auto mt-20 max-w-4xl text-center">
+          <p className="text-sm font-black uppercase tracking-[0.35em] text-[#d4af37]">
+            EVOLUÇÃO CHARLES
           </p>
 
-          <h3 className="mt-4 text-3xl font-black uppercase leading-[0.95] tracking-[-0.05em] md:text-6xl">
-            Seu objetivo define o protocolo.
-            <span className="block text-[#D4AF37]">
-              O método mostra o caminho.
-            </span>
-          </h3>
+          <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[-0.05em] md:text-6xl">
+            Eu não nasci com shape.
+            <span className="block text-[#d4af37]">Eu construí isso.</span>
+          </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-[#A0A7B4] md:text-lg">
-            Tudo organizado dentro de uma plataforma premium: dietas, treinos,
-            protocolos, execuções, estratégias e acesso exclusivo para acelerar
-            sua evolução física.
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/65">
+            Depois de errar treino, alimentação e estratégia, eu organizei tudo
+            em um método direto, simples de seguir e pensado para quem quer
+            evoluir de verdade.
           </p>
         </section>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
           <CardMetodo
             icon={Flame}
-            titulo="Cutting"
-            subtitulo="Protocolo de definição"
-            descricao="Para quem quer secar, trincar e atingir um físico definido que chama atenção."
+            titulo="QUER SECAR?"
+            descricao="Um protocolo completo para perder gordura sem ficar perdido no processo."
             itens={[
-              "Foco em queima de gordura",
-              "Planilhas de treino otimizadas",
-              "Fichas de nutrição práticas",
-              "Estratégia para preservar massa magra",
+              "Dieta organizada",
+              "Estratégia de definição",
+              "Treinos estruturados",
+              "Preservação de massa muscular",
             ]}
           />
 
           <CardMetodo
             icon={Dumbbell}
-            titulo="Bulking"
-            subtitulo="Protocolo de volume"
-            descricao="Para quem quer ficar denso, forte e construir um físico de respeito."
+            titulo="QUER GANHAR MASSA?"
+            descricao="Um plano estruturado para ganhar volume com estratégia e sem virar falso grande."
             itens={[
-              "Estratégia de ganho de massa muscular",
-              "Treinos de força e progressão de carga",
-              "Planilhas voltadas para bulking limpo",
-              "Método para crescer com controle",
+              "Plano alimentar para crescer",
+              "Treinos para hipertrofia",
+              "Estratégia de progressão",
+              "Organização por nível",
             ]}
           />
         </div>
 
-        <div className="mt-6 flex justify-center">
-          <button
-            onClick={() => (window.location.href = "/cadastro-metodo")}
-            className="inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-[#F59E0B] px-6 py-4 text-sm font-black uppercase text-black shadow-[0_0_55px_rgba(212,175,55,0.30)] transition hover:scale-[1.03] hover:shadow-[0_0_65px_rgba(245,158,11,0.38)]"
-          >
-            Quero ter acesso
-            <ArrowRight size={20} />
-          </button>
-        </div>
+        <OfertaPrincipal />
 
-        <section className="mt-16">
-          <div className="text-center">
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-[#D4AF37]">
-              RESULTADOS REAIS
-            </p>
-
-            <h3 className="mt-4 text-4xl font-black uppercase leading-[0.9] tracking-[-0.04em] md:text-7xl">
-              Evolução
-              <span className="block text-[#D4AF37]">Charles</span>
-            </h3>
-
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#A0A7B4]">
-              Resultado construído com estratégia, constância e o método certo.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-8 w-full max-w-[1050px] overflow-hidden rounded-[26px] border border-[#D4AF37]/20 bg-[#161A22]/80 p-2 shadow-[0_0_80px_rgba(212,175,55,0.10)] md:p-3">
-            <img
-              src="/evolucao-charles.jpg"
-              alt="Evolução Charles"
-              className="w-full rounded-[20px] object-contain"
-            />
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={() => (window.location.href = "/cadastro-metodo")}
-              className="inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-[#F59E0B] px-6 py-4 text-sm font-black uppercase text-black shadow-[0_0_55px_rgba(212,175,55,0.30)] transition hover:scale-[1.03] hover:shadow-[0_0_65px_rgba(245,158,11,0.38)]"
-            >
-              Quero ter acesso
-              <ArrowRight size={20} />
-            </button>
-          </div>
-        </section>
-
-        <section className="mt-16">
+        <section className="mt-20">
           <Titulo
-            tag="O que vai ter dentro"
-            titulo="Tudo organizado em um único lugar"
-            texto="Da alimentação ao treino. Da execução ao protocolo. Tudo separado de forma simples, premium e fácil de acessar."
+            tag="DENTRO DA PLATAFORMA"
+            titulo="Você não precisa mais ficar perdido"
+            texto="O Shape Prime organiza treino, dieta e estratégia em um único lugar para você simplesmente seguir e evoluir."
           />
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-            <Feature icon={Crown} title="Painel exclusivo do aluno" />
-            <Feature icon={Book} title="Protocolo do Charles" />
-            <Feature icon={Utensils} title="Dietas Cutting" />
-            <Feature icon={Utensils} title="Dietas Bulking" />
-            <Feature icon={Dumbbell} title="Treino do Charles" />
-            <Feature
-              icon={ShieldCheck}
-              title="Iniciante, intermediário e avançado"
-            />
-            <Feature icon={PlayCircle} title="Vídeos de execução correta" />
-            <Feature icon={Users} title="Grupo exclusivo" />
-            <Feature icon={Zap} title="Sugestão de suplementos" />
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <Feature icon={Utensils} title="Dietas prontas para secar sem passar fome" />
+            <Feature icon={Utensils} title="Plano alimentar para ganhar massa com estratégia" />
+            <Feature icon={Dumbbell} title="Meu protocolo pessoal de treino" />
+            <Feature icon={ShieldCheck} title="Treinos adaptados ao seu nível" />
+            <Feature icon={PlayCircle} title="Aprenda a executar os exercícios sem errar" />
+            <Feature icon={Users} title="Grupo exclusivo de alunos" />
+            <Feature icon={Zap} title="Estratégias para acelerar sua evolução" />
+            <Feature icon={Crown} title="Área premium organizada" />
+            <Feature icon={Gift} title="Acesso vitalício e atualizações futuras" />
           </div>
         </section>
 
-        <section className="mt-16 grid gap-4 md:grid-cols-3">
+        <section className="mt-20 grid gap-5 md:grid-cols-3">
           <MiniCard
             numero="01"
-            titulo="Treine com direção"
-            texto="Pare de montar treino aleatório e siga uma estrutura organizada."
+            titulo="Pare de treinar no achismo"
+            texto="Você vai seguir um plano estruturado, sem precisar ficar trocando treino ou copiando influencer."
           />
+
           <MiniCard
             numero="02"
-            titulo="Tudo em um lugar"
-            texto="Treinos, dietas e protocolos separados de forma simples e premium."
+            titulo="Tudo organizado pra você"
+            texto="Dieta, treino, execução e estratégia em um só lugar."
           />
+
           <MiniCard
             numero="03"
-            titulo="Evolução constante"
-            texto="Mais estratégia, mais constância e uma evolução física organizada."
+            titulo="Evolua com consistência"
+            texto="Quando você segue uma estrutura, o resultado deixa de ser sorte."
           />
         </section>
 
         <section className="mt-20">
-          <div className="text-center">
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-[#D4AF37]">
-              PERGUNTAS FREQUENTES
-            </p>
+          <Titulo
+            tag="DÚVIDAS FREQUENTES"
+            titulo="Antes de começar"
+            texto="As principais dúvidas de quem quer entrar no Shape Prime."
+          />
 
-            <h3 className="mt-4 text-4xl font-black uppercase leading-[0.9] tracking-[-0.04em] text-[#F5F5F5] md:text-7xl">
-              Tire suas
-              <span className="block text-[#D4AF37]">dúvidas</span>
-            </h3>
-
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#A0A7B4]">
-              Tudo o que você precisa saber antes de começar.
-            </p>
-          </div>
-
-          <div className="mx-auto mt-10 max-w-4xl space-y-4">
-            <FaqItem
-              pergunta="Preciso de academia para fazer o protocolo?"
-              resposta="Não obrigatoriamente. Você pode adaptar os treinos conforme sua realidade e os equipamentos que possui."
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <Faq
+              pergunta="E se eu nunca treinei?"
+              resposta="O Shape Prime possui estrutura para iniciantes, intermediários e avançados."
             />
 
-            <FaqItem
-              pergunta="Funciona para quem nunca treinou?"
-              resposta="Sim. O Shape Prime possui estratégias para iniciantes, intermediários e avançados."
+            <Faq
+              pergunta="Tenho pouco tempo. Funciona?"
+              resposta="Sim. O importante é consistência e estratégia, não passar horas na academia."
             />
 
-            <FaqItem
-              pergunta="Vou receber dieta e treino juntos?"
-              resposta="Sim. Você terá acesso aos protocolos completos de treino, alimentação e estratégias de evolução física."
+            <Faq
+              pergunta="Preciso seguir dieta 100%?"
+              resposta="Não. O objetivo é te ensinar consistência, não perfeição impossível."
             />
 
-            <FaqItem
-              pergunta="Em quanto tempo começo a ver resultados?"
-              resposta="Os resultados dependem da sua constância, mas muitos alunos percebem evolução nas primeiras semanas."
+            <Faq
+              pergunta="Em quanto tempo vejo resultado?"
+              resposta="Muitas pessoas já percebem mudança nas primeiras semanas, mas tudo depende da sua constância."
             />
-
-            <FaqItem
-              pergunta="O acesso é vitalício mesmo?"
-              resposta="Sim. Você paga apenas uma vez e recebe acesso vitalício ao conteúdo e futuras atualizações."
-            />
-
-            <FaqItem
-              pergunta="O valor é mensal?"
-              resposta="Não. O pagamento é único. Você paga uma vez e mantém o acesso ao conteúdo."
-            />
-
-            <FaqItem
-              pergunta="E se eu não gostar do conteúdo?"
-              resposta="Você terá suporte para entender a plataforma e aplicar corretamente o método."
-            />
-          </div>
-
-          <div className="mt-10 flex justify-center">
-            <button
-              onClick={() => (window.location.href = "/cadastro-metodo")}
-              className="inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-[#F59E0B] px-6 py-4 text-sm font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_65px_rgba(245,158,11,0.40)]"
-            >
-              Quero ter acesso
-              <ArrowRight size={20} />
-            </button>
           </div>
         </section>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.94 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="relative mx-auto mt-20 max-w-[430px] rounded-[34px] border border-[#D4AF37]/35 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] px-6 pb-8 pt-16 text-center shadow-[0_0_120px_rgba(212,175,55,0.22)]"
-        >
-          <div className="absolute left-1/2 top-0 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#D4AF37] via-[#D4AF37] to-[#F59E0B] text-black shadow-[0_0_60px_rgba(212,175,55,0.65)]">
-            <Crown size={42} />
-          </div>
-
-          <div className="mx-auto inline-flex rounded-xl border border-[#D4AF37]/30 bg-black/40 px-6 py-2">
-            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#D4AF37]">
-              Método Premium
-            </p>
-          </div>
-
-          <div className="mt-7 flex items-center justify-center gap-3 text-[#A0A7B4]">
-            <span className="text-sm font-bold uppercase">De:</span>
-            <span className="relative text-2xl font-black">
-              R$ 159,90
-              <span className="absolute left-0 top-1/2 h-[3px] w-full -translate-y-1/2 rotate-[-6deg] bg-red-500" />
-            </span>
-          </div>
-
-          <p className="mt-5 text-sm font-bold uppercase tracking-[0.18em] text-[#A0A7B4]">
-            Por apenas:
+        <section className="mt-20 text-center">
+          <p className="text-sm font-black uppercase tracking-[0.35em] text-[#d4af37]">
+            COMEÇA AGORA
           </p>
 
-          <div className="mt-2 flex items-end justify-center gap-2">
-            <span className="mb-3 text-3xl font-black text-[#D4AF37]">
-              R$
+          <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black uppercase leading-[0.95] md:text-6xl">
+            Seu shape não vai mudar
+            <span className="block text-[#d4af37]">
+              fazendo a mesma coisa.
             </span>
-            <span className="text-7xl font-black leading-none tracking-[-0.08em] text-[#F5F5F5] md:text-8xl">
-              79,90
-            </span>
-          </div>
+          </h2>
 
-          <div className="mx-auto mt-6 max-w-[260px] rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-[#F59E0B] px-5 py-3 text-xl font-black uppercase text-black shadow-[0_0_45px_rgba(212,175,55,0.35)]">
-            50% OFF
-          </div>
-
-          <p className="mt-6 text-xl font-black uppercase tracking-[0.2em] text-[#D4AF37]">
-            Acesso vitalício
-          </p>
-
-          <p className="mx-auto mt-5 max-w-sm text-sm leading-relaxed text-[#A0A7B4]">
-            Pagamento único com acesso imediato à plataforma, protocolos,
-            treinos, dietas e futuras atualizações do Shape Prime.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/60">
+            Pare de recomeçar toda segunda-feira e comece a seguir uma estrutura
+            de verdade.
           </p>
 
           <button
             onClick={() => (window.location.href = "/cadastro-metodo")}
-            className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#D4AF37] via-[#D4AF37] to-[#F59E0B] px-6 py-4 text-sm font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_65px_rgba(245,158,11,0.40)]"
+            className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-sm font-black uppercase tracking-[0.16em] text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_70px_rgba(212,175,55,0.5)]"
           >
-            <Target size={21} />
-            Quero ter acesso
-            <ArrowRight size={21} />
+            QUERO ACESSAR O SHAPE PRIME
+            <ArrowRight size={22} />
           </button>
+        </section>
 
-          <div className="mt-5 flex items-center justify-center gap-2 text-xs text-[#A0A7B4]">
-            <ShieldCheck size={16} />
-            Pagamento único • acesso imediato • acesso vitalício
-          </div>
-        </motion.div>
-
-        <div className="mt-10 flex items-center justify-center gap-2 text-[#D4AF37]">
+        <div className="mt-10 flex items-center justify-center gap-2 text-[#d4af37]">
           <Lock size={18} />
-          <p className="text-center text-xs font-bold uppercase tracking-[0.18em] md:text-sm">
+          <p className="text-center text-sm font-bold uppercase tracking-[0.18em]">
             Plataforma premium Shape Prime
           </p>
         </div>
@@ -365,59 +236,125 @@ export default function MetodoShape() {
   );
 }
 
+function OfertaPrincipal() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.94 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className="mt-20 overflow-hidden rounded-[40px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.22),transparent_45%),rgba(255,255,255,0.03)] p-8 text-center shadow-[0_0_180px_rgba(212,175,55,0.22)] md:p-12"
+    >
+      <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-[#d4af37] text-black shadow-[0_0_60px_rgba(212,175,55,0.5)]">
+        <Crown size={42} />
+      </div>
+
+      <p className="mt-8 text-sm font-black uppercase tracking-[0.3em] text-[#d4af37]">
+        Oferta especial
+      </p>
+
+      <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black uppercase leading-[0.95] tracking-[-0.05em] md:text-6xl">
+        Quanto vale ter um shape
+        <span className="block text-[#d4af37]">
+          que você tenha orgulho?
+        </span>
+      </h2>
+
+      <div className="mx-auto mt-8 max-w-2xl rounded-[30px] border border-white/10 bg-black/35 p-6 text-left">
+        <p className="text-sm font-black uppercase tracking-[0.2em] text-white/45">
+          Você poderia gastar facilmente:
+        </p>
+
+        <div className="mt-5 grid gap-3 text-sm font-bold text-white/70">
+          <p>❌ R$200+ em consultoria</p>
+          <p>❌ R$150 em treino</p>
+          <p>❌ R$100+ em dieta</p>
+        </div>
+      </div>
+
+      <p className="mt-8 text-sm font-black uppercase tracking-[0.25em] text-white/45">
+        Mas hoje você entra no Shape Prime por apenas:
+      </p>
+
+      <h3 className="mt-4 text-6xl font-black leading-none text-[#d4af37] md:text-7xl">
+        R$ 79,90
+      </h3>
+
+      <p className="mt-3 text-xl font-bold uppercase tracking-[0.18em] text-white">
+        pagamento único • acesso vitalício
+      </p>
+
+      <div className="mx-auto mt-8 grid max-w-3xl gap-3 text-left md:grid-cols-2">
+        <OfertaItem texto="Acesso vitalício" />
+        <OfertaItem texto="Atualizações futuras" />
+        <OfertaItem texto="Treinos completos" />
+        <OfertaItem texto="Dietas organizadas" />
+        <OfertaItem texto="Protocolos premium" />
+        <OfertaItem texto="Grupo exclusivo" />
+      </div>
+
+      <button
+        onClick={() => (window.location.href = "/cadastro-metodo")}
+        className="mt-10 inline-flex items-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-10 py-5 text-lg font-black uppercase text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:shadow-[0_0_70px_rgba(212,175,55,0.5)]"
+      >
+        <Target size={22} />
+        QUERO COMEÇAR MINHA EVOLUÇÃO
+        <ArrowRight size={22} />
+      </button>
+
+      <div className="mt-6 flex items-center justify-center gap-2 text-sm text-white/40">
+        <ShieldCheck size={16} />
+        Pagamento único • acesso imediato • acesso vitalício
+      </div>
+    </motion.div>
+  );
+}
+
 function Titulo({ tag, titulo, texto }) {
   return (
     <div className="text-center">
-      <p className="text-xs font-black uppercase tracking-[0.25em] text-[#D4AF37]">
+      <p className="text-xs font-black uppercase tracking-[0.25em] text-[#d4af37]">
         {tag}
       </p>
 
-      <h3 className="mt-3 text-3xl font-black uppercase leading-none text-[#F5F5F5] md:text-5xl">
+      <h3 className="mt-3 text-4xl font-black uppercase leading-none md:text-5xl">
         {titulo}
       </h3>
 
-      <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#A0A7B4]">
+      <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/55">
         {texto}
       </p>
     </div>
   );
 }
 
-function CardMetodo({ icon: Icon, titulo, subtitulo, descricao, itens }) {
+function CardMetodo({ icon: Icon, titulo, descricao, itens }) {
   return (
     <motion.div
-      whileHover={{ y: -6, scale: 1.01 }}
-      className="rounded-[26px] border border-[#D4AF37]/18 bg-[#161A22]/90 p-5 shadow-[0_0_60px_rgba(212,175,55,0.07)] backdrop-blur md:p-7"
+      whileHover={{
+        y: -10,
+        scale: 1.015,
+      }}
+      className="rounded-[34px] border border-[#d4af37]/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-8 shadow-[0_0_70px_rgba(212,175,55,0.06)]"
     >
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#D4AF37] text-black">
-        <Icon size={27} />
+      <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[#d4af37] text-black">
+        <Icon size={30} />
       </div>
 
-      <h3 className="mt-5 text-3xl font-black uppercase leading-none tracking-[-0.04em] text-[#D4AF37] md:text-5xl">
-        {titulo}
-      </h3>
+      <h3 className="mt-6 text-3xl font-black uppercase">{titulo}</h3>
 
-      <h4 className="mt-3 text-xl font-black uppercase text-[#F5F5F5] md:text-2xl">
-        {subtitulo}
-      </h4>
-
-      <p className="mt-4 text-sm leading-relaxed text-[#A0A7B4] md:text-base">
+      <p className="mt-4 text-lg leading-relaxed text-white/60">
         {descricao}
       </p>
 
-      <div className="my-5 h-px w-full bg-white/10" />
-
-      <div className="space-y-3">
+      <div className="mt-6 space-y-3">
         {itens.map((item) => (
           <div
             key={item}
-            className="flex items-start gap-3 text-sm text-[#F5F5F5]/80"
+            className="flex items-center gap-3 text-sm text-white/70"
           >
-            <CheckCircle2
-              size={17}
-              className="mt-0.5 min-w-[17px] text-[#D4AF37]"
-            />
-            <span>{item}</span>
+            <CheckCircle2 size={18} className="text-[#d4af37]" />
+            {item}
           </div>
         ))}
       </div>
@@ -427,46 +364,53 @@ function CardMetodo({ icon: Icon, titulo, subtitulo, descricao, itens }) {
 
 function Feature({ icon: Icon, title }) {
   return (
-    <div className="flex min-h-[84px] items-center gap-4 rounded-[22px] border border-white/10 bg-[#161A22] p-4 transition hover:border-[#D4AF37]/30 hover:bg-[#1B2029]">
-      <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#D4AF37]/12 text-[#D4AF37]">
-        <Icon size={21} />
+    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-[#d4af37]/30 hover:bg-[#d4af37]/10">
+      <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
+        <Icon size={22} />
       </div>
 
-      <p className="text-sm font-black uppercase tracking-[0.1em] text-[#F5F5F5]">
-        {title}
-      </p>
+      <p className="font-bold uppercase tracking-[0.08em]">{title}</p>
     </div>
   );
 }
 
 function MiniCard({ numero, titulo, texto }) {
   return (
-    <div className="rounded-[24px] border border-white/10 bg-[#161A22] p-5">
-      <p className="text-3xl font-black text-[#D4AF37]">{numero}</p>
-      <h4 className="mt-3 text-lg font-black uppercase text-[#F5F5F5]">
-        {titulo}
-      </h4>
-      <p className="mt-2 text-sm leading-relaxed text-[#A0A7B4]">{texto}</p>
+    <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
+      <p className="text-4xl font-black text-[#d4af37]">{numero}</p>
+
+      <h4 className="mt-4 text-xl font-black uppercase">{titulo}</h4>
+
+      <p className="mt-3 text-sm leading-relaxed text-white/55">{texto}</p>
     </div>
   );
 }
 
-function FaqItem({ pergunta, resposta }) {
+function Faq({ pergunta, resposta }) {
   return (
-    <details className="group overflow-hidden rounded-[24px] border border-white/10 bg-[#161A22]/90 transition hover:border-[#D4AF37]/30">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 text-left text-base font-black text-[#F5F5F5] marker:hidden md:px-6 md:text-lg">
-        {pergunta}
-
-        <div className="flex h-9 w-9 min-w-9 items-center justify-center rounded-full bg-[#D4AF37]/10 text-xl font-black text-[#D4AF37] transition group-open:rotate-45">
-          +
+    <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
+      <div className="flex items-start gap-4">
+        <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
+          <HelpCircle size={22} />
         </div>
-      </summary>
 
-      <div className="border-t border-white/10 px-5 py-5 md:px-6">
-        <p className="text-sm leading-relaxed text-[#A0A7B4] md:text-base">
-          {resposta}
-        </p>
+        <div>
+          <h4 className="text-lg font-black uppercase">{pergunta}</h4>
+
+          <p className="mt-3 text-sm leading-relaxed text-white/60">
+            {resposta}
+          </p>
+        </div>
       </div>
-    </details>
+    </div>
+  );
+}
+
+function OfertaItem({ texto }) {
+  return (
+    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 p-4 text-sm font-bold text-white/75">
+      <CheckCircle2 size={18} className="text-[#d4af37]" />
+      {texto}
+    </div>
   );
 }

@@ -73,7 +73,7 @@ export default function MetodoShape() {
           </p>
 
           <button
-            onClick={() => (window.location.href = "/#/login-metodo")}
+            onClick={() => (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")}
             className="mt-7 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#D4AF37] px-5 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:w-auto md:px-10 md:py-5 md:text-sm"
           >
             COMEÇAR AGORA
@@ -287,7 +287,7 @@ export default function MetodoShape() {
           </p>
 
           <button
-            onClick={() => (window.location.href = "/#/login-metodo")}
+            onClick={() => (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")}
             className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#D4AF37] px-6 py-4 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:w-auto md:px-10 md:py-5 md:text-sm"
           >
             COMEÇAR AGORA
@@ -373,7 +373,7 @@ function OfertaPrincipal() {
       </div>
 
       <button
-        onClick={() => (window.location.href = "/#/login-metodo")}
+        onClick={() => (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")}
         className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#D4AF37] px-5 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:w-auto md:px-10 md:py-5 md:text-base"
       >
         <Target size={19} />

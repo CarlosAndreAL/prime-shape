@@ -179,6 +179,7 @@ export default function MetodoShape() {
               "Estratégia de definição",
               "Treinos estruturados",
               "Preservação de massa muscular",
+              "Meu Protocolo Pessoal",
             ]}
           />
 
@@ -191,6 +192,7 @@ export default function MetodoShape() {
               "Treinos para hipertrofia",
               "Estratégia de progressão",
               "Organização por nível",
+              "Meu Protocolo Pessoal",
             ]}
           />
         </div>
@@ -207,7 +209,7 @@ export default function MetodoShape() {
           <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-3">
             <Feature icon={Utensils} title="Dietas prontas para secar sem passar fome" />
             <Feature icon={Utensils} title="Plano alimentar para ganhar massa com estratégia" />
-            <Feature icon={Dumbbell} title="Meu protocolo pessoal de treino" />
+            <Feature icon={Dumbbell} title="Meu protocolo pessoal" />
             <Feature icon={ShieldCheck} title="Treinos adaptados ao seu nível" />
             <Feature icon={PlayCircle} title="Aprenda a executar os exercícios sem errar" />
             <Feature icon={Users} title="Grupo exclusivo de alunos" />
@@ -336,14 +338,27 @@ function OfertaPrincipal() {
         </div>
       </div>
 
-      <p className="mt-5 text-[9px] font-black uppercase tracking-[0.18em] text-[#A0A7B4] md:text-xs">
-        Mas hoje você entra no Shape Prime por apenas:
-      </p>
+      <div className="mt-6 flex items-center justify-center">
+  <div className="rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-red-400 md:text-xs">
+    🔥 50% OFF HOJE
+  </div>
+</div>
 
-      <h3 className="mt-2 text-5xl font-black leading-none text-[#D4AF37] md:text-7xl">
-        R$ 79,90
-      </h3>
+<p className="mt-5 text-[9px] font-black uppercase tracking-[0.18em] text-[#A0A7B4] md:text-xs">
+  De <span className="line-through opacity-70">R$ 159,90</span> por apenas:
+</p>
 
+<div className="mt-3 flex flex-col items-center">
+  <div className="rounded-[30px] border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-6 py-5 shadow-[0_0_45px_rgba(212,175,55,0.12)] md:px-10">
+    <h3 className="text-5xl font-black leading-none text-[#D4AF37] md:text-7xl">
+      R$ 79,90
+    </h3>
+
+    <p className="mt-3 text-[11px] font-black uppercase tracking-[0.18em] text-[#F5F5F5] md:text-sm">
+      PAGAMENTO ÚNICO • ACESSO VITALÍCIO
+    </p>
+  </div>
+</div>
       <p className="mt-2 text-xs font-bold uppercase tracking-[0.14em] text-[#F5F5F5] md:text-lg">
         pagamento único • acesso vitalício
       </p>

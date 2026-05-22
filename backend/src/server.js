@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const nodemailer = require("nodemailer");
 const { PrismaClient } = require("@prisma/client");
 
 require("dotenv").config();
@@ -12,20 +13,90 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(express.json());
 
+const LOGIN_URL = "https://prime-shape.onrender.com/#/login-metodo";
+const SENHA_PADRAO = "123456";
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+async function enviarEmailAcesso({ nome, email, senha }) {
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.log("⚠️ EMAIL_USER ou EMAIL_PASS não configurado.");
+    return;
+  }
+
+  await transporter.sendMail({
+    from: `"Shape Prime" <${process.env.EMAIL_USER}>`,
+    to: email,
+    subject: "Seu acesso ao Shape Prime foi liberado 🔥",
+    html: `
+      <div style="margin:0;padding:0;background:#0F1115;font-family:Arial,sans-serif;color:#F5F5F5;">
+        <div style="max-width:620px;margin:0 auto;padding:40px 18px;">
+          <div style="background:#11141A;border:1px solid rgba(212,175,55,.28);border-radius:28px;padding:34px;box-shadow:0 0 50px rgba(0,0,0,.35);">
+            
+            <div style="text-align:center;margin-bottom:28px;">
+              <div style="display:inline-block;background:#D4AF37;color:#000;font-weight:900;font-size:24px;padding:18px 22px;border-radius:20px;">
+                PS
+              </div>
+
+              <h1 style="margin:22px 0 6px;color:#F5F5F5;font-size:34px;letter-spacing:2px;">
+                PRIME <span style="color:#D4AF37;">SHAPE</span>
+              </h1>
+
+              <p style="margin:0;color:#A0A7B4;font-size:14px;">
+                Seu acesso premium foi liberado
+              </p>
+            </div>
+
+            <h2 style="font-size:26px;line-height:1.2;text-align:center;margin:0 0 20px;">
+              Bem-vindo ao método, ${nome || "aluno"} 🔥
+            </h2>
+
+            <p style="color:#A0A7B4;font-size:16px;line-height:1.7;text-align:center;">
+              Sua compra foi aprovada e sua conta já está pronta para acessar a plataforma.
+            </p>
+
+            <div style="background:#0F1115;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px;margin:28px 0;">
+              <p style="margin:0 0 12px;color:#A0A7B4;font-size:14px;">Seus dados de acesso:</p>
+
+              <p style="margin:10px 0;color:#F5F5F5;font-size:16px;">
+                <strong style="color:#D4AF37;">Email:</strong> ${email}
+              </p>
+
+              <p style="margin:10px 0;color:#F5F5F5;font-size:16px;">
+                <strong style="color:#D4AF37;">Senha inicial:</strong> ${senha}
+              </p>
+            </div>
+
+            <a href="${LOGIN_URL}"
+              style="display:block;text-align:center;background:#D4AF37;color:#000;text-decoration:none;font-weight:900;font-size:15px;letter-spacing:1px;padding:18px;border-radius:18px;">
+              ACESSAR MINHA PLATAFORMA
+            </a>
+
+            <p style="margin-top:24px;color:#A0A7B4;font-size:13px;line-height:1.6;text-align:center;">
+              Por segurança, depois de entrar na plataforma, recomendamos alterar sua senha.
+            </p>
+          </div>
+        </div>
+      </div>
+    `,
+  });
+}
+
 app.get("/", (req, res) => {
   res.json({ ok: true, message: "Shape Prime Backend Online" });
 });
 
 function gerarToken(usuario) {
   return jwt.sign(
-    {
-      id: usuario.id,
-      email: usuario.email,
-    },
+    { id: usuario.id, email: usuario.email },
     process.env.JWT_SECRET || "prime_shape_secret",
-    {
-      expiresIn: "7d",
-    }
+    { expiresIn: "7d" }
   );
 }
 
@@ -40,8 +111,10 @@ app.post("/auth/login", async (req, res) => {
       });
     }
 
+    const emailNormalizado = String(email).trim().toLowerCase();
+
     const usuario = await prisma.usuario.findUnique({
-      where: { email },
+      where: { email: emailNormalizado },
     });
 
     if (!usuario) {
@@ -121,9 +194,7 @@ function autenticar(req, res, next) {
 app.get("/auth/me", autenticar, async (req, res) => {
   try {
     const usuario = await prisma.usuario.findUnique({
-      where: {
-        id: req.usuarioId,
-      },
+      where: { id: req.usuarioId },
       select: {
         id: true,
         nome: true,
@@ -133,10 +204,7 @@ app.get("/auth/me", autenticar, async (req, res) => {
       },
     });
 
-    res.json({
-      ok: true,
-      usuario,
-    });
+    res.json({ ok: true, usuario });
   } catch (error) {
     console.error(error);
 
@@ -189,9 +257,7 @@ app.post("/auth/alterar-senha", autenticar, async (req, res) => {
 
     await prisma.usuario.update({
       where: { id: usuario.id },
-      data: {
-        senha: novaSenhaHash,
-      },
+      data: { senha: novaSenhaHash },
     });
 
     res.json({
@@ -274,8 +340,7 @@ app.post("/webhook/kiwify", async (req, res) => {
     }
 
     const emailNormalizado = String(email).trim().toLowerCase();
-    const senhaPadrao = "123456";
-    const senhaHash = await bcrypt.hash(senhaPadrao, 10);
+    const senhaHash = await bcrypt.hash(SENHA_PADRAO, 10);
 
     const usuarioExistente = await prisma.usuario.findUnique({
       where: { email: emailNormalizado },
@@ -286,6 +351,7 @@ app.post("/webhook/kiwify", async (req, res) => {
         where: { email: emailNormalizado },
         data: {
           nome: nome || usuarioExistente.nome,
+          senha: usuarioExistente.senha,
           plano: "metodo",
           acessoLiberado: true,
         },
@@ -298,16 +364,17 @@ app.post("/webhook/kiwify", async (req, res) => {
         },
       });
 
+      await enviarEmailAcesso({
+        nome: usuarioAtualizado.nome,
+        email: emailNormalizado,
+        senha: SENHA_PADRAO,
+      });
+
       console.log("✅ Usuário já existia. Acesso liberado:", usuarioAtualizado);
 
       return res.status(200).json({
         ok: true,
-        message: "Usuário já existia. Acesso liberado.",
-        usuario: usuarioAtualizado,
-        login: {
-          email: emailNormalizado,
-          senha: senhaPadrao,
-        },
+        message: "Usuário já existia. Acesso liberado e email enviado.",
       });
     }
 
@@ -328,16 +395,17 @@ app.post("/webhook/kiwify", async (req, res) => {
       },
     });
 
+    await enviarEmailAcesso({
+      nome: novoUsuario.nome,
+      email: emailNormalizado,
+      senha: SENHA_PADRAO,
+    });
+
     console.log("✅ Novo aluno criado pela Kiwify:", novoUsuario);
 
     return res.status(200).json({
       ok: true,
-      message: "Aluno criado e acesso liberado.",
-      usuario: novoUsuario,
-      login: {
-        email: emailNormalizado,
-        senha: senhaPadrao,
-      },
+      message: "Aluno criado, acesso liberado e email enviado.",
     });
   } catch (error) {
     console.error("Erro no webhook Kiwify:", error);

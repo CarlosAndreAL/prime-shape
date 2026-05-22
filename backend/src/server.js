@@ -3,7 +3,6 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { PrismaClient } = require("@prisma/client");
-const { MercadoPagoConfig, Preference, Payment } = require("mercadopago");
 
 require("dotenv").config();
 
@@ -13,84 +12,33 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(express.json());
 
-const mpClient = new MercadoPagoConfig({
-  accessToken: process.env.MP_ACCESS_TOKEN,
-});
-
 app.get("/", (req, res) => {
   res.json({ ok: true, message: "Shape Prime Backend Online" });
 });
 
-app.post("/auth/cadastro", async (req, res) => {
-  try {
-    const { nome, email, senha } = req.body;
-
-    if (!nome || !email || !senha) {
-      return res.status(400).json({
-        ok: false,
-        message: "Preencha tudo.",
-      });
+function gerarToken(usuario) {
+  return jwt.sign(
+    {
+      id: usuario.id,
+      email: usuario.email,
+    },
+    process.env.JWT_SECRET || "prime_shape_secret",
+    {
+      expiresIn: "7d",
     }
-
-    const existe = await prisma.usuario.findUnique({
-      where: { email },
-    });
-
-    if (existe) {
-      return res.status(400).json({
-        ok: false,
-        message: "Email já cadastrado.",
-      });
-    }
-
-    const senhaHash = await bcrypt.hash(senha, 10);
-
-    const usuario = await prisma.usuario.create({
-      data: {
-        nome,
-        email,
-        senha: senhaHash,
-        plano: "metodo",
-        acessoLiberado: false,
-      },
-      select: {
-        id: true,
-        nome: true,
-        email: true,
-        plano: true,
-        acessoLiberado: true,
-      },
-    });
-
-    const token = jwt.sign(
-      {
-        id: usuario.id,
-        email: usuario.email,
-      },
-      process.env.JWT_SECRET || "prime_shape_secret",
-      {
-        expiresIn: "7d",
-      }
-    );
-
-    res.json({
-      ok: true,
-      usuario,
-      token,
-    });
-  } catch (error) {
-    console.error(error);
-
-    res.status(500).json({
-      ok: false,
-      message: "Erro ao criar cadastro.",
-    });
-  }
-});
+  );
+}
 
 app.post("/auth/login", async (req, res) => {
   try {
     const { email, senha } = req.body;
+
+    if (!email || !senha) {
+      return res.status(400).json({
+        ok: false,
+        message: "Informe email e senha.",
+      });
+    }
 
     const usuario = await prisma.usuario.findUnique({
       where: { email },
@@ -103,10 +51,7 @@ app.post("/auth/login", async (req, res) => {
       });
     }
 
-    const senhaCorreta = await bcrypt.compare(
-      senha,
-      usuario.senha
-    );
+    const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
 
     if (!senhaCorreta) {
       return res.status(400).json({
@@ -115,16 +60,14 @@ app.post("/auth/login", async (req, res) => {
       });
     }
 
-    const token = jwt.sign(
-      {
-        id: usuario.id,
-        email: usuario.email,
-      },
-      process.env.JWT_SECRET || "prime_shape_secret",
-      {
-        expiresIn: "7d",
-      }
-    );
+    if (!usuario.acessoLiberado) {
+      return res.status(403).json({
+        ok: false,
+        message: "Seu acesso ainda não foi liberado.",
+      });
+    }
+
+    const token = gerarToken(usuario);
 
     res.json({
       ok: true,
@@ -166,7 +109,6 @@ function autenticar(req, res, next) {
     );
 
     req.usuarioId = decoded.id;
-
     next();
   } catch {
     return res.status(401).json({
@@ -205,75 +147,205 @@ app.get("/auth/me", autenticar, async (req, res) => {
   }
 });
 
-app.post("/pagamentos/criar-preferencia", autenticar, async (req, res) => {
+app.post("/auth/alterar-senha", autenticar, async (req, res) => {
   try {
-    const preference = new Preference(mpClient);
+    const { senhaAtual, novaSenha } = req.body;
 
-    const result = await preference.create({
-      body: {
-        external_reference: String(req.usuarioId),
+    if (!senhaAtual || !novaSenha) {
+      return res.status(400).json({
+        ok: false,
+        message: "Informe a senha atual e a nova senha.",
+      });
+    }
 
-        items: [
-          {
-            title: "Shape Prime Premium",
-            quantity: 1,
-            unit_price: 99.9,
-            currency_id: "BRL",
-          },
-        ],
+    if (novaSenha.length < 6) {
+      return res.status(400).json({
+        ok: false,
+        message: "A nova senha precisa ter pelo menos 6 caracteres.",
+      });
+    }
 
-        back_urls: {
-          success: "https://prime-shape-x3q0.onrender.com/acesso-liberado",
-          failure: "https://prime-shape-x3q0.onrender.com/checkout",
-          pending: "https://prime-shape-x3q0.onrender.com/checkout",
-        },
+    const usuario = await prisma.usuario.findUnique({
+      where: { id: req.usuarioId },
+    });
 
-        notification_url:
-          "https://prime-shape-x3q0.onrender.com/webhook/mercadopago",
+    if (!usuario) {
+      return res.status(404).json({
+        ok: false,
+        message: "Usuário não encontrado.",
+      });
+    }
+
+    const senhaCorreta = await bcrypt.compare(senhaAtual, usuario.senha);
+
+    if (!senhaCorreta) {
+      return res.status(400).json({
+        ok: false,
+        message: "Senha atual incorreta.",
+      });
+    }
+
+    const novaSenhaHash = await bcrypt.hash(novaSenha, 10);
+
+    await prisma.usuario.update({
+      where: { id: usuario.id },
+      data: {
+        senha: novaSenhaHash,
       },
     });
 
-    return res.json({
+    res.json({
       ok: true,
-      preferenceId: result.id,
-      init_point: result.init_point,
+      message: "Senha alterada com sucesso.",
     });
   } catch (error) {
-    console.error("Erro Mercado Pago:", error);
+    console.error(error);
 
-    return res.status(500).json({
+    res.status(500).json({
       ok: false,
-      message: "Erro ao criar preferência.",
+      message: "Erro ao alterar senha.",
     });
   }
 });
 
-app.post("/webhook/mercadopago", async (req, res) => {
+app.post("/webhook/kiwify", async (req, res) => {
   try {
-    const paymentId = req.body?.data?.id;
+    const body = req.body;
 
-    if (!paymentId) {
-      return res.sendStatus(200);
+    console.log("📩 Webhook Kiwify recebido:", JSON.stringify(body, null, 2));
+
+    const evento =
+      body?.webhook_event_type ||
+      body?.event ||
+      body?.trigger ||
+      body?.type ||
+      body?.status;
+
+    const status =
+      body?.order_status ||
+      body?.status ||
+      body?.order?.status ||
+      body?.purchase?.status ||
+      body?.data?.status;
+
+    const email =
+      body?.Customer?.email ||
+      body?.customer?.email ||
+      body?.client?.email ||
+      body?.buyer?.email ||
+      body?.order?.customer?.email ||
+      body?.data?.customer?.email ||
+      body?.email;
+
+    const nome =
+      body?.Customer?.full_name ||
+      body?.Customer?.name ||
+      body?.customer?.full_name ||
+      body?.customer?.name ||
+      body?.client?.name ||
+      body?.buyer?.name ||
+      body?.order?.customer?.name ||
+      body?.data?.customer?.name ||
+      "Aluno Shape Prime";
+
+    const compraAprovada =
+      evento === "compra_aprovada" ||
+      evento === "order_approved" ||
+      evento === "purchase_approved" ||
+      status === "paid" ||
+      status === "approved" ||
+      status === "aprovado" ||
+      status === "aprovada";
+
+    if (!compraAprovada) {
+      console.log("ℹ️ Webhook ignorado. Evento/status:", evento, status);
+      return res.status(200).json({
+        ok: true,
+        message: "Evento ignorado.",
+      });
     }
 
-    const payment = new Payment(mpClient);
-    const pagamento = await payment.get({ id: paymentId });
+    if (!email) {
+      console.log("⚠️ Webhook aprovado, mas sem email.");
+      return res.status(200).json({
+        ok: false,
+        message: "Email não encontrado no webhook.",
+      });
+    }
 
-    if (pagamento.status === "approved") {
-      const usuarioId = Number(pagamento.external_reference);
+    const emailNormalizado = String(email).trim().toLowerCase();
+    const senhaPadrao = "123456";
+    const senhaHash = await bcrypt.hash(senhaPadrao, 10);
 
-      await prisma.usuario.update({
-        where: { id: usuarioId },
-        data: { acessoLiberado: true },
+    const usuarioExistente = await prisma.usuario.findUnique({
+      where: { email: emailNormalizado },
+    });
+
+    if (usuarioExistente) {
+      const usuarioAtualizado = await prisma.usuario.update({
+        where: { email: emailNormalizado },
+        data: {
+          nome: nome || usuarioExistente.nome,
+          plano: "metodo",
+          acessoLiberado: true,
+        },
+        select: {
+          id: true,
+          nome: true,
+          email: true,
+          plano: true,
+          acessoLiberado: true,
+        },
       });
 
-      console.log("✅ Acesso liberado para usuário:", usuarioId);
+      console.log("✅ Usuário já existia. Acesso liberado:", usuarioAtualizado);
+
+      return res.status(200).json({
+        ok: true,
+        message: "Usuário já existia. Acesso liberado.",
+        usuario: usuarioAtualizado,
+        login: {
+          email: emailNormalizado,
+          senha: senhaPadrao,
+        },
+      });
     }
 
-    return res.sendStatus(200);
+    const novoUsuario = await prisma.usuario.create({
+      data: {
+        nome: nome || "Aluno Shape Prime",
+        email: emailNormalizado,
+        senha: senhaHash,
+        plano: "metodo",
+        acessoLiberado: true,
+      },
+      select: {
+        id: true,
+        nome: true,
+        email: true,
+        plano: true,
+        acessoLiberado: true,
+      },
+    });
+
+    console.log("✅ Novo aluno criado pela Kiwify:", novoUsuario);
+
+    return res.status(200).json({
+      ok: true,
+      message: "Aluno criado e acesso liberado.",
+      usuario: novoUsuario,
+      login: {
+        email: emailNormalizado,
+        senha: senhaPadrao,
+      },
+    });
   } catch (error) {
-    console.error("Erro no webhook Mercado Pago:", error);
-    return res.sendStatus(200);
+    console.error("Erro no webhook Kiwify:", error);
+
+    return res.status(200).json({
+      ok: false,
+      message: "Erro tratado no webhook.",
+    });
   }
 });
 

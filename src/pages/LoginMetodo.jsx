@@ -95,10 +95,10 @@ export default function LoginMetodo() {
           </button>
 
           <button
-            onClick={() => (window.location.href = "/cadastro-metodo")}
+          onClick={() => (window.location.href = "/#/login-metodo")}
             className="w-full text-sm font-bold uppercase tracking-[0.18em] text-white/45 transition hover:text-[#d4af37]"
           >
-            Ainda não tenho conta
+          Acesso liberado após a compra
           </button>
         </div>
       </div>

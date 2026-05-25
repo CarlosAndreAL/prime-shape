@@ -85,7 +85,7 @@ export default function MetodoShape() {
     </button>
 
     <p className="mt-5 text-[13px] font-black leading-relaxed text-white md:text-lg">
-      🔥 Última chance de entrar no Shape Prime.
+      🔥 A transformação que vai mudar seu shape começa agora.
       <br />
       Depois, acabou.
     </p>

@@ -17,9 +17,20 @@ import Checkout from "./pages/Checkout";
 function HomePage() {
   const navigate = useNavigate();
 
+  const isMetodoDomain = window.location.hostname.includes(
+    "metodoshapeprime.com.br"
+  );
+
+  if (isMetodoDomain) {
+    navigate("/metodo");
+    return null;
+  }
+
   return (
     <StartPage
-      onMetodo={() => navigate("/metodo")}
+      onMetodo={() =>
+        (window.location.href = "https://metodoshapeprime.com.br")
+      }
       onConsultoria={() => navigate("/consultoria")}
     />
   );

@@ -34,52 +34,84 @@ export default function MetodoShape() {
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-4xl rounded-[34px] border border-white/10 bg-[#0B0D11]/90 px-5 py-8 text-center shadow-[0_0_80px_rgba(0,0,0,0.45)] backdrop-blur-xl md:px-10 md:py-12"
-        >
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/10 px-4 py-2 text-[8px] font-black uppercase tracking-[0.16em] text-[#D4AF37] md:text-[11px]">
-            <Sparkles size={13} />
-            Método Premium
-          </div>
+  initial={{ opacity: 0, y: 35 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true }}
+  className="relative overflow-hidden rounded-[38px] border border-white/10 bg-[#080A0E]/95 px-5 py-8 shadow-[0_0_120px_rgba(0,0,0,0.6)] backdrop-blur-2xl md:px-10 md:py-14"
+>
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_32%)]" />
 
-          <h1 className="mx-auto max-w-[320px] font-black uppercase leading-[0.92] tracking-[-0.05em] sm:max-w-3xl md:max-w-5xl">
-            <span className="block text-[2.2rem] text-[#F5F5F5] sm:text-6xl md:text-8xl">
-              SAIA DO FÍSICO
-            </span>
+  <div className="relative z-10 grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr]">
+    
+    {/* ESQUERDA */}
+    <div>
+      <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#D4AF37] md:text-xs">
+        <Sparkles size={14} />
+        MÉTODO PREMIUM • ACESSO VITALÍCIO
+      </div>
 
-            <span className="block text-[2.2rem] text-[#F5F5F5] sm:text-6xl md:text-8xl">
-              COMUM
-            </span>
+      <h1 className="mt-7 max-w-2xl font-black uppercase leading-[1.08] tracking-[-0.03em]">
+  <span className="block text-[1.85rem] italic text-[#F5F5F5] sm:text-4xl md:text-5xl">
+    O MÉTODO QUE VAI
+  </span>
 
-            <span className="mt-1 block bg-gradient-to-r from-[#D4AF37] to-[#F59E0B] bg-clip-text text-[2.15rem] text-transparent sm:text-6xl md:text-8xl">
-              CONSTRUA SEU
-            </span>
+  <span className="block text-[1.85rem] italic text-[#F5F5F5] sm:text-4xl md:text-5xl">
+    DESTRAVAR SEU
+  </span>
 
-            <span className="block bg-gradient-to-r from-[#D4AF37] to-[#F59E0B] bg-clip-text text-[2.15rem] text-transparent sm:text-6xl md:text-8xl">
-              SHAPE
-            </span>
+  <span className="block bg-gradient-to-r from-[#D4AF37] to-[#F59E0B] bg-clip-text text-[2rem] italic text-transparent sm:text-5xl md:text-6xl">
+    SHAPE DE UMA VEZ.
+  </span>
+</h1>
 
-            <span className="mt-1 block text-[2rem] text-[#F5F5F5] sm:text-6xl md:text-8xl">
-              DE RESPEITO.
-            </span>
-          </h1>
+      <p className="mt-6 max-w-xl text-sm leading-relaxed text-[#A0A7B4] md:text-lg">
+        O Shape Prime reúne treinos, dietas, protocolos e estratégias
+        organizadas para você finalmente construir um shape de respeito
+        sem perder tempo no achismo.
+      </p>
 
-          <p className="mx-auto mt-5 max-w-2xl text-[13px] leading-relaxed text-[#A0A7B4] md:mt-7 md:text-lg">
-            Treinos, dietas e protocolos prontos para você parar de perder tempo
-            e finalmente evoluir de verdade.
-          </p>
+      
+      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <button
+  onClick={() =>
+    (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
+  }
+  className="mt-7 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-[#D4AF37] px-6 py-4 text-sm font-black tracking-[0.06em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.02] hover:bg-[#F59E0B] md:w-auto md:px-10 md:text-base"
+>
+  Quero ter acesso
+  <ArrowRight size={20} />
+</button>
+        
+      </div>
+    </div>
 
-          <button
-            onClick={() => (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")}
-            className="mt-7 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#D4AF37] px-5 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:w-auto md:px-10 md:py-5 md:text-sm"
-          >
-            COMEÇAR AGORA
-            <ArrowRight size={20} />
-          </button>
-        </motion.div>
+    {/* DIREITA */}
+    <div className="relative">
+      <div className="absolute inset-0 rounded-[3rem] bg-[radial-gradient(circle,rgba(212,175,55,0.22),transparent_70%)] blur-3xl" />
+
+      <div className="relative overflow-hidden rounded-[2.8rem] border border-white/10 bg-black shadow-[0_0_80px_rgba(0,0,0,0.6)]">
+        
+        <div className="absolute left-5 top-5 z-20 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#D4AF37] backdrop-blur-xl">
+          Shape Prime
+        </div>
+
+        <div className="absolute bottom-5 right-5 z-20 rounded-full border border-white/10 bg-black/70 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#F5F5F5] backdrop-blur-xl">
+          Método Premium
+        </div>
+
+        <video
+          src={charlesVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full min-h-[520px] w-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}

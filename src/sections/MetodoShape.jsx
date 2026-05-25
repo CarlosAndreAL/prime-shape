@@ -38,94 +38,57 @@ export default function MetodoShape() {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7 }}
   viewport={{ once: true }}
-  className="relative overflow-hidden rounded-[38px] border border-white/10 bg-[#080A0E]/95 px-5 py-8 shadow-[0_0_120px_rgba(0,0,0,0.6)] backdrop-blur-2xl md:px-10 md:py-14"
+  className="relative mx-auto max-w-5xl overflow-hidden rounded-[28px] border border-white/10 bg-[#050608] px-4 py-7 text-center shadow-[0_0_80px_rgba(0,0,0,0.7)] md:rounded-[42px] md:px-10 md:py-12"
 >
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_32%)]" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.16),transparent_36%),linear-gradient(180deg,rgba(212,175,55,0.08),transparent_45%)]" />
 
-  <div className="relative z-10 grid items-center gap-10 md:grid-cols-[1.05fr_0.95fr]">
-    
-    {/* ESQUERDA */}
-    <div>
-      <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#D4AF37] md:text-xs">
-        <Sparkles size={14} />
-        MÉTODO PREMIUM • ACESSO VITALÍCIO
-      </div>
-
-      <h1 className="mt-7 max-w-2xl font-black uppercase leading-[1.08] tracking-[-0.03em]">
-  <span className="block text-[1.85rem] italic text-[#F5F5F5] sm:text-4xl md:text-5xl">
-    O MÉTODO QUE VAI
-  </span>
-
-  <span className="block text-[1.85rem] italic text-[#F5F5F5] sm:text-4xl md:text-5xl">
-    DESTRAVAR SEU
-  </span>
-
-  <span className="block bg-gradient-to-r from-[#D4AF37] to-[#F59E0B] bg-clip-text text-[2rem] italic text-transparent sm:text-5xl md:text-6xl">
-    SHAPE DE UMA VEZ.
-  </span>
-</h1>
-
-      <p className="mt-6 max-w-xl text-sm leading-relaxed text-[#A0A7B4] md:text-lg">
-        O Shape Prime reúne treinos, dietas, protocolos e estratégias
-        organizadas para você finalmente construir um shape de respeito
-        sem perder tempo no achismo.
-      </p>
-
-      
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-        <button
-  onClick={() =>
-    (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
-  }
-  className="mt-7 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-[#D4AF37] px-6 py-4 text-sm font-black tracking-[0.06em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.02] hover:bg-[#F59E0B] md:w-auto md:px-10 md:text-base"
->
-  Quero ter acesso
-  <ArrowRight size={20} />
-</button>
-        
-      </div>
-    </div>
-
-    {/* DIREITA */}
-    <div className="relative">
-      <div className="absolute inset-0 rounded-[3rem] bg-[radial-gradient(circle,rgba(212,175,55,0.22),transparent_70%)] blur-3xl" />
-
-      <div className="relative overflow-hidden rounded-[2.8rem] border border-white/10 bg-black shadow-[0_0_80px_rgba(0,0,0,0.6)]">
-        
-        <div className="absolute left-5 top-5 z-20 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#D4AF37] backdrop-blur-xl">
-          Shape Prime
-        </div>
-
-        <div className="absolute bottom-5 right-5 z-20 rounded-full border border-white/10 bg-black/70 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#F5F5F5] backdrop-blur-xl">
-          Método Premium
-        </div>
-
-        <img
-  src="/evolucao-shape.jpg"
-  alt="Charles Shape"
-  className="h-full min-h-[520px] w-full object-cover"
-/>
-
-<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-
-<div className="absolute bottom-6 left-6 right-6">
-  <div className="rounded-3xl border border-white/10 bg-black/55 p-5 backdrop-blur-xl">
-    
-    <p className="mt-1 text-sm text-zinc-300">
-      Evolução construída com método,
-      estratégia e consistência.
+  <div className="relative z-10">
+    <p className="mx-auto inline-flex items-center justify-center rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/10 px-4 py-2 text-[8px] font-black uppercase tracking-[0.22em] text-[#D4AF37] md:text-xs">
+      <Sparkles size={12} className="mr-2" />
+      Método Premium
     </p>
 
-    <div className="mt-4 flex items-center gap-2">
-      <div className="h-2 w-2 rounded-full bg-emerald-400" />
-      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">
-        Shape Prime
-      </span>
-    </div>
-  </div>
-</div>
+    <h1 className="mx-auto mt-6 max-w-[330px] text-[1.55rem] font-medium italic uppercase leading-[1.2] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
+      O método que vai destravar seu
+      <span className="text-[#D4AF37]"> shape de uma vez.</span>
+    </h1>
+
+    <div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[10px] border border-[#D4AF37]/25 shadow-[0_0_45px_rgba(212,175,55,0.22)] md:max-w-2xl">
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+
+      <img
+        src="/evolucao-charles.jpg"
+        alt="Charles Shape"
+        className="relative z-0 h-[260px] w-full object-cover md:h-[430px]"
+      />
+
+      <div className="absolute inset-0 z-20 flex items-center justify-center">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 backdrop-blur-md">
+          <PlayCircle size={34} className="text-white" />
+        </div>
       </div>
     </div>
+
+    <p className="mx-auto mt-5 max-w-[330px] text-[14px] italic leading-relaxed text-[#F5F5F5] md:max-w-2xl md:text-xl">
+      Treinos, dietas e protocolos prontos para você construir um shape de
+      respeito sem perder tempo no achismo.
+    </p>
+
+    <button
+      onClick={() =>
+        (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
+      }
+      className="mx-auto mt-6 inline-flex w-full max-w-[300px] items-center justify-center gap-3 rounded-xl bg-[#D4AF37] px-5 py-4 text-base font-black text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.02] hover:bg-[#F59E0B]"
+    >
+      Quero ter acesso
+      <ArrowRight size={20} />
+    </button>
+
+    <p className="mt-5 text-[13px] font-black leading-relaxed text-white md:text-lg">
+      🔥 Última chance de entrar no Shape Prime.
+      <br />
+      Depois, acabou.
+    </p>
   </div>
 </motion.div>
 

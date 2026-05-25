@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import StartPage from "./sections/StartPage";
 import MetodoShape from "./sections/MetodoShape";
@@ -21,8 +22,13 @@ function HomePage() {
     "metodoshapeprime.com.br"
   );
 
+  useEffect(() => {
+    if (isMetodoDomain) {
+      navigate("/metodo");
+    }
+  }, [isMetodoDomain, navigate]);
+
   if (isMetodoDomain) {
-    navigate("/metodo");
     return null;
   }
 
@@ -42,29 +48,45 @@ export default function App() {
       <Routes>
 
         <Route path="/checkout" element={<Checkout />} />
+
         <Route path="/login-metodo" element={<LoginMetodo />} />
-<Route path="/cadastro-metodo" element={<CadastroMetodo />} />
+
+        <Route
+          path="/cadastro-metodo"
+          element={<CadastroMetodo />}
+        />
 
         <Route path="/" element={<HomePage />} />
 
         <Route path="/metodo" element={<MetodoShape />} />
-        <Route path="/consultoria" element={<ConsultoriaPage />} />
 
         <Route
-  path="/portal-aluno"
-  element={
-    <ProtectedRoute>
-      <MetodoShapePortal />
-    </ProtectedRoute>
-  }
-/>
+          path="/consultoria"
+          element={<ConsultoriaPage />}
+        />
+
+        <Route
+          path="/portal-aluno"
+          element={
+            <ProtectedRoute>
+              <MetodoShapePortal />
+            </ProtectedRoute>
+          }
+        />
 
         <Route path="/bulking" element={<SerieBulking />} />
+
         <Route path="/cutting" element={<SerieCutting />} />
+
         <Route path="/treinos" element={<TreinosShape />} />
-        <Route path="/treino-charles" element={<TreinoCharles />} />
+
+        <Route
+          path="/treino-charles"
+          element={<TreinoCharles />}
+        />
 
         <Route path="*" element={<Navigate to="/" replace />} />
+
       </Routes>
     </HashRouter>
   );

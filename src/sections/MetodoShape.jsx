@@ -100,14 +100,30 @@ export default function MetodoShape() {
           Método Premium
         </div>
 
-        <video
-          src={charlesVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="h-full min-h-[520px] w-full object-cover"
-        />
+        <img
+  src="/evolucao-shape.jpg"
+  alt="Charles Shape"
+  className="h-full min-h-[520px] w-full object-cover"
+/>
+
+<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+<div className="absolute bottom-6 left-6 right-6">
+  <div className="rounded-3xl border border-white/10 bg-black/55 p-5 backdrop-blur-xl">
+    
+    <p className="mt-1 text-sm text-zinc-300">
+      Evolução construída com método,
+      estratégia e consistência.
+    </p>
+
+    <div className="mt-4 flex items-center gap-2">
+      <div className="h-2 w-2 rounded-full bg-emerald-400" />
+      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">
+        Shape Prime
+      </span>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   </div>

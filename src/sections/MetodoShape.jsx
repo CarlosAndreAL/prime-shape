@@ -52,22 +52,40 @@ export default function MetodoShape() {
       O método que vai destravar seu
       <span className="text-[#D4AF37]"> shape de uma vez.</span>
     </h1>
+<div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[22px] border border-[#D4AF37]/20 bg-black shadow-[0_0_55px_rgba(212,175,55,0.16)] md:max-w-2xl">
 
-    <div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[10px] border border-[#D4AF37]/25 shadow-[0_0_45px_rgba(212,175,55,0.22)] md:max-w-2xl">
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
-
+  <div className="grid grid-cols-2">
+    
+    {/* ANTES */}
+    <div className="relative overflow-hidden">
       <img
-        src="/evolucao-charles.jpg"
-        alt="Charles Shape"
-        className="relative z-0 h-[260px] w-full object-cover md:h-[430px]"
+        src="/IMG_1637.png"
+        alt="Antes"
+        className="h-[320px] w-full object-cover md:h-[520px]"
       />
 
-      <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/15 backdrop-blur-md">
-          <PlayCircle size={34} className="text-white" />
-        </div>
+      <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-white backdrop-blur-md">
+        ANTES
       </div>
     </div>
+
+    {/* DEPOIS */}
+    <div className="relative overflow-hidden">
+      <img
+        src="/IMG_1667.png"
+        alt="Depois"
+        className="h-[320px] w-full object-cover md:h-[520px]"
+      />
+
+      <div className="absolute right-3 top-3 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-[#D4AF37] backdrop-blur-md">
+        DEPOIS
+      </div>
+    </div>
+  </div>
+
+  {/* DIVISOR */}
+  <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#D4AF37] to-transparent opacity-80" />
+</div>
 
     <p className="mx-auto mt-5 max-w-[330px] text-[14px] italic leading-relaxed text-[#F5F5F5] md:max-w-2xl md:text-xl">
       Treinos, dietas e protocolos prontos para você construir um shape de
@@ -169,11 +187,34 @@ export default function MetodoShape() {
                     Depois
                   </div>
 
-                  <img
-                    src="/evolucao-charles.jpg"
-                    alt="Evolução Charles"
-                    className="relative z-10 w-full rounded-[2rem] object-cover brightness-[0.97] contrast-[1.04]"
-                  />
+                  <div className="relative z-10 grid grid-cols-2 overflow-hidden rounded-[2rem]">
+  
+  <div className="relative">
+    <img
+      src="/IMG_1637.png"
+      alt="Antes"
+      className="h-full w-full object-cover"
+    />
+
+    <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/70 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-white backdrop-blur-xl">
+      Antes
+    </div>
+  </div>
+
+  <div className="relative">
+    <img
+      src="/IMG_1667.png"
+      alt="Depois"
+      className="h-full w-full object-cover"
+    />
+
+    <div className="absolute right-3 top-3 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#D4AF37] backdrop-blur-xl">
+      Depois
+    </div>
+  </div>
+
+  <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#D4AF37] to-transparent opacity-80" />
+</div>
                 </div>
               </div>
             </div>

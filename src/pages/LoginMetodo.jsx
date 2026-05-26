@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Mail, Lock, ArrowRight } from "lucide-react";
+import API_URL from "../config/api";
+
 
 export default function LoginMetodo() {
   const [form, setForm] = useState({ email: "", senha: "" });
@@ -25,7 +27,7 @@ export default function LoginMetodo() {
     localStorage.setItem("prime_shape_token", dados.token);
     localStorage.setItem("prime_shape_usuario", JSON.stringify(dados.usuario));
 
-    window.location.href = "/portal-aluno";
+    window.location.href = "/#/portal-aluno";
   }
 
   return (

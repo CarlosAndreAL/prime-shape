@@ -13,7 +13,7 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(express.json());
 
-const LOGIN_URL = "https://prime-shape.onrender.com/#/login-metodo";
+const LOGIN_URL = "https://metodoshapeprime.com.br/#/login-metodo";
 const SENHA_PADRAO = "123456";
 
 const transporter = nodemailer.createTransport({

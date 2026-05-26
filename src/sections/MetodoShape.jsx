@@ -187,33 +187,12 @@ export default function MetodoShape() {
                     Depois
                   </div>
 
-                  <div className="relative z-10 grid grid-cols-2 overflow-hidden rounded-[2rem]">
-  
-  <div className="relative">
-    <img
-      src="/IMG_1637.png"
-      alt="Antes"
-      className="h-full w-full object-cover"
-    />
-
-    <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/70 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-white backdrop-blur-xl">
-      Antes
-    </div>
-  </div>
-
-  <div className="relative">
-    <img
-      src="/IMG_1667.png"
-      alt="Depois"
-      className="h-full w-full object-cover"
-    />
-
-    <div className="absolute right-3 top-3 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#D4AF37] backdrop-blur-xl">
-      Depois
-    </div>
-  </div>
-
-  <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#D4AF37] to-transparent opacity-80" />
+                <div className="relative z-10 overflow-hidden rounded-[2rem]">
+  <img
+    src="/evolucao-charles.jpg"
+    alt="Evolução Charles"
+    className="h-full w-full object-cover"
+  />
 </div>
                 </div>
               </div>

@@ -385,7 +385,7 @@ function OfertaPrincipal() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12),transparent_55%)]" />
 
           <div className="relative z-10">
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#A0A7B4] md:text-xs">
+            <p className="text-base font-black uppercase tracking-[0.22em] text-[#F5F5F5] md:text-lg">
               DE <span className="line-through opacity-70">R$ 159,90</span> POR APENAS:
             </p>
 

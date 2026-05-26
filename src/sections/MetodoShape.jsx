@@ -283,11 +283,7 @@ export default function MetodoShape() {
               resposta="O Shape Prime possui estrutura para iniciantes, intermediários e avançados."
             />
 
-            <Faq
-              pergunta="Tenho pouco tempo. Funciona?"
-              resposta="Sim. O importante é consistência e estratégia, não passar horas na academia."
-            />
-
+        
             <Faq
               pergunta="Preciso seguir dieta 100%?"
               resposta="Não. O objetivo é te ensinar consistência, não perfeição impossível."

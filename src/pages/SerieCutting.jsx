@@ -1465,7 +1465,7 @@ const cards = [
   {
     id: "protocolo",
     titulo: "Protocolo Charles Crescimento",
-    subtitulo: "Método oficial",
+    
     categoria: "Protocolo",
     icon: Crown,
     imagem:
@@ -1529,9 +1529,7 @@ export default function SerieCutting() {
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <Resumo icon={CalendarDays} titulo="Série" valor="01" />
-            <Resumo icon={Lock} titulo="Acesso" valor="Vitalício" />
-            <Resumo icon={Flame} titulo="Objetivo" valor="Definição" />
+          
           </div>
         </motion.div>
 

@@ -1533,9 +1533,7 @@ export default function SerieBulking() {
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <Resumo icon={CalendarDays} titulo="Série" valor="01" />
-            <Resumo icon={Lock} titulo="Acesso" valor="Vitalício" />
-            <Resumo icon={Flame} titulo="Objetivo" valor="Hipertrofia" />
+         
           </div>
         </motion.div>
 

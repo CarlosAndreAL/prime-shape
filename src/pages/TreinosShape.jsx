@@ -71,9 +71,7 @@ export default function TreinosShape() {
           </p>
 
           <div className="mx-auto mt-8 grid max-w-4xl gap-4 md:grid-cols-3">
-            <Resumo icon={CalendarDays} titulo="Níveis" valor="03" />
-            <Resumo icon={Lock} titulo="Acesso" valor="Vitalício" />
-            <Resumo icon={Flame} titulo="Objetivo" valor="Evolução" />
+          
           </div>
         </motion.div>
 

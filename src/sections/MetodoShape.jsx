@@ -88,7 +88,7 @@ export default function MetodoShape() {
 </div>
 
     <p className="mx-auto mt-5 max-w-[330px] text-[14px] italic leading-relaxed text-[#F5F5F5] md:max-w-2xl md:text-xl">
-      Treinos, dietas e protocolos prontos para você construir um shape de
+      Treinos, dietas e métodos prontos para você construir um shape de
       respeito sem perder tempo no achismo.
     </p>
 
@@ -103,7 +103,7 @@ export default function MetodoShape() {
     </button>
 
     <p className="mt-5 text-[13px] font-black leading-relaxed text-white md:text-lg">
-      🔥 A transformação que vai mudar seu shape começa agora.
+     
       <br />
       
     </p>
@@ -131,7 +131,7 @@ export default function MetodoShape() {
           </div>
 
           <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-[#D4AF37] md:text-xs">
-            Entenda como funciona a estrutura completa do Shape Prime
+            
           </p>
         </motion.div>
 
@@ -204,9 +204,9 @@ export default function MetodoShape() {
           <CardMetodo
             icon={Flame}
             titulo="QUER SECAR?"
-            descricao="Um protocolo completo para perder gordura sem ficar perdido no processo."
+            descricao="Um método completo para perder gordura sem ficar perdido no processo."
             itens={[
-              "Dieta organizada",
+              "Plano alimentar pra secar",
               "Estratégia de definição",
               "Treinos estruturados",
               "Preservação de massa muscular",
@@ -217,7 +217,7 @@ export default function MetodoShape() {
           <CardMetodo
             icon={Dumbbell}
             titulo="QUER GANHAR MASSA?"
-            descricao="Um plano estruturado para ganhar volume com estratégia e sem virar falso grande."
+            descricao="Um método estruturado para ganhar volume com estratégia e sem virar falso grande."
             itens={[
               "Plano alimentar para crescer",
               "Treinos para hipertrofia",
@@ -344,77 +344,77 @@ function OfertaPrincipal() {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-[30px] border border-white/10 bg-[#0B0D11]/90 p-5 text-center shadow-[0_0_80px_rgba(0,0,0,0.55)] md:mt-20 md:rounded-[40px] md:p-10"
+      className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-[34px] border border-[#D4AF37]/10 bg-[#08090C] p-5 text-center shadow-[0_0_100px_rgba(0,0,0,0.65)] md:mt-24 md:rounded-[44px] md:p-10"
     >
-      <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#D4AF37] md:text-xs">
-        Método Premium
-      </p>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_50%)]" />
 
-      <h2 className="mx-auto mt-3 max-w-3xl text-2xl font-black uppercase leading-[0.95] text-[#F5F5F5] md:text-5xl">
-        Quanto vale ter um shape
-        <span className="block text-[#D4AF37]">
-          que você tenha orgulho?
-        </span>
-      </h2>
-
-      <div className="mx-auto mt-5 max-w-xl rounded-[24px] border border-white/10 bg-[#0F1115] p-4 text-left">
-        <p className="text-[9px] font-black uppercase tracking-[0.16em] text-[#A0A7B4]">
-          Você poderia gastar facilmente:
+      <div className="relative z-10">
+        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#D4AF37] md:text-xs">
+          MÉTODO PREMIUM
         </p>
 
-        <div className="mt-3 grid gap-2 text-xs font-bold text-[#A0A7B4] md:text-sm">
-          <p>❌ R$200+ em consultoria</p>
-          <p>❌ R$150 em treino</p>
-          <p>❌ R$100+ em dieta</p>
+        <h2 className="mx-auto mt-4 max-w-3xl text-[2rem] font-black uppercase leading-[0.9] tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">
+          Quanto vale ter um shape
+          <span className="block text-[#D4AF37]">
+            que você tenha orgulho?
+          </span>
+        </h2>
+
+        <div className="mx-auto mt-6 max-w-xl rounded-[26px] border border-white/10 bg-[#11141A] p-5 text-left">
+          <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#A0A7B4]">
+            Você poderia gastar facilmente:
+          </p>
+
+          <div className="mt-4 space-y-3 text-sm font-bold text-[#F5F5F5] md:text-base">
+            <p>❌ R$200+ em consultoria</p>
+            <p>❌ R$150 em treino</p>
+            <p>❌ R$100+ em dieta</p>
+          </div>
         </div>
-      </div>
 
-      <div className="mt-6 flex items-center justify-center">
-  <div className="rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-red-400 md:text-xs">
-    🔥 50% OFF HOJE
-  </div>
-</div>
+        {/* BADGE PROMO */}
+        <div className="mt-7 flex items-center justify-center">
+          <div className="rounded-full border border-red-500/20 bg-red-500/10 px-5 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-red-400 shadow-[0_0_30px_rgba(239,68,68,0.18)]">
+            🔥 50% OFF HOJE
+          </div>
+        </div>
 
-<p className="mt-5 text-[9px] font-black uppercase tracking-[0.18em] text-[#A0A7B4] md:text-xs">
-  De <span className="line-through opacity-70">R$ 159,90</span> por apenas:
-</p>
+        {/* PREÇO */}
+        <div className="relative mx-auto mt-6 max-w-2xl overflow-hidden rounded-[34px] border border-[#D4AF37]/20 bg-[linear-gradient(180deg,#17120A_0%,#0B0D11_100%)] px-5 py-8 shadow-[0_0_70px_rgba(212,175,55,0.18)] md:px-10 md:py-12">
 
-<div className="mt-3 flex flex-col items-center">
-  <div className="rounded-[30px] border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-6 py-5 shadow-[0_0_45px_rgba(212,175,55,0.12)] md:px-10">
-    <h3 className="text-5xl font-black leading-none text-[#D4AF37] md:text-7xl">
-      R$ 79,90
-    </h3>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12),transparent_55%)]" />
 
-    <p className="mt-3 text-[11px] font-black uppercase tracking-[0.18em] text-[#F5F5F5] md:text-sm">
-      PAGAMENTO ÚNICO • ACESSO VITALÍCIO
-    </p>
-  </div>
-</div>
-      <p className="mt-2 text-xs font-bold uppercase tracking-[0.14em] text-[#F5F5F5] md:text-lg">
-        pagamento único • acesso vitalício
-      </p>
+          <div className="relative z-10">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#A0A7B4] md:text-xs">
+              DE <span className="line-through opacity-70">R$ 159,90</span> POR APENAS:
+            </p>
 
-      <div className="mx-auto mt-5 grid max-w-2xl gap-2 text-left md:grid-cols-2">
-        <OfertaItem texto="Acesso vitalício" />
-        <OfertaItem texto="Atualizações futuras" />
-        <OfertaItem texto="Treinos completos" />
-        <OfertaItem texto="Dietas organizadas" />
-        <OfertaItem texto="Protocolos premium" />
-        <OfertaItem texto="Grupo exclusivo" />
-      </div>
+            <h3 className="mt-4 text-[4rem] font-black leading-none tracking-[-0.06em] text-[#D4AF37] drop-shadow-[0_0_25px_rgba(212,175,55,0.35)] md:text-[7rem]">
+              R$79,90
+            </h3>
 
-      <button
-        onClick={() => (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")}
-        className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#D4AF37] px-5 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:w-auto md:px-10 md:py-5 md:text-base"
-      >
-        <Target size={19} />
-        QUERO COMEÇAR MINHA EVOLUÇÃO
-        <ArrowRight size={19} />
-      </button>
+            <p className="mt-4 text-[11px] font-black uppercase tracking-[0.18em] text-[#F5F5F5] md:text-sm">
+              PAGAMENTO ÚNICO • ACESSO VITALÍCIO
+            </p>
+          </div>
+        </div>
 
-      <div className="mt-4 flex items-center justify-center gap-2 text-[11px] text-[#A0A7B4] md:text-sm">
-        <ShieldCheck size={14} />
-        Pagamento único • acesso imediato • acesso vitalício
+        {/* BOTÃO */}
+        <button
+          onClick={() =>
+            (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
+          }
+          className="mt-7 inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-[22px] bg-[#D4AF37] px-6 py-5 text-[13px] font-black uppercase tracking-[0.14em] text-black shadow-[0_0_50px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:max-w-none md:w-auto md:px-12 md:text-base"
+        >
+          <Target size={20} />
+          QUERO COMEÇAR AGORA
+          <ArrowRight size={20} />
+        </button>
+
+        <div className="mt-5 flex items-center justify-center gap-2 text-[11px] text-[#A0A7B4] md:text-sm">
+          <ShieldCheck size={14} />
+          Pagamento único • acesso imediato • acesso vitalício
+        </div>
       </div>
     </motion.div>
   );

@@ -89,8 +89,9 @@ export default function ObrigadoMetodo() {
             </div>
           </div>
 
-          <form
-            onSubmit={liberarAcesso}
+         <form
+  onSubmit={liberarAcesso}
+  noValidate
             className="rounded-[28px] border border-white/10 bg-white/[0.04] p-5 sm:p-7"
           >
             <div className="space-y-5">
@@ -120,7 +121,7 @@ export default function ObrigadoMetodo() {
                 <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
                   <Mail size={19} className="shrink-0 text-[#d4af37]" />
                   <input
-                    type="email"
+  type="text"
                     name="email"
                     value={form.email}
                     onChange={handleChange}

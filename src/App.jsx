@@ -12,6 +12,7 @@ import TreinosShape from "./pages/TreinosShape";
 import TreinoCharles from "./pages/TreinoCharles";
 import CadastroMetodo from "./pages/CadastroMetodo";
 import LoginMetodo from "./pages/LoginMetodo";
+import ObrigadoMetodo from "./pages/ObrigadoMetodo";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Checkout from "./pages/Checkout";
 
@@ -50,6 +51,8 @@ export default function App() {
         <Route path="/checkout" element={<Checkout />} />
 
         <Route path="/login-metodo" element={<LoginMetodo />} />
+
+        <Route path="/obrigado" element={<ObrigadoMetodo />} />
 
         <Route
           path="/cadastro-metodo"

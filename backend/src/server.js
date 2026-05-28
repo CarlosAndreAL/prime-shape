@@ -92,6 +92,36 @@ app.get("/", (req, res) => {
   res.json({ ok: true, message: "Shape Prime Backend Online" });
 });
 
+async function liberarAcessoMetodo({ nome, email }) {
+  const emailNormalizado = String(email).trim().toLowerCase();
+  const nomeNormalizado = String(nome || "").trim();
+  const usuarioExistente = await prisma.usuario.findUnique({
+    where: { email: emailNormalizado },
+  });
+
+  if (usuarioExistente) {
+    return prisma.usuario.update({
+      where: { email: emailNormalizado },
+      data: {
+        plano: "metodo",
+        acessoLiberado: true,
+      },
+    });
+  }
+
+  const senhaHash = await bcrypt.hash(SENHA_PADRAO, 10);
+
+  return prisma.usuario.create({
+    data: {
+      nome: nomeNormalizado || "Aluno Shape Prime",
+      email: emailNormalizado,
+      senha: senhaHash,
+      plano: "metodo",
+      acessoLiberado: true,
+    },
+  });
+}
+
 function gerarToken(usuario) {
   return jwt.sign(
     { id: usuario.id, email: usuario.email },
@@ -286,22 +316,16 @@ app.post("/auth/liberar-acesso", async (req, res) => {
     }
 
     const emailNormalizado = String(email).trim().toLowerCase();
-    const senhaHash = await bcrypt.hash(SENHA_PADRAO, 10);
+    if (!emailNormalizado) {
+      return res.status(400).json({
+        ok: false,
+        message: "Informe seu email.",
+      });
+    }
 
-    const usuario = await prisma.usuario.upsert({
-      where: { email: emailNormalizado },
-      update: {
-        nome: nome || "Aluno Shape Prime",
-        plano: "metodo",
-        acessoLiberado: true,
-      },
-      create: {
-        nome: nome || "Aluno Shape Prime",
-        email: emailNormalizado,
-        senha: senhaHash,
-        plano: "metodo",
-        acessoLiberado: true,
-      },
+    const usuario = await liberarAcessoMetodo({
+      nome,
+      email: emailNormalizado,
     });
 
     await enviarEmailAcesso({
@@ -390,73 +414,38 @@ app.post("/webhook/kiwify", async (req, res) => {
     }
 
     const emailNormalizado = String(email).trim().toLowerCase();
-    const senhaHash = await bcrypt.hash(SENHA_PADRAO, 10);
-
-    const usuarioExistente = await prisma.usuario.findUnique({
-      where: { email: emailNormalizado },
-    });
-
-    if (usuarioExistente) {
-      const usuarioAtualizado = await prisma.usuario.update({
-        where: { email: emailNormalizado },
-        data: {
-          nome: nome || usuarioExistente.nome,
-          senha: usuarioExistente.senha,
-          plano: "metodo",
-          acessoLiberado: true,
-        },
-        select: {
-          id: true,
-          nome: true,
-          email: true,
-          plano: true,
-          acessoLiberado: true,
-        },
-      });
-
-      await enviarEmailAcesso({
-        nome: usuarioAtualizado.nome,
-        email: emailNormalizado,
-        senha: SENHA_PADRAO,
-      });
-
-      console.log("✅ Usuário já existia. Acesso liberado:", usuarioAtualizado);
-
+    if (!emailNormalizado) {
+      console.log("Webhook aprovado, mas com email vazio.");
       return res.status(200).json({
-        ok: true,
-        message: "Usuário já existia. Acesso liberado e email enviado.",
+        ok: false,
+        message: "Email nao encontrado no webhook.",
       });
     }
 
-    const novoUsuario = await prisma.usuario.create({
-      data: {
-        nome: nome || "Aluno Shape Prime",
-        email: emailNormalizado,
-        senha: senhaHash,
-        plano: "metodo",
-        acessoLiberado: true,
-      },
-      select: {
-        id: true,
-        nome: true,
-        email: true,
-        plano: true,
-        acessoLiberado: true,
-      },
+    const usuario = await liberarAcessoMetodo({
+      nome,
+      email: emailNormalizado,
     });
 
     await enviarEmailAcesso({
-      nome: novoUsuario.nome,
+      nome: usuario.nome,
       email: emailNormalizado,
       senha: SENHA_PADRAO,
     });
 
-    console.log("✅ Novo aluno criado pela Kiwify:", novoUsuario);
+    console.log("Acesso liberado pela Kiwify:", {
+      id: usuario.id,
+      nome: usuario.nome,
+      email: usuario.email,
+      plano: usuario.plano,
+      acessoLiberado: usuario.acessoLiberado,
+    });
 
     return res.status(200).json({
       ok: true,
-      message: "Aluno criado, acesso liberado e email enviado.",
+      message: "Aluno criado/liberado e email enviado.",
     });
+
   } catch (error) {
     console.error("Erro no webhook Kiwify:", error);
 

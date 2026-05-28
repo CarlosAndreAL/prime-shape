@@ -12,46 +12,50 @@ export default function ObrigadoMetodo() {
   }
 
   async function liberarAcesso(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    if (!form.email.trim()) {
-      setStatus({ tipo: "erro", mensagem: "Digite o email usado na compra." });
-      return;
-    }
+  const emailLimpo = form.email.trim().replace(/\s/g, "");
 
-    setCarregando(true);
-    setStatus({ tipo: "", mensagem: "" });
-
-    try {
-      const resposta = await fetch(`${API_URL}/auth/liberar-acesso`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          nome: form.nome.trim(),
-          email: form.email.trim(),
-        }),
-      });
-
-      const dados = await resposta.json();
-
-      if (!resposta.ok) {
-        throw new Error(dados.message || "Erro ao liberar acesso.");
-      }
-
-      setStatus({
-        tipo: "sucesso",
-        mensagem: "Acesso enviado! Confira seu email.",
-      });
-    } catch (error) {
-      setStatus({
-        tipo: "erro",
-        mensagem: error.message || "Erro ao liberar acesso.",
-      });
-    } finally {
-      setCarregando(false);
-    }
+  if (!emailLimpo.includes("@") || !emailLimpo.includes(".")) {
+    setStatus({
+      tipo: "erro",
+      mensagem: "Digite o email completo usado na compra. Ex: nome@gmail.com",
+    });
+    return;
   }
 
+  setCarregando(true);
+  setStatus({ tipo: "", mensagem: "" });
+
+  try {
+    const resposta = await fetch(`${API_URL}/auth/liberar-acesso`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        nome: form.nome.trim(),
+        email: emailLimpo,
+      }),
+    });
+
+    const dados = await resposta.json();
+
+    if (!resposta.ok) {
+      throw new Error(dados.message || "Erro ao liberar acesso.");
+    }
+
+    setStatus({
+      tipo: "sucesso",
+      mensagem: "Acesso enviado! Confira seu email.",
+    });
+  } catch (error) {
+    setStatus({
+      tipo: "erro",
+      mensagem: "Não foi possível liberar o acesso agora. Tente novamente.",
+    });
+  } finally {
+    setCarregando(false);
+  }
+}
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#020202] px-5 py-10 text-white sm:px-6">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_28%)]" />

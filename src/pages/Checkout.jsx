@@ -6,7 +6,7 @@ export default function Checkout() {
     const token = localStorage.getItem("prime_shape_token");
 
 const response = await axios.post(
-  "https://prime-shape-x3q0.onrender.com/pagamentos/criar-preferencia",
+  "https://api.metodoshapeprime.com.br/pagamentos/criar-preferencia",
   {},
   {
     headers: {

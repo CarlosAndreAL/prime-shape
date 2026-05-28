@@ -274,6 +274,56 @@ app.post("/auth/alterar-senha", autenticar, async (req, res) => {
   }
 });
 
+app.post("/auth/liberar-acesso", async (req, res) => {
+  try {
+    const { nome, email } = req.body;
+
+    if (!email) {
+      return res.status(400).json({
+        ok: false,
+        message: "Informe seu email.",
+      });
+    }
+
+    const emailNormalizado = String(email).trim().toLowerCase();
+    const senhaHash = await bcrypt.hash(SENHA_PADRAO, 10);
+
+    const usuario = await prisma.usuario.upsert({
+      where: { email: emailNormalizado },
+      update: {
+        nome: nome || "Aluno Shape Prime",
+        plano: "metodo",
+        acessoLiberado: true,
+      },
+      create: {
+        nome: nome || "Aluno Shape Prime",
+        email: emailNormalizado,
+        senha: senhaHash,
+        plano: "metodo",
+        acessoLiberado: true,
+      },
+    });
+
+    await enviarEmailAcesso({
+      nome: usuario.nome,
+      email: emailNormalizado,
+      senha: SENHA_PADRAO,
+    });
+
+    return res.json({
+      ok: true,
+      message: "Acesso liberado. Verifique seu email.",
+    });
+  } catch (error) {
+    console.error("Erro ao liberar acesso:", error);
+
+    return res.status(500).json({
+      ok: false,
+      message: "Erro ao liberar acesso.",
+    });
+  }
+});
+
 app.post("/webhook/kiwify", async (req, res) => {
   try {
     const body = req.body;

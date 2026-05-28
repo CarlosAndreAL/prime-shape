@@ -1,3 +1,3 @@
-const API_URL = "https://prime-shape-x3q0.onrender.com";
+const API_URL = "https://api.metodoshapeprime.com.br";
 
 export default API_URL;

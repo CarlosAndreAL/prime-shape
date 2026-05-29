@@ -59,7 +59,7 @@ export default function MetodoShapePortal() {
           <PortalCard
             titulo="BULKING"
             subtitulo="Hipertrofia muscular"
-            descricao="Protocolos completos para ganho de massa, força e volume muscular."
+            descricao="Dietas e métodos para ganho de massa, força e volume muscular."
             imagem="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1400&auto=format&fit=crop"
             icon={Dumbbell}
             onClick={() => navigate("/bulking")}

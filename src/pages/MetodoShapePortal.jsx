@@ -51,7 +51,7 @@ export default function MetodoShapePortal() {
             titulo="CUTTING"
             subtitulo="Definição muscular"
             descricao="Dietas e protocolos completos para secar gordura mantendo massa muscular."
-            imagem="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1400&auto=format&fit=crop"
+            imagem="/cuttingfoto.png"
             icon={Flame}
             onClick={() => navigate("/cutting")}
           />
@@ -60,7 +60,7 @@ export default function MetodoShapePortal() {
             titulo="BULKING"
             subtitulo="Hipertrofia muscular"
             descricao="Dietas e métodos para ganho de massa, força e volume muscular."
-            imagem="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1400&auto=format&fit=crop"
+            imagem="/bulkingfoto.png"
             icon={Dumbbell}
             onClick={() => navigate("/bulking")}
           />
@@ -69,7 +69,7 @@ export default function MetodoShapePortal() {
             titulo="TREINO CHARLES"
             subtitulo="Método oficial"
             descricao="Treinos completos e estratégias do método Charles para evolução máxima."
-            imagem="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1400&auto=format&fit=crop"
+            imagem="/treinofoto.png"
             icon={Crown}
             onClick={() => navigate("/treino-charles")}
           />

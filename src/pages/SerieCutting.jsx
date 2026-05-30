@@ -20,6 +20,7 @@ import {
   Dumbbell,
   Activity,
   ClipboardList,
+  ShieldCheck,
 } from "lucide-react";
 
 const dietaHomem1600 = [

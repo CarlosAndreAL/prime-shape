@@ -69,7 +69,7 @@ export default function MetodoShapePortal() {
             titulo="TREINO CHARLES"
             subtitulo="Método oficial"
             descricao="Treinos completos e estratégias do método Charles para evolução máxima."
-            imagem="/treinofoto.png"
+            imagem="/treinosfoto.png"
             icon={Crown}
             onClick={() => navigate("/treino-charles")}
           />

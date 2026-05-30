@@ -1474,15 +1474,18 @@ const cards = [
   descricao: "Estratégias para progredir carga, volume e intensidade com segurança e constância.",
   tipo: "texto",
   conteudo: [
-    "ESTRATÉGIAS DE PROGRESSÃO",
-    "No bulking, crescer não é só comer mais. É treinar melhor, evoluir carga e controlar o progresso.",
-    "1. Registre cargas, repetições e evolução semanal.",
-    "2. Busque progressão de carga com boa execução.",
-    "3. Aumente volume aos poucos, sem exagerar.",
-    "4. Priorize exercícios base e movimentos bem feitos.",
-    "5. Respeite descanso e recuperação.",
-    "Quem progride com método cresce com mais qualidade."
-  ],
+  "ESTRATÉGIAS DE PROGRESSÃO",
+  "A progressão é o principal indicador de crescimento muscular. Sem evolução de performance, dificilmente haverá evolução física consistente.",
+
+  "1. Busque aumentar carga ou repetições semanalmente.",
+  "2. Mantenha a execução perfeita antes de subir peso.",
+  "3. Registre todos os treinos para acompanhar sua evolução.",
+  "4. Utilize sobrecarga progressiva nos exercícios principais.",
+  "5. Quando estagnar, aumente volume ou frequência de forma estratégica.",
+  "6. Priorize força nos exercícios compostos e qualidade nos isoladores.",
+
+  "Quem treina com método e acompanha números cresce mais rápido do que quem apenas treina pesado."
+]
 },
 
 {

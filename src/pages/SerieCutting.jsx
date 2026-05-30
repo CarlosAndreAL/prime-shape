@@ -1461,6 +1461,47 @@ const cards = [
   ],
 },
   
+{
+  id: "estrategias-definicao",
+  titulo: "Estratégias de Definição",
+  subtitulo: "Secar com inteligência",
+  categoria: "Cutting",
+  icon: Flame,
+  imagem: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop",
+  descricao: "Estratégias para acelerar a definição muscular mantendo performance, energia e controle no processo.",
+  tipo: "texto",
+  conteudo: [
+    "ESTRATÉGIAS DE DEFINIÇÃO",
+    "O objetivo do cutting não é apenas perder peso, é reduzir gordura mantendo o máximo de massa muscular possível.",
+    "1. Mantenha proteína alta em todas as refeições.",
+    "2. Reduza calorias de forma progressiva, sem cortar tudo de uma vez.",
+    "3. Priorize treinos intensos para sinalizar ao corpo que ele precisa manter músculo.",
+    "4. Use cardio como ferramenta, não como punição.",
+    "5. Acompanhe medidas, fotos e evolução semanal.",
+    "Definição vem de consistência, estratégia e controle."
+  ],
+},
+
+{
+  id: "preservacao-massa",
+  titulo: "Preservação de Massa Muscular",
+  subtitulo: "Mantenha músculo no déficit",
+  categoria: "Cutting",
+  icon: ShieldCheck,
+  imagem: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1200&auto=format&fit=crop",
+  descricao: "Métodos para preservar força e massa magra durante o déficit calórico.",
+  tipo: "texto",
+  conteudo: [
+    "PRESERVAÇÃO DE MASSA MUSCULAR",
+    "Durante o cutting, o foco é perder gordura sem sacrificar o shape construído.",
+    "1. Não reduza proteína.",
+    "2. Não abandone cargas altas no treino.",
+    "3. Evite déficits calóricos agressivos.",
+    "4. Durma bem para manter recuperação e hormônios regulados.",
+    "5. Controle o cardio para não prejudicar a recuperação.",
+    "O segredo é secar mantendo força, volume e densidade muscular."
+  ],
+},
   
   {
     id: "protocolo",

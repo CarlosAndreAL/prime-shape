@@ -1464,7 +1464,48 @@ const cards = [
   ],
 },
   
-  
+  {
+  id: "estrategias-progressao",
+  titulo: "Estratégias de Progressão",
+  subtitulo: "Evolução constante",
+  categoria: "Bulking",
+  icon: Target,
+  imagem: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
+  descricao: "Estratégias para progredir carga, volume e intensidade com segurança e constância.",
+  tipo: "texto",
+  conteudo: [
+    "ESTRATÉGIAS DE PROGRESSÃO",
+    "No bulking, crescer não é só comer mais. É treinar melhor, evoluir carga e controlar o progresso.",
+    "1. Registre cargas, repetições e evolução semanal.",
+    "2. Busque progressão de carga com boa execução.",
+    "3. Aumente volume aos poucos, sem exagerar.",
+    "4. Priorize exercícios base e movimentos bem feitos.",
+    "5. Respeite descanso e recuperação.",
+    "Quem progride com método cresce com mais qualidade."
+  ],
+},
+
+{
+  id: "ganho-massa-inteligente",
+  titulo: "Ganho de Massa Inteligente",
+  subtitulo: "Crescer com qualidade",
+  categoria: "Bulking",
+  icon: Dumbbell,
+  imagem: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1200&auto=format&fit=crop",
+  descricao: "Métodos para ganhar massa muscular com qualidade, evitando excesso de gordura.",
+  tipo: "texto",
+  conteudo: [
+    "GANHO DE MASSA INTELIGENTE",
+    "Bulking bem feito é construir músculo sem transformar o processo em ganho descontrolado de gordura.",
+    "1. Use superávit calórico moderado.",
+    "2. Mantenha proteína adequada todos os dias.",
+    "3. Distribua carboidratos próximos ao treino.",
+    "4. Ajuste calorias conforme o peso e o espelho evoluem.",
+    "5. Não confunda comer muito com comer certo.",
+    "O objetivo é ganhar volume, força e densidade muscular com qualidade."
+  ],
+},
+
   {
     id: "protocolo",
     titulo: "Protocolo Charles Crescimento",

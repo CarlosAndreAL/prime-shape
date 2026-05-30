@@ -49,7 +49,7 @@ export default function MetodoShape() {
     </p>
 
     <h1 className="mx-auto mt-6 max-w-[330px] text-[1.55rem] font-medium italic uppercase leading-[1.2] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
-      O método que vai destravar seu
+      O método que vai transformar seu
       <span className="text-[#D4AF37]"> shape de uma vez.</span>
     </h1>
 <div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[22px] border border-[#D4AF37]/20 bg-black shadow-[0_0_55px_rgba(212,175,55,0.16)] md:max-w-2xl">
@@ -208,7 +208,6 @@ export default function MetodoShape() {
             itens={[
               "Plano alimentar pra secar",
               "Estratégia de definição",
-              "Treinos estruturados",
               "Preservação de massa muscular",
               "Meu Protocolo Pessoal",
             ]}
@@ -222,7 +221,6 @@ export default function MetodoShape() {
               "Plano alimentar para crescer",
               "Treinos para hipertrofia",
               "Estratégia de progressão",
-              "Organização por nível",
               "Meu Protocolo Pessoal",
             ]}
           />

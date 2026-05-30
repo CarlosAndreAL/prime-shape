@@ -1816,7 +1816,7 @@ function Texto({ card }) {
 
         <p className="mt-5 text-base leading-relaxed text-white/70">
           Meu protocolo foi cuidadosamente estruturado para maximizar os
-          resultados com segurança e eficiência. Aqui está tudo o que utilizei:
+          resultados com segurança e eficiência.
         </p>
 
         <div className="mt-7 rounded-[28px] border border-white/10 bg-black/35 p-5">
@@ -1825,49 +1825,73 @@ function Texto({ card }) {
           </h4>
 
           <div className="mt-5 grid gap-3">
-            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
-              1ml de Durateston — terça-feira
-            </p>
-
-            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
-              1ml de Deca — terça-feira
-            </p>
-
-            <p className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
-              30mg de Hemogenin no pré-treino
-            </p>
+            {["1ml de Durateston — terça-feira", "1ml de Deca — terça-feira", "30mg de Hemogenin no pré-treino"].map((item) => (
+              <p key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-white/75">
+                {item}
+              </p>
+            ))}
           </div>
         </div>
 
-        <div className="mt-6 rounded-[28px] border border-white/10 bg-white/[0.035] p-5">
-          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-[#d4af37]">
-            Importante
+        <div className="mt-6 rounded-[28px] border border-red-500/20 bg-red-500/10 p-5">
+          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-red-300">
+            Aviso importante
           </h4>
 
           <p className="mt-4 text-sm leading-relaxed text-white/70">
-            Esse é apenas o protocolo que EU utilizei. Não recomendo que ninguém
-            utilize por conta própria.
-          </p>
-
-          <p className="mt-4 text-sm leading-relaxed text-white/70">
-            Se você está pensando em seguir qualquer protocolo, procure um médico
-            especializado, faça exames e tenha acompanhamento profissional.
+            Esse é apenas o protocolo que EU utilizei. Não recomendo que ninguém utilize por conta própria.
+            Procure um médico especializado, faça exames e tenha acompanhamento profissional.
           </p>
         </div>
       </div>
     );
   }
 
+  const titulo = card.conteudo?.[0];
+  const intro = card.conteudo?.[1];
+  const itens = card.conteudo?.slice(2, -1) || [];
+  const final = card.conteudo?.[card.conteudo.length - 1];
+
   return (
-    <div className="grid gap-4">
-      {card.conteudo.map((item, index) => (
-        <div
-          key={index}
-          className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5"
-        >
-          <p className="text-sm leading-relaxed text-white/75">{item}</p>
+    <div className="rounded-[34px] border border-[#d4af37]/25 bg-gradient-to-br from-[#d4af37]/10 via-white/[0.03] to-black p-6 md:p-8">
+      <div className="flex items-center gap-3">
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d4af37] text-black">
+          <Target size={24} />
         </div>
-      ))}
+
+        <div>
+          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#d4af37]">
+            Conteúdo premium
+          </p>
+          <h3 className="mt-1 text-3xl font-black uppercase text-white md:text-4xl">
+            {titulo}
+          </h3>
+        </div>
+      </div>
+
+      <p className="mt-6 text-base leading-relaxed text-white/70">
+        {intro}
+      </p>
+
+      <div className="mt-7 grid gap-3">
+        {itens.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/35 p-4"
+          >
+            <CheckCircle2 size={19} className="mt-0.5 min-w-[19px] text-[#d4af37]" />
+            <p className="text-sm leading-relaxed text-white/75">
+              {item.replace(/^\d+\.\s*/, "")}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-7 rounded-[26px] border border-[#d4af37]/25 bg-[#d4af37]/10 p-5">
+        <p className="text-sm font-bold leading-relaxed text-[#f5e39d]">
+          {final}
+        </p>
+      </div>
     </div>
   );
 }

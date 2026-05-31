@@ -1494,7 +1494,7 @@ const cards = [
   subtitulo: "Crescer com qualidade",
   categoria: "Bulking",
   icon: Dumbbell,
-  imagem: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1200&auto=format&fit=crop",
+  imagem: "/cuttingfoto.png",
   descricao: "Métodos para ganhar massa muscular com qualidade, evitando excesso de gordura.",
   tipo: "texto",
   conteudo: [
@@ -1516,7 +1516,7 @@ const cards = [
     categoria: "Protocolo",
     icon: Crown,
     imagem:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop",
+      "/bulkingfoto.png",
     descricao:
   "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
     tipo: "texto",

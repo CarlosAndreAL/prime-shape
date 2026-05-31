@@ -1468,7 +1468,7 @@ const cards = [
   subtitulo: "Secar com inteligência",
   categoria: "Cutting",
   icon: Flame,
-  imagem: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop",
+  imagem: "/cuttingfoto.png",
   descricao: "Estratégias para acelerar a definição muscular mantendo performance, energia e controle no processo.",
   tipo: "texto",
   conteudo: [
@@ -1489,7 +1489,7 @@ const cards = [
   subtitulo: "Mantenha músculo no déficit",
   categoria: "Cutting",
   icon: ShieldCheck,
-  imagem: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1200&auto=format&fit=crop",
+  imagem: "/bulkingfoto.png",
   descricao: "Métodos para preservar força e massa magra durante o déficit calórico.",
   tipo: "texto",
   conteudo: [

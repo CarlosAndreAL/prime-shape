@@ -1503,38 +1503,6 @@ const cards = [
     "O segredo é secar mantendo força, volume e densidade muscular."
   ],
 },
-  
-  {
-    id: "protocolo",
-    titulo: "Protocolo Charles Crescimento",
-    
-    categoria: "Protocolo",
-    icon: Crown,
-    imagem:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop",
-    descricao:
-  "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
-    tipo: "texto",
-conteudo: [
-  "MEU PROTOCOLO COMPLETO",
-  "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança, performance e evolução física.",
-
-  "HORMONIZAÇÃO",
-  "• 1ml de Durateston — terça-feira",
-  "• 1ml de Deca — terça-feira",
-  "• 30mg de Hemogenin no pré-treino",
-
-  "DISCIPLINA",
-  "Todo o protocolo foi seguido com treino intenso, dieta ajustada, constância e acompanhamento da evolução semanal.",
-
-  "IMPORTANTE",
-  "Esse é apenas o protocolo que EU utilizei durante minha evolução.",
-  "Não recomendo que ninguém utilize qualquer tipo de hormônio por conta própria.",
-
-  "ORIENTAÇÃO PROFISSIONAL",
-  "Se você pretende seguir qualquer protocolo hormonal, procure um médico especializado, faça exames e tenha acompanhamento profissional adequado.",
-    ],
-  },
 ];
 
 export default function SerieCutting() {

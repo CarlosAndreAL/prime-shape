@@ -1506,11 +1506,11 @@ const cards = [
 
 {
   id: "protocolo-charles-cutting",
-  titulo: "Protocolo Charles",
+  titulo: "Protocolo Charles Cutting",
   subtitulo: "Método oficial",
   categoria: "Protocolo",
   icon: Crown,
-  imagem: "/cuttingfoto.png",
+  imagem: "/cardcutting.png",
   descricao:
     "Protocolo utilizado pelo Charles durante sua fase de definição muscular.",
   tipo: "texto",

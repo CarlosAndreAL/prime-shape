@@ -1561,14 +1561,7 @@ export default function SerieCutting() {
           </div>
 
           <div className="overflow-x-auto pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <motion.div
-  drag="x"
-  dragConstraints={{ left: -850, right: 0 }}
-  dragElastic={0.12}
-  whileTap={{ cursor: "grabbing" }}
-
-  className="flex w-max cursor-grab gap-6 active:cursor-grabbing"
->
+            <div className="flex gap-6 w-max">
   {cards.map((card) => (
                 <ModuloCard
                   key={card.id}
@@ -1576,7 +1569,7 @@ export default function SerieCutting() {
                   onClick={() => setCardAberto(card)}
                 />
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
       </section>

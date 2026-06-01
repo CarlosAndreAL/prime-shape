@@ -1503,6 +1503,35 @@ const cards = [
     "O segredo é secar mantendo força, volume e densidade muscular."
   ],
 },
+
+{
+  id: "protocolo-charles-cutting",
+  titulo: "Protocolo Charles",
+  subtitulo: "Método oficial",
+  categoria: "Protocolo",
+  icon: Crown,
+  imagem: "/cuttingfoto.png",
+  descricao:
+    "Protocolo utilizado pelo Charles durante sua fase de definição muscular.",
+  tipo: "texto",
+  conteudo: [
+    "MEU PROTOCOLO COMPLETO",
+    "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança e eficiência.",
+
+    "2ml de Enantato de Testosterona por semana (400mg)",
+    "Segunda-feira: 1ml (200mg)",
+    "Quinta-feira: 1ml (200mg)",
+    "30mg de Oxandrolona no pré-treino",
+
+    "Esse protocolo foi seguido de forma disciplinada, aliado a um treino e dieta ajustados.",
+
+    "IMPORTANTE",
+
+    "Esse é apenas o protocolo que EU utilizei. Não recomendo que ninguém utilize por conta própria.",
+
+    "Se você está pensando em seguir qualquer protocolo, procure um médico especializado, faça exames e tenha acompanhamento profissional."
+  ],
+},
 ];
 
 export default function SerieCutting() {
@@ -1761,7 +1790,9 @@ function DietasHomem({ card }) {
 }
 
 function Texto({ card }) {
-  const isProtocolo = card.id === "protocolo";
+  const isProtocolo =
+  card.id === "protocolo" ||
+  card.id === "protocolo-charles-cutting";
 
   if (isProtocolo) {
     return (

@@ -1511,7 +1511,7 @@ const cards = [
 
   {
     id: "protocolo",
-    titulo: "Protocolo Charles Crescimento",
+    titulo: "Protocolo Charles Bulking",
     subtitulo: "Método oficial",
     categoria: "Protocolo",
     icon: Crown,

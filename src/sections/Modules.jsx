@@ -42,7 +42,7 @@ export default function Modules() {
   return (
     <section style={styles.section}>
       <div style={styles.bg} />
-      <div style={styles.goldTopLine} />
+      <div style={styles.neonTopLine} />
       <div style={styles.energyGlow} />
 
       <motion.div
@@ -85,7 +85,7 @@ export default function Modules() {
               <img src={image} alt="" style={styles.image} />
 
               <div style={styles.cardDark} />
-              <div style={styles.cardGold} />
+              <div style={styles.cardNeon} />
               <div style={styles.cardNoise} />
 
               <div style={styles.number}>
@@ -120,10 +120,10 @@ const styles = {
     position: "absolute",
     inset: 0,
     background:
-      "radial-gradient(circle at 50% 20%, rgba(212,175,55,0.18), transparent 42%), linear-gradient(180deg, #000 0%, #060503 50%, #000 100%)",
+      "radial-gradient(circle at 50% 20%, rgba(163,255,18,0.18), transparent 42%), linear-gradient(180deg, #000 0%, #060503 50%, #000 100%)",
   },
 
-  goldTopLine: {
+  neonTopLine: {
     position: "absolute",
     top: 0,
     left: "50%",
@@ -131,9 +131,9 @@ const styles = {
     width: "84%",
     height: "2px",
     background:
-      "linear-gradient(90deg, transparent, #d4af37, transparent)",
+      "linear-gradient(90deg, transparent, #a3ff12, transparent)",
     boxShadow:
-      "0 0 25px rgba(212,175,55,0.8), 0 0 80px rgba(212,175,55,0.25)",
+      "0 0 25px rgba(163,255,18,0.8), 0 0 80px rgba(163,255,18,0.25)",
   },
 
   energyGlow: {
@@ -144,7 +144,7 @@ const styles = {
     width: "1200px",
     height: "420px",
     borderRadius: "999px",
-    background: "rgba(212,175,55,0.12)",
+    background: "rgba(163,255,18,0.12)",
     filter: "blur(120px)",
   },
 
@@ -161,9 +161,9 @@ const styles = {
     marginBottom: "22px",
     padding: "10px 18px",
     borderRadius: "999px",
-    background: "rgba(212,175,55,0.10)",
-    border: "1px solid rgba(212,175,55,0.28)",
-    color: "#d4af37",
+    background: "rgba(163,255,18,0.10)",
+    border: "1px solid rgba(163,255,18,0.28)",
+    color: "#a3ff12",
     fontSize: isMobile ? "11px" : "13px",
     fontWeight: 1000,
     letterSpacing: "3px",
@@ -216,9 +216,9 @@ const styles = {
     borderRadius: isMobile ? "26px" : "34px",
     overflow: "hidden",
     background: "#111",
-    border: "1px solid rgba(212,175,55,0.26)",
+    border: "1px solid rgba(163,255,18,0.26)",
     boxShadow:
-      "0 0 70px rgba(212,175,55,0.12), inset 0 0 60px rgba(0,0,0,0.8)",
+      "0 0 70px rgba(163,255,18,0.12), inset 0 0 60px rgba(0,0,0,0.8)",
   },
 
   image: {
@@ -236,11 +236,11 @@ const styles = {
       "linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.96) 82%)",
   },
 
-  cardGold: {
+  cardNeon: {
     position: "absolute",
     inset: 0,
     background:
-      "radial-gradient(circle at top, rgba(212,175,55,0.32), transparent 45%)",
+      "radial-gradient(circle at top, rgba(163,255,18,0.32), transparent 45%)",
     mixBlendMode: "screen",
   },
 
@@ -248,7 +248,7 @@ const styles = {
     position: "absolute",
     inset: 0,
     background:
-      "linear-gradient(90deg, rgba(212,175,55,0.08), transparent 45%, rgba(255,255,255,0.05))",
+      "linear-gradient(90deg, rgba(163,255,18,0.08), transparent 45%, rgba(255,255,255,0.05))",
   },
 
   number: {
@@ -280,7 +280,7 @@ const styles = {
 
   cardText: {
     margin: "14px 0 0",
-    color: "#d4af37",
+    color: "#a3ff12",
     fontSize: isMobile ? "11px" : "13px",
     fontWeight: 1000,
     letterSpacing: "1.4px",
@@ -294,7 +294,7 @@ const styles = {
     bottom: "14px",
     height: "2px",
     background:
-      "linear-gradient(90deg, transparent, rgba(212,175,55,0.9), transparent)",
-    boxShadow: "0 0 18px rgba(212,175,55,0.8)",
+      "linear-gradient(90deg, transparent, rgba(163,255,18,0.9), transparent)",
+    boxShadow: "0 0 18px rgba(163,255,18,0.8)",
   },
 };

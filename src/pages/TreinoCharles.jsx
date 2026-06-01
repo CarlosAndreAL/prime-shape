@@ -137,7 +137,7 @@ export default function TreinoCharles() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.22),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.22),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
       <div className="pointer-events-none fixed inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:42px_42px]" />
 
       <section className="relative z-10 mx-auto max-w-7xl px-6 py-16">
@@ -147,7 +147,7 @@ export default function TreinoCharles() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37]">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#a3ff12]">
             <Crown size={14} />
             Método oficial Shape Prime
           </div>
@@ -156,7 +156,7 @@ export default function TreinoCharles() {
             TREINO CHARLES
           </h1>
 
-          <p className="mt-5 text-2xl font-black uppercase text-[#d4af37]">
+          <p className="mt-5 text-2xl font-black uppercase text-[#a3ff12]">
             Protocolo semanal avançado
           </p>
 
@@ -171,8 +171,8 @@ export default function TreinoCharles() {
           </div>
         </motion.div>
 
-        <div className="mt-14 rounded-[34px] border border-[#d4af37]/20 bg-[#d4af37]/10 p-6">
-          <Target className="text-[#d4af37]" size={30} />
+        <div className="mt-14 rounded-[34px] border border-[#a3ff12]/20 bg-[#a3ff12]/10 p-6">
+          <Target className="text-[#a3ff12]" size={30} />
 
           <h2 className="mt-4 text-3xl font-black uppercase">
             Escolha o dia do treino
@@ -185,7 +185,7 @@ export default function TreinoCharles() {
                 onClick={() => setDiaAberto(dia)}
                 className={`rounded-2xl border px-5 py-4 text-left text-sm font-black uppercase transition ${
                   diaAberto.dia === dia.dia
-                    ? "border-[#d4af37] bg-[#d4af37] text-black"
+                    ? "border-[#a3ff12] bg-[#a3ff12] text-black"
                     : "border-white/10 bg-black/30 text-white/70"
                 }`}
               >
@@ -196,7 +196,7 @@ export default function TreinoCharles() {
         </div>
 
         <div className="mt-10 rounded-[34px] border border-white/10 bg-white/[0.03] p-6">
-          <p className="text-xs font-black uppercase tracking-[0.22em] text-[#d4af37]">
+          <p className="text-xs font-black uppercase tracking-[0.22em] text-[#a3ff12]">
             {diaAberto.grupo}
           </p>
 
@@ -211,7 +211,7 @@ export default function TreinoCharles() {
                 className="rounded-2xl border border-white/10 bg-black/30 p-4"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 min-w-10 items-center justify-center rounded-xl bg-[#d4af37] text-xs font-black text-black">
+                  <div className="flex h-10 w-10 min-w-10 items-center justify-center rounded-xl bg-[#a3ff12] text-xs font-black text-black">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
@@ -238,7 +238,7 @@ export default function TreinoCharles() {
 function Resumo({ icon: Icon, titulo, valor }) {
   return (
     <div className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5 text-left">
-      <Icon className="text-[#d4af37]" size={28} />
+      <Icon className="text-[#a3ff12]" size={28} />
 
       <p className="mt-4 text-3xl font-black">{valor}</p>
 

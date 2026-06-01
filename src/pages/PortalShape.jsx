@@ -14,7 +14,7 @@ import {
 export default function PortalShape() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.28),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.28),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
 
       <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:42px_42px]" />
 
@@ -26,14 +26,14 @@ export default function PortalShape() {
           className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
         >
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#d4af37]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#a3ff12]">
               <Sparkles size={13} />
               SHAPE PRIME PREMIUM
             </div>
 
             <h1 className="mt-5 text-5xl font-black uppercase leading-[0.9] tracking-[-0.06em] md:text-7xl">
               ESCOLHA SUA
-              <span className="block text-[#d4af37]">
+              <span className="block text-[#a3ff12]">
                 JORNADA
               </span>
             </h1>
@@ -43,8 +43,8 @@ export default function PortalShape() {
             </p>
           </div>
 
-          <div className="rounded-[30px] border border-[#d4af37]/20 bg-[#d4af37]/10 p-6 backdrop-blur-xl">
-            <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#d4af37]">
+          <div className="rounded-[30px] border border-[#a3ff12]/20 bg-[#a3ff12]/10 p-6 backdrop-blur-xl">
+            <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#a3ff12]">
               STATUS DA CONTA
             </p>
 
@@ -53,7 +53,7 @@ export default function PortalShape() {
             </h3>
 
             <div className="mt-4 flex items-center gap-2 text-sm text-white/60">
-              <CheckCircle2 size={18} className="text-[#d4af37]" />
+              <CheckCircle2 size={18} className="text-[#a3ff12]" />
               Acesso vitalício liberado
             </div>
           </div>
@@ -63,19 +63,19 @@ export default function PortalShape() {
           initial={{ opacity: 0, y: 45 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative mt-10 overflow-hidden rounded-[40px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_right,rgba(212,175,55,0.18),transparent_35%),linear-gradient(135deg,#0b0907,#000)] p-8 md:p-12"
+          className="relative mt-10 overflow-hidden rounded-[40px] border border-[#a3ff12]/20 bg-[radial-gradient(circle_at_right,rgba(163,255,18,0.18),transparent_35%),linear-gradient(135deg,#0b0907,#000)] p-8 md:p-12"
         >
-          <div className="absolute right-[-100px] top-[-100px] h-[320px] w-[320px] rounded-full bg-[#d4af37]/20 blur-[100px]" />
+          <div className="absolute right-[-100px] top-[-100px] h-[320px] w-[320px] rounded-full bg-[#a3ff12]/20 blur-[100px]" />
 
           <div className="relative z-10 max-w-3xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/25 bg-[#d4af37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#d4af37]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/25 bg-[#a3ff12]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#a3ff12]">
               <Crown size={13} />
               EXPERIÊNCIA PREMIUM
             </div>
 
             <h2 className="text-4xl font-black uppercase leading-[0.9] tracking-[-0.05em] md:text-6xl">
               O PRIMEIRO PASSO
-              <span className="block text-[#d4af37]">
+              <span className="block text-[#a3ff12]">
                 PARA O SHAPE.
               </span>
             </h2>
@@ -84,7 +84,7 @@ export default function PortalShape() {
               Dentro da plataforma você terá protocolos completos de cutting e bulking, organização por módulos, vídeos de execução, dietas, treinos e acompanhamento da evolução.
             </p>
 
-            <button className="mt-8 flex h-[58px] items-center gap-3 rounded-2xl bg-[#d4af37] px-7 text-sm font-black uppercase tracking-[0.12em] text-black shadow-[0_0_55px_rgba(212,175,55,0.35)] transition hover:scale-[1.03]">
+            <button className="mt-8 flex h-[58px] items-center gap-3 rounded-2xl bg-[#a3ff12] px-7 text-sm font-black uppercase tracking-[0.12em] text-black shadow-[0_0_55px_rgba(163,255,18,0.35)] transition hover:scale-[1.03]">
               Começar agora
               <ArrowRight size={20} />
             </button>
@@ -94,7 +94,7 @@ export default function PortalShape() {
         <section className="mt-16">
           <div className="mb-7 flex items-center justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.25em] text-[#d4af37]">
+              <p className="text-xs font-black uppercase tracking-[0.25em] text-[#a3ff12]">
                 Protocolos
               </p>
 
@@ -104,7 +104,7 @@ export default function PortalShape() {
             </div>
 
             <div className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-white/45 md:flex">
-              <Star size={14} className="text-[#d4af37]" />
+              <Star size={14} className="text-[#a3ff12]" />
               Experiência cinematográfica
             </div>
           </div>
@@ -139,14 +139,14 @@ export default function PortalShape() {
                 "Execução correta",
                 "Progressão de carga",
               ]}
-              cor="from-[#d4af37]/20"
+              cor="from-[#a3ff12]/20"
             />
           </div>
         </section>
 
         <section className="mt-20">
           <div className="mb-7">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#d4af37]">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#a3ff12]">
               Dentro da plataforma
             </p>
 
@@ -197,11 +197,11 @@ function SerieCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/70" />
 
         <div className="relative z-10 flex h-full flex-col justify-end p-7">
-          <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-[#d4af37] text-black shadow-[0_0_50px_rgba(212,175,55,0.45)]">
+          <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-[#a3ff12] text-black shadow-[0_0_50px_rgba(163,255,18,0.45)]">
             <Icon size={30} />
           </div>
 
-          <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37]">
+          <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#a3ff12]">
             Série exclusiva
           </p>
 
@@ -223,13 +223,13 @@ function SerieCard({
                 key={episodio}
                 className="flex items-center gap-2 text-sm text-white/75"
               >
-                <PlayCircle size={16} className="text-[#d4af37]" />
+                <PlayCircle size={16} className="text-[#a3ff12]" />
                 {episodio}
               </div>
             ))}
           </div>
 
-          <button className="mt-8 flex h-[58px] items-center justify-center gap-3 rounded-2xl bg-[#d4af37] text-sm font-black uppercase tracking-[0.14em] text-black shadow-[0_0_60px_rgba(212,175,55,0.35)] transition hover:scale-[1.02]">
+          <button className="mt-8 flex h-[58px] items-center justify-center gap-3 rounded-2xl bg-[#a3ff12] text-sm font-black uppercase tracking-[0.14em] text-black shadow-[0_0_60px_rgba(163,255,18,0.35)] transition hover:scale-[1.02]">
             Assistir série
             <ArrowRight size={19} />
           </button>
@@ -245,7 +245,7 @@ function MiniCard({ titulo }) {
       whileHover={{ y: -5 }}
       className="rounded-[28px] border border-white/10 bg-white/[0.035] p-6 backdrop-blur-xl"
     >
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#a3ff12]/10 text-[#a3ff12]">
         <Lock size={24} />
       </div>
 

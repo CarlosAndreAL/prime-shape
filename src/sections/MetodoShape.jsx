@@ -22,14 +22,14 @@ const COLORS = {
   bg: "#0F1115",
   text: "#F5F5F5",
   muted: "#A0A7B4",
-  gold: "#D4AF37",
-  amber: "#F59E0B",
+  neon: "#A3FF12",
+  lime: "#7CFF00",
 };
 
 export default function MetodoShape() {
   return (
     <section className="relative overflow-hidden bg-[#0F1115] px-4 py-12 text-[#F5F5F5] md:px-6 md:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.11),transparent_34%),radial-gradient(circle_at_bottom,rgba(245,158,11,0.06),transparent_42%),linear-gradient(180deg,#0F1115_0%,#090B0F_55%,#0F1115_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.11),transparent_34%),radial-gradient(circle_at_bottom,rgba(124,255,0,0.06),transparent_42%),linear-gradient(180deg,#0F1115_0%,#090B0F_55%,#0F1115_100%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,.22)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.22)_1px,transparent_1px)] [background-size:42px_42px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
@@ -40,19 +40,19 @@ export default function MetodoShape() {
   viewport={{ once: true }}
   className="relative mx-auto max-w-5xl overflow-hidden rounded-[28px] border border-white/10 bg-[#050608] px-4 py-7 text-center shadow-[0_0_80px_rgba(0,0,0,0.7)] md:rounded-[42px] md:px-10 md:py-12"
 >
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.16),transparent_36%),linear-gradient(180deg,rgba(212,175,55,0.08),transparent_45%)]" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.16),transparent_36%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_45%)]" />
 
   <div className="relative z-10">
-    <p className="mx-auto inline-flex items-center justify-center rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/10 px-4 py-2 text-[8px] font-black uppercase tracking-[0.22em] text-[#D4AF37] md:text-xs">
+    <p className="mx-auto inline-flex items-center justify-center rounded-full border border-[#A3FF12]/25 bg-[#A3FF12]/10 px-4 py-2 text-[8px] font-black uppercase tracking-[0.22em] text-[#A3FF12] md:text-xs">
       <Sparkles size={12} className="mr-2" />
       Método Premium
     </p>
 
     <h1 className="mx-auto mt-6 max-w-[330px] text-[1.55rem] font-medium italic uppercase leading-[1.2] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
       O método que vai transformar seu
-      <span className="text-[#D4AF37]"> shape de uma vez.</span>
+      <span className="text-[#A3FF12]"> shape de uma vez.</span>
     </h1>
-<div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[22px] border border-[#D4AF37]/20 bg-black shadow-[0_0_55px_rgba(212,175,55,0.16)] md:max-w-2xl">
+<div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[22px] border border-[#A3FF12]/20 bg-black shadow-[0_0_55px_rgba(163,255,18,0.16)] md:max-w-2xl">
 
   <div className="grid grid-cols-2">
     
@@ -77,14 +77,14 @@ export default function MetodoShape() {
         className="h-[320px] w-full object-cover md:h-[520px]"
       />
 
-      <div className="absolute right-3 top-3 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-[#D4AF37] backdrop-blur-md">
+      <div className="absolute right-3 top-3 rounded-full border border-[#A3FF12]/20 bg-[#A3FF12]/10 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-[#A3FF12] backdrop-blur-md">
         DEPOIS
       </div>
     </div>
   </div>
 
   {/* DIVISOR */}
-  <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#D4AF37] to-transparent opacity-80" />
+  <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#A3FF12] to-transparent opacity-80" />
 </div>
 
     <p className="mx-auto mt-5 max-w-[330px] text-[14px] italic leading-relaxed text-[#F5F5F5] md:max-w-2xl md:text-xl">
@@ -96,7 +96,7 @@ export default function MetodoShape() {
       onClick={() =>
         (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
       }
-      className="mx-auto mt-6 inline-flex w-full max-w-[300px] items-center justify-center gap-3 rounded-xl bg-[#D4AF37] px-5 py-4 text-base font-black text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.02] hover:bg-[#F59E0B]"
+      className="mx-auto mt-6 inline-flex w-full max-w-[300px] items-center justify-center gap-3 rounded-xl bg-[#A3FF12] px-5 py-4 text-base font-black text-black shadow-[0_0_45px_rgba(163,255,18,0.28)] transition hover:scale-[1.02] hover:bg-[#7CFF00]"
     >
       Quero ter acesso
       <ArrowRight size={20} />
@@ -130,7 +130,7 @@ export default function MetodoShape() {
             </div>
           </div>
 
-          <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-[#D4AF37] md:text-xs">
+          <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-[#A3FF12] md:text-xs">
             
           </p>
         </motion.div>
@@ -143,17 +143,17 @@ export default function MetodoShape() {
             viewport={{ once: true }}
             className="relative overflow-hidden rounded-[34px] border border-white/10 bg-[#0B0D11]/90 p-6 shadow-[0_0_80px_rgba(0,0,0,0.55)] backdrop-blur-xl md:rounded-[44px] md:p-10"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_45%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.08),transparent_45%)]" />
 
             <div className="relative z-10 grid gap-7 md:grid-cols-[1fr_0.9fr] md:items-center">
               <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#D4AF37] md:text-xs">
+                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#A3FF12] md:text-xs">
                   RESULTADOS REAIS
                 </p>
 
                 <h2 className="mt-4 text-3xl font-black uppercase leading-[0.9] tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">
                   Eu não nasci com shape.
-                  <span className="block text-[#D4AF37]">
+                  <span className="block text-[#A3FF12]">
                     Eu construí isso.
                   </span>
                 </h2>
@@ -163,10 +163,10 @@ export default function MetodoShape() {
                   tudo em um método que realmente funciona.
                 </p>
 
-                <div className="mt-6 rounded-3xl border border-[#D4AF37]/20 bg-[#D4AF37]/5 p-5">
+                <div className="mt-6 rounded-3xl border border-[#A3FF12]/20 bg-[#A3FF12]/5 p-5">
                   <p className="text-xl font-black uppercase leading-tight text-[#F5F5F5] md:text-3xl">
                     Se funcionou pra mim,
-                    <span className="block text-[#D4AF37]">
+                    <span className="block text-[#A3FF12]">
                       pode funcionar pra você.
                     </span>
                   </p>
@@ -174,16 +174,16 @@ export default function MetodoShape() {
               </div>
 
               <div className="relative flex items-center justify-center">
-                <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle,rgba(212,175,55,0.10),transparent_70%)] blur-3xl" />
+                <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle,rgba(163,255,18,0.10),transparent_70%)] blur-3xl" />
 
                 <div className="relative overflow-hidden rounded-[2.4rem] border border-white/10 bg-[#0F1115] p-3 shadow-[0_0_80px_rgba(0,0,0,0.55)]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.06),transparent_55%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.06),transparent_55%)]" />
 
                   <div className="absolute left-5 top-5 z-20 rounded-full border border-white/10 bg-black/70 px-4 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#F5F5F5] backdrop-blur-xl">
                     Antes
                   </div>
 
-                  <div className="absolute bottom-5 right-5 z-20 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#D4AF37] backdrop-blur-xl">
+                  <div className="absolute bottom-5 right-5 z-20 rounded-full border border-[#A3FF12]/20 bg-[#A3FF12]/10 px-4 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#A3FF12] backdrop-blur-xl">
                     Depois
                   </div>
 
@@ -295,13 +295,13 @@ export default function MetodoShape() {
         </section>
 
         <section className="mt-16 text-center md:mt-20">
-          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#D4AF37] md:text-sm">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#A3FF12] md:text-sm">
             COMEÇA AGORA
           </p>
 
           <h2 className="mx-auto mt-4 max-w-4xl text-3xl font-black uppercase leading-[0.95] text-[#F5F5F5] md:text-6xl">
             Seu shape não vai mudar
-            <span className="block text-[#D4AF37]">
+            <span className="block text-[#A3FF12]">
               fazendo a mesma coisa.
             </span>
           </h2>
@@ -313,14 +313,14 @@ export default function MetodoShape() {
 
           <button
             onClick={() => (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")}
-            className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#D4AF37] px-6 py-4 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[0_0_45px_rgba(212,175,55,0.28)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:w-auto md:px-10 md:py-5 md:text-sm"
+            className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#A3FF12] px-6 py-4 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[0_0_45px_rgba(163,255,18,0.28)] transition hover:scale-[1.03] hover:bg-[#7CFF00] md:w-auto md:px-10 md:py-5 md:text-sm"
           >
             COMEÇAR AGORA
             <ArrowRight size={20} />
           </button>
         </section>
 
-        <div className="mt-10 flex items-center justify-center gap-2 text-[#D4AF37]">
+        <div className="mt-10 flex items-center justify-center gap-2 text-[#A3FF12]">
           <Lock size={18} />
           <p className="text-center text-xs font-bold uppercase tracking-[0.16em] md:text-sm">
             Plataforma premium Shape Prime
@@ -338,18 +338,18 @@ function OfertaPrincipal() {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-[34px] border border-[#D4AF37]/10 bg-[#08090C] p-5 text-center shadow-[0_0_100px_rgba(0,0,0,0.65)] md:mt-24 md:rounded-[44px] md:p-10"
+      className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-[34px] border border-[#A3FF12]/10 bg-[#08090C] p-5 text-center shadow-[0_0_100px_rgba(0,0,0,0.65)] md:mt-24 md:rounded-[44px] md:p-10"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.08),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.08),transparent_50%)]" />
 
       <div className="relative z-10">
-        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#D4AF37] md:text-xs">
+        <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#A3FF12] md:text-xs">
           MÉTODO PREMIUM
         </p>
 
         <h2 className="mx-auto mt-4 max-w-3xl text-[2rem] font-black uppercase leading-[0.9] tracking-[-0.04em] text-[#F5F5F5] md:text-6xl">
           Quanto vale ter um shape
-          <span className="block text-[#D4AF37]">
+          <span className="block text-[#A3FF12]">
             que você tenha orgulho?
           </span>
         </h2>
@@ -374,16 +374,16 @@ function OfertaPrincipal() {
         </div>
 
         {/* PREÇO */}
-        <div className="relative mx-auto mt-6 max-w-2xl overflow-hidden rounded-[34px] border border-[#D4AF37]/20 bg-[linear-gradient(180deg,#17120A_0%,#0B0D11_100%)] px-5 py-8 shadow-[0_0_70px_rgba(212,175,55,0.18)] md:px-10 md:py-12">
+        <div className="relative mx-auto mt-6 max-w-2xl overflow-hidden rounded-[34px] border border-[#A3FF12]/20 bg-[linear-gradient(180deg,#071405_0%,#0B0D11_100%)] px-5 py-8 shadow-[0_0_70px_rgba(163,255,18,0.18)] md:px-10 md:py-12">
 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.12),transparent_55%)]" />
 
           <div className="relative z-10">
             <p className="text-base font-black uppercase tracking-[0.22em] text-[#F5F5F5] md:text-lg">
               DE <span className="line-through opacity-70">R$ 159,90</span> POR APENAS:
             </p>
 
-            <h3 className="mt-4 text-[4rem] font-black leading-none tracking-[-0.06em] text-[#D4AF37] drop-shadow-[0_0_25px_rgba(212,175,55,0.35)] md:text-[7rem]">
+            <h3 className="mt-4 text-[4rem] font-black leading-none tracking-[-0.06em] text-[#A3FF12] drop-shadow-[0_0_25px_rgba(163,255,18,0.35)] md:text-[7rem]">
               R$79,90
             </h3>
 
@@ -398,7 +398,7 @@ function OfertaPrincipal() {
           onClick={() =>
             (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
           }
-          className="mt-7 inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-[22px] bg-[#D4AF37] px-6 py-5 text-[13px] font-black uppercase tracking-[0.14em] text-black shadow-[0_0_50px_rgba(212,175,55,0.35)] transition hover:scale-[1.03] hover:bg-[#F59E0B] md:max-w-none md:w-auto md:px-12 md:text-base"
+          className="mt-7 inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-[22px] bg-[#A3FF12] px-6 py-5 text-[13px] font-black uppercase tracking-[0.14em] text-black shadow-[0_0_50px_rgba(163,255,18,0.35)] transition hover:scale-[1.03] hover:bg-[#7CFF00] md:max-w-none md:w-auto md:px-12 md:text-base"
         >
           <Target size={20} />
           QUERO COMEÇAR AGORA
@@ -417,7 +417,7 @@ function OfertaPrincipal() {
 function Titulo({ tag, titulo, texto }) {
   return (
     <div className="text-center">
-      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#D4AF37] md:text-xs">
+      <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#A3FF12] md:text-xs">
         {tag}
       </p>
 
@@ -436,9 +436,9 @@ function CardMetodo({ icon: Icon, titulo, descricao, itens }) {
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.01 }}
-      className="rounded-[30px] border border-white/10 bg-[#0B0D11]/90 p-6 shadow-[0_0_70px_rgba(0,0,0,0.35)] transition hover:border-[#D4AF37]/30 md:rounded-[34px] md:p-8"
+      className="rounded-[30px] border border-white/10 bg-[#0B0D11]/90 p-6 shadow-[0_0_70px_rgba(0,0,0,0.35)] transition hover:border-[#A3FF12]/30 md:rounded-[34px] md:p-8"
     >
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#D4AF37] text-black md:h-16 md:w-16 md:rounded-3xl">
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#A3FF12] text-black md:h-16 md:w-16 md:rounded-3xl">
         <Icon size={28} />
       </div>
 
@@ -453,7 +453,7 @@ function CardMetodo({ icon: Icon, titulo, descricao, itens }) {
       <div className="mt-6 space-y-3">
         {itens.map((item) => (
           <div key={item} className="flex items-center gap-3 text-sm text-[#A0A7B4] md:text-base">
-            <CheckCircle2 size={18} className="min-w-[18px] text-[#D4AF37]" />
+            <CheckCircle2 size={18} className="min-w-[18px] text-[#A3FF12]" />
             {item}
           </div>
         ))}
@@ -464,8 +464,8 @@ function CardMetodo({ icon: Icon, titulo, descricao, itens }) {
 
 function Feature({ icon: Icon, title }) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#0B0D11]/90 p-4 transition hover:border-[#D4AF37]/30 hover:bg-[#11141A] md:p-5">
-      <div className="flex h-11 w-11 min-w-11 items-center justify-center rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] md:h-12 md:w-12">
+    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#0B0D11]/90 p-4 transition hover:border-[#A3FF12]/30 hover:bg-[#11141A] md:p-5">
+      <div className="flex h-11 w-11 min-w-11 items-center justify-center rounded-2xl bg-[#A3FF12]/10 text-[#A3FF12] md:h-12 md:w-12">
         <Icon size={21} />
       </div>
 
@@ -479,7 +479,7 @@ function Feature({ icon: Icon, title }) {
 function MiniCard({ numero, titulo, texto }) {
   return (
     <div className="rounded-[26px] border border-white/10 bg-[#0B0D11]/90 p-5 md:rounded-[30px] md:p-6">
-      <p className="text-3xl font-black text-[#D4AF37] md:text-4xl">
+      <p className="text-3xl font-black text-[#A3FF12] md:text-4xl">
         {numero}
       </p>
 
@@ -498,7 +498,7 @@ function Faq({ pergunta, resposta }) {
   return (
     <div className="rounded-[26px] border border-white/10 bg-[#0B0D11]/90 p-5 md:rounded-[30px] md:p-6">
       <div className="flex items-start gap-4">
-        <div className="flex h-11 w-11 min-w-11 items-center justify-center rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] md:h-12 md:w-12">
+        <div className="flex h-11 w-11 min-w-11 items-center justify-center rounded-2xl bg-[#A3FF12]/10 text-[#A3FF12] md:h-12 md:w-12">
           <HelpCircle size={21} />
         </div>
 
@@ -519,7 +519,7 @@ function Faq({ pergunta, resposta }) {
 function OfertaItem({ texto }) {
   return (
     <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#0F1115] p-3 text-xs font-bold text-[#A0A7B4] md:p-4 md:text-sm">
-      <CheckCircle2 size={16} className="min-w-[16px] text-[#D4AF37]" />
+      <CheckCircle2 size={16} className="min-w-[16px] text-[#A3FF12]" />
       {texto}
     </div>
   );

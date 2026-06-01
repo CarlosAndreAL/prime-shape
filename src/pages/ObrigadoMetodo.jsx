@@ -58,12 +58,12 @@ export default function ObrigadoMetodo() {
 }
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#020202] px-5 py-10 text-white sm:px-6">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_28%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.18),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_28%)]" />
 
       <section className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] w-full max-w-5xl items-center justify-center">
-        <div className="grid w-full gap-8 rounded-[32px] border border-[#d4af37]/20 bg-[#050505]/92 p-6 shadow-[0_0_90px_rgba(212,175,55,0.1)] backdrop-blur-xl md:grid-cols-[1.05fr_0.95fr] md:p-10">
+        <div className="grid w-full gap-8 rounded-[32px] border border-[#a3ff12]/20 bg-[#050505]/92 p-6 shadow-[0_0_90px_rgba(163,255,18,0.1)] backdrop-blur-xl md:grid-cols-[1.05fr_0.95fr] md:p-10">
           <div className="flex flex-col justify-center">
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-[#d4af37]">
+            <p className="text-xs font-black uppercase tracking-[0.35em] text-[#a3ff12]">
               SHAPE PRIME
             </p>
 
@@ -100,12 +100,12 @@ export default function ObrigadoMetodo() {
           >
             <div className="space-y-5">
               <div>
-                <label className="mb-2 block text-xs font-black uppercase tracking-[0.22em] text-[#d4af37]">
+                <label className="mb-2 block text-xs font-black uppercase tracking-[0.22em] text-[#a3ff12]">
                   Nome opcional
                 </label>
 
                 <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
-                  <User size={19} className="shrink-0 text-[#d4af37]" />
+                  <User size={19} className="shrink-0 text-[#a3ff12]" />
                   <input
                     type="text"
                     name="nome"
@@ -118,12 +118,12 @@ export default function ObrigadoMetodo() {
               </div>
 
               <div>
-                <label className="mb-2 block text-xs font-black uppercase tracking-[0.22em] text-[#d4af37]">
+                <label className="mb-2 block text-xs font-black uppercase tracking-[0.22em] text-[#a3ff12]">
                   Email da compra
                 </label>
 
                 <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/35 px-5 py-4">
-                  <Mail size={19} className="shrink-0 text-[#d4af37]" />
+                  <Mail size={19} className="shrink-0 text-[#a3ff12]" />
                   <input
   type="text"
                     name="email"
@@ -139,7 +139,7 @@ export default function ObrigadoMetodo() {
               <button
                 type="submit"
                 disabled={carregando}
-                className="flex min-h-[58px] w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
+                className="flex min-h-[58px] w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#efffc2] via-[#a3ff12] to-[#4fd000] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {carregando ? (
                   <Loader2 size={21} className="animate-spin" />
@@ -155,7 +155,7 @@ export default function ObrigadoMetodo() {
                 <div
                   className={`rounded-2xl border px-5 py-4 text-sm font-bold ${
                     status.tipo === "sucesso"
-                      ? "border-[#d4af37]/35 bg-[#d4af37]/10 text-[#f4d66d]"
+                      ? "border-[#a3ff12]/35 bg-[#a3ff12]/10 text-[#f4d66d]"
                       : "border-red-400/30 bg-red-500/10 text-red-100"
                   }`}
                 >
@@ -171,7 +171,7 @@ export default function ObrigadoMetodo() {
               {status.tipo === "sucesso" && (
                 <a
                   href="/#/login-metodo"
-                  className="flex min-h-[54px] w-full items-center justify-center gap-3 rounded-2xl border border-[#d4af37]/35 bg-[#d4af37]/10 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#f4d66d] transition hover:bg-[#d4af37]/15"
+                  className="flex min-h-[54px] w-full items-center justify-center gap-3 rounded-2xl border border-[#a3ff12]/35 bg-[#a3ff12]/10 px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-[#f4d66d] transition hover:bg-[#a3ff12]/15"
                 >
                   Entrar no portal
                   <ArrowRight size={19} />

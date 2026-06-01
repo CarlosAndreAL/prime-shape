@@ -32,11 +32,11 @@ export default function LoginMetodo() {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black px-6 py-16 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,255,18,0.15),transparent_60%)]" />
 
-      <div className="relative z-10 mx-auto max-w-2xl rounded-[40px] border border-[#d4af37]/20 bg-[#050505]/90 p-10 shadow-[0_0_80px_rgba(212,175,55,0.08)] backdrop-blur-xl">
+      <div className="relative z-10 mx-auto max-w-2xl rounded-[40px] border border-[#a3ff12]/20 bg-[#050505]/90 p-10 shadow-[0_0_80px_rgba(163,255,18,0.08)] backdrop-blur-xl">
         <div className="mb-10 text-center">
-          <p className="text-sm font-black uppercase tracking-[0.35em] text-[#d4af37]">
+          <p className="text-sm font-black uppercase tracking-[0.35em] text-[#a3ff12]">
             SHAPE PRIME
           </p>
 
@@ -51,12 +51,12 @@ export default function LoginMetodo() {
 
         <div className="space-y-6">
           <div>
-            <label className="mb-2 block text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
+            <label className="mb-2 block text-sm font-bold uppercase tracking-[0.2em] text-[#a3ff12]">
               Email
             </label>
 
             <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
-              <Mail size={20} className="text-[#d4af37]" />
+              <Mail size={20} className="text-[#a3ff12]" />
 
               <input
                 type="email"
@@ -70,12 +70,12 @@ export default function LoginMetodo() {
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
+            <label className="mb-2 block text-sm font-bold uppercase tracking-[0.2em] text-[#a3ff12]">
               Senha
             </label>
 
             <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
-              <Lock size={20} className="text-[#d4af37]" />
+              <Lock size={20} className="text-[#a3ff12]" />
 
               <input
                 type="password"
@@ -90,7 +90,7 @@ export default function LoginMetodo() {
 
           <button
             onClick={entrar}
-            className="mt-6 flex w-full items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] px-8 py-5 text-lg font-black uppercase text-black transition hover:scale-[1.02]"
+            className="mt-6 flex w-full items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-[#efffc2] via-[#a3ff12] to-[#4fd000] px-8 py-5 text-lg font-black uppercase text-black transition hover:scale-[1.02]"
           >
             ENTRAR NO PORTAL
             <ArrowRight size={22} />
@@ -98,7 +98,7 @@ export default function LoginMetodo() {
 
           <button
           onClick={() => (window.location.href = "/#/login-metodo")}
-            className="w-full text-sm font-bold uppercase tracking-[0.18em] text-white/45 transition hover:text-[#d4af37]"
+            className="w-full text-sm font-bold uppercase tracking-[0.18em] text-white/45 transition hover:text-[#a3ff12]"
           >
           Acesso liberado após a compra
           </button>

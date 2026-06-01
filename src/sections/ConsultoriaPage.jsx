@@ -83,17 +83,17 @@ export default function ConsultoriaPage({ onVoltar }) {
       `}</style>
 
       <div className="fixed inset-0 overflow-hidden bg-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(212,175,55,0.26),transparent_30%),radial-gradient(circle_at_18%_45%,rgba(212,175,55,0.11),transparent_35%),radial-gradient(circle_at_85%_70%,rgba(212,175,55,0.13),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
-        <div className="absolute left-1/2 top-[-180px] h-[540px] w-[540px] -translate-x-1/2 rounded-full bg-[#d4af37]/20 blur-[130px]" />
-        <div className="absolute -left-44 top-[38%] h-[420px] w-[420px] rounded-full bg-[#d4af37]/10 blur-[125px]" />
-        <div className="absolute -right-44 top-[58%] h-[460px] w-[460px] rounded-full bg-[#d4af37]/10 blur-[135px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(163,255,18,0.26),transparent_30%),radial-gradient(circle_at_18%_45%,rgba(163,255,18,0.11),transparent_35%),radial-gradient(circle_at_85%_70%,rgba(163,255,18,0.13),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+        <div className="absolute left-1/2 top-[-180px] h-[540px] w-[540px] -translate-x-1/2 rounded-full bg-[#a3ff12]/20 blur-[130px]" />
+        <div className="absolute -left-44 top-[38%] h-[420px] w-[420px] rounded-full bg-[#a3ff12]/10 blur-[125px]" />
+        <div className="absolute -right-44 top-[58%] h-[460px] w-[460px] rounded-full bg-[#a3ff12]/10 blur-[135px]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.93)_100%)]" />
       </div>
 
       {onVoltar && (
         <button
           onClick={onVoltar}
-          className="fixed left-5 top-5 z-50 rounded-full border border-[#d4af37]/35 bg-black/75 px-5 py-3 text-xs font-black uppercase tracking-[0.24em] text-[#d4af37] backdrop-blur-xl"
+          className="fixed left-5 top-5 z-50 rounded-full border border-[#a3ff12]/35 bg-black/75 px-5 py-3 text-xs font-black uppercase tracking-[0.24em] text-[#a3ff12] backdrop-blur-xl"
         >
           ← Voltar
         </button>
@@ -113,7 +113,7 @@ export default function ConsultoriaPage({ onVoltar }) {
               CONSULTORIA
             </h2>
 
-            <p className="mt-1 text-[11px] font-black tracking-[0.45em] text-[#d4af37]">
+            <p className="mt-1 text-[11px] font-black tracking-[0.45em] text-[#a3ff12]">
               PERSONALIZADA
             </p>
           </motion.div>
@@ -124,14 +124,14 @@ export default function ConsultoriaPage({ onVoltar }) {
             transition={{ delay: 0.12 }}
             className="text-center"
           >
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.25em] text-[#d4af37]">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.25em] text-[#a3ff12]">
               <Zap size={14} />
               Resultado com direção
             </p>
 
             <h1 className="text-[48px] font-black uppercase leading-[0.86] tracking-[-0.08em] sm:text-[72px]">
               Pare de tentar
-              <span className="block bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#8f6d12] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(212,175,55,0.35)]">
+              <span className="block bg-gradient-to-r from-[#efffc2] via-[#a3ff12] to-[#4fd000] bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(163,255,18,0.35)]">
                 sozinho
               </span>
               comece com método
@@ -158,10 +158,10 @@ export default function ConsultoriaPage({ onVoltar }) {
         <div className="mx-auto max-w-[580px]">
           <SectionTitle icon={Flame} title="O problema não é você" />
 
-          <div className="mt-10 overflow-hidden rounded-[34px] border border-[#d4af37]/20 bg-white/[0.035] p-7 shadow-[0_0_90px_rgba(212,175,55,0.09)]">
+          <div className="mt-10 overflow-hidden rounded-[34px] border border-[#a3ff12]/20 bg-white/[0.035] p-7 shadow-[0_0_90px_rgba(163,255,18,0.09)]">
             <h2 className="text-[34px] font-black uppercase leading-[0.92] tracking-[-0.05em]">
               O que faltava era
-              <span className="block text-[#d4af37]">direção.</span>
+              <span className="block text-[#a3ff12]">direção.</span>
             </h2>
 
             <p className="mt-5 text-[16px] leading-relaxed text-white/70">
@@ -173,7 +173,7 @@ export default function ConsultoriaPage({ onVoltar }) {
               {bullets.map((item) => (
                 <div key={item} className="flex gap-3">
                   <CheckCircle2
-                    className="mt-1 min-w-5 text-[#d4af37]"
+                    className="mt-1 min-w-5 text-[#a3ff12]"
                     size={21}
                   />
                   <p className="text-[15px] leading-relaxed text-white/75">
@@ -201,12 +201,12 @@ export default function ConsultoriaPage({ onVoltar }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, amount: 0.2 }}
                   transition={{ delay: index * 0.06 }}
-                  className="relative overflow-hidden rounded-[28px] border border-[#d4af37]/20 bg-white/[0.035] p-5 shadow-[0_0_60px_rgba(212,175,55,0.07)]"
+                  className="relative overflow-hidden rounded-[28px] border border-[#a3ff12]/20 bg-white/[0.035] p-5 shadow-[0_0_60px_rgba(163,255,18,0.07)]"
                 >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.16),transparent_60%)]" />
-                  <Icon size={36} className="relative z-10 text-[#d4af37]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.16),transparent_60%)]" />
+                  <Icon size={36} className="relative z-10 text-[#a3ff12]" />
 
-                  <h3 className="relative z-10 mt-5 text-[13px] font-black uppercase leading-tight text-[#d4af37]">
+                  <h3 className="relative z-10 mt-5 text-[13px] font-black uppercase leading-tight text-[#a3ff12]">
                     {item.title}
                   </h3>
 
@@ -228,14 +228,14 @@ export default function ConsultoriaPage({ onVoltar }) {
             {steps.map((item, index) => (
               <div
                 key={item}
-                className="relative overflow-hidden rounded-[26px] border border-[#d4af37]/18 bg-white/[0.035] p-5"
+                className="relative overflow-hidden rounded-[26px] border border-[#a3ff12]/18 bg-white/[0.035] p-5"
               >
                 <div className="absolute right-4 top-3 text-[46px] font-black leading-none text-white/[0.04]">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
                 <div className="relative z-10 flex items-center gap-4">
-                  <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]">
+                  <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl border border-[#a3ff12]/30 bg-[#a3ff12]/10 text-[#a3ff12]">
                     <Crown size={24} />
                   </div>
 
@@ -260,7 +260,7 @@ export default function ConsultoriaPage({ onVoltar }) {
         <div className="mx-auto max-w-[580px]">
           <SectionTitle icon={Dumbbell} title="Pra quem é" />
 
-          <div className="mt-10 rounded-[34px] border border-[#d4af37]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.16),transparent_48%),rgba(255,255,255,0.035)] p-7">
+          <div className="mt-10 rounded-[34px] border border-[#a3ff12]/20 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.16),transparent_48%),rgba(255,255,255,0.035)] p-7">
             <h2 className="text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em]">
               Essa consultoria é para quem quer parar de improvisar.
             </h2>
@@ -275,12 +275,12 @@ export default function ConsultoriaPage({ onVoltar }) {
       </section>
 
       <section className="relative z-10 border-t border-white/10 px-5 py-14">
-        <div className="relative mx-auto max-w-[580px] overflow-hidden rounded-[36px] border border-[#d4af37]/25 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.24),transparent_45%),rgba(255,255,255,0.035)] p-8 shadow-[0_0_90px_rgba(212,175,55,0.12)]">
+        <div className="relative mx-auto max-w-[580px] overflow-hidden rounded-[36px] border border-[#a3ff12]/25 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.24),transparent_45%),rgba(255,255,255,0.035)] p-8 shadow-[0_0_90px_rgba(163,255,18,0.12)]">
           <div className="shine-smooth absolute top-0 h-full w-[35%] bg-gradient-to-r from-transparent via-white/10 to-transparent blur-sm" />
 
           <h2 className="relative z-10 text-center text-[42px] font-black uppercase leading-[0.92] tracking-[-0.05em]">
             Chegou
-            <span className="block text-[#d4af37]">a sua vez</span>
+            <span className="block text-[#a3ff12]">a sua vez</span>
           </h2>
 
           <p className="relative z-10 mx-auto mt-5 max-w-[420px] text-center text-[15px] leading-relaxed text-white/68">
@@ -312,7 +312,7 @@ function CtaButton({ text1, text2, compact = false, href }) {
       target="_blank"
       rel="noreferrer"
       whileTap={{ scale: 0.97 }}
-      className={`relative flex w-full items-center justify-between overflow-hidden rounded-[28px] bg-gradient-to-r from-[#fff0a6] via-[#d4af37] to-[#9b7310] px-7 text-black shadow-[0_0_90px_rgba(212,175,55,0.35)] ${
+      className={`relative flex w-full items-center justify-between overflow-hidden rounded-[28px] bg-gradient-to-r from-[#efffc2] via-[#a3ff12] to-[#54d800] px-7 text-black shadow-[0_0_90px_rgba(163,255,18,0.35)] ${
         compact ? "mt-8 py-5" : "mt-9 py-6"
       }`}
     >
@@ -328,7 +328,7 @@ function CtaButton({ text1, text2, compact = false, href }) {
         </h3>
       </div>
 
-      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-black text-[#d4af37]">
+      <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-black text-[#a3ff12]">
         <ArrowRight size={30} />
       </div>
     </motion.a>
@@ -339,16 +339,16 @@ function SectionTitle({ icon: Icon, title }) {
   return (
     <div className="text-center">
       <div className="mb-4 flex items-center justify-center gap-4">
-        <span className="h-px w-10 bg-[#d4af37]" />
+        <span className="h-px w-10 bg-[#a3ff12]" />
 
-        <div className="flex items-center gap-2 text-[#d4af37]">
+        <div className="flex items-center gap-2 text-[#a3ff12]">
           <Icon size={18} />
           <p className="text-xs font-black uppercase tracking-[0.25em]">
             {title}
           </p>
         </div>
 
-        <span className="h-px w-10 bg-[#d4af37]" />
+        <span className="h-px w-10 bg-[#a3ff12]" />
       </div>
     </div>
   );
@@ -385,7 +385,7 @@ function BeforeAfterMobile() {
         ref={boxRef}
         onPointerMove={move}
         onPointerDown={move}
-        className="relative h-[520px] w-full touch-none overflow-hidden rounded-[36px] border border-[#d4af37]/35 bg-black shadow-[0_0_120px_rgba(212,175,55,0.18)] sm:h-[640px]"
+        className="relative h-[520px] w-full touch-none overflow-hidden rounded-[36px] border border-[#a3ff12]/35 bg-black shadow-[0_0_120px_rgba(163,255,18,0.18)] sm:h-[640px]"
       >
         <img
           src={depoisImg}
@@ -405,9 +405,9 @@ function BeforeAfterMobile() {
 
         <div
           ref={lineRef}
-          className="absolute left-1/2 top-0 z-20 h-full w-[4px] -translate-x-1/2 bg-[#d4af37] shadow-[0_0_40px_rgba(212,175,55,1)]"
+          className="absolute left-1/2 top-0 z-20 h-full w-[4px] -translate-x-1/2 bg-[#a3ff12] shadow-[0_0_40px_rgba(163,255,18,1)]"
         >
-          <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-black bg-[#d4af37] text-3xl font-black text-black shadow-[0_0_45px_rgba(212,175,55,0.9)]">
+          <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-4 border-black bg-[#a3ff12] text-3xl font-black text-black shadow-[0_0_45px_rgba(163,255,18,0.9)]">
             ↔
           </div>
         </div>
@@ -416,7 +416,7 @@ function BeforeAfterMobile() {
           ANTES
         </div>
 
-        <div className="absolute right-4 top-4 z-30 rounded-xl border border-[#d4af37]/40 bg-black/85 px-4 py-2 text-xs font-black tracking-[0.2em] backdrop-blur-xl">
+        <div className="absolute right-4 top-4 z-30 rounded-xl border border-[#a3ff12]/40 bg-black/85 px-4 py-2 text-xs font-black tracking-[0.2em] backdrop-blur-xl">
           RESULTADO
         </div>
 

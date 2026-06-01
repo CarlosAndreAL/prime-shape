@@ -1547,7 +1547,7 @@ export default function SerieBulking() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.24),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.24),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
 
       <div className="pointer-events-none fixed inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:42px_42px]" />
 
@@ -1558,7 +1558,7 @@ export default function SerieBulking() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37]">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#a3ff12]">
             <Crown size={14} />
             Série premium Shape Prime
           </div>
@@ -1567,7 +1567,7 @@ export default function SerieBulking() {
             BULKING
           </h1>
 
-          <p className="mt-5 text-2xl font-black uppercase text-[#d4af37]">
+          <p className="mt-5 text-2xl font-black uppercase text-[#a3ff12]">
             Hipertrofia muscular
           </p>
 
@@ -1584,7 +1584,7 @@ export default function SerieBulking() {
         <section className="mt-14">
           <div className="mb-6 flex items-center justify-between">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.25em] text-[#d4af37]">
+              <p className="text-xs font-black uppercase tracking-[0.25em] text-[#a3ff12]">
                 Tudo que você precisa
               </p>
 
@@ -1594,7 +1594,7 @@ export default function SerieBulking() {
             </div>
 
             <div className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-white/45 md:flex">
-              <Sparkles size={14} className="text-[#d4af37]" />
+              <Sparkles size={14} className="text-[#a3ff12]" />
               Arraste para o lado
             </div>
           </div>
@@ -1645,7 +1645,7 @@ function ModuloCard({ card, onClick }) {
       whileHover={{ y: -12, scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={onClick}
-      className="group relative h-[430px] w-[285px] shrink-0 overflow-hidden rounded-[34px] border border-[#d4af37]/20 bg-black text-left shadow-[0_0_90px_rgba(212,175,55,0.10)]"
+      className="group relative h-[430px] w-[285px] shrink-0 overflow-hidden rounded-[34px] border border-[#a3ff12]/20 bg-black text-left shadow-[0_0_90px_rgba(163,255,18,0.10)]"
     >
       <img
         src={card.imagem}
@@ -1654,21 +1654,21 @@ function ModuloCard({ card, onClick }) {
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/50" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.18),transparent_45%)]" />
 
       <div className="relative z-10 flex h-full flex-col justify-between p-5">
         <div className="flex items-start justify-between">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#d4af37] text-black shadow-[0_0_50px_rgba(212,175,55,0.5)]">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#a3ff12] text-black shadow-[0_0_50px_rgba(163,255,18,0.5)]">
             <Icon size={26} />
           </div>
 
-          <span className="rounded-full border border-[#d4af37]/30 bg-black/55 px-3 py-1 text-[9px] font-black uppercase tracking-[0.18em] text-[#d4af37]">
+          <span className="rounded-full border border-[#a3ff12]/30 bg-black/55 px-3 py-1 text-[9px] font-black uppercase tracking-[0.18em] text-[#a3ff12]">
             {card.categoria}
           </span>
         </div>
 
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#d4af37]">
+          <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#a3ff12]">
             {card.subtitulo}
           </p>
 
@@ -1680,7 +1680,7 @@ function ModuloCard({ card, onClick }) {
             {card.descricao}
           </p>
 
-          <div className="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-[#d4af37]">
+          <div className="mt-6 flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-[#a3ff12]">
             Abrir módulo
             <ArrowRight size={16} />
           </div>
@@ -1704,7 +1704,7 @@ function ModalConteudo({ card, fechar }) {
         initial={{ opacity: 0, y: 80, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 80, scale: 0.96 }}
-        className="mx-auto max-w-6xl overflow-hidden rounded-[40px] border border-[#d4af37]/25 bg-[#070706]"
+        className="mx-auto max-w-6xl overflow-hidden rounded-[40px] border border-[#a3ff12]/25 bg-[#070706]"
       >
         <div className="relative h-[330px]">
           <img src={card.imagem} alt="" className="h-full w-full object-cover" />
@@ -1719,7 +1719,7 @@ function ModalConteudo({ card, fechar }) {
           </button>
 
           <div className="absolute bottom-8 left-8 right-8">
-            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37]">
+            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#a3ff12]">
               {card.categoria}
             </p>
 
@@ -1754,8 +1754,8 @@ function DietasHomem({ card }) {
 
   return (
     <div>
-      <div className="mb-8 rounded-[30px] border border-[#d4af37]/20 bg-[#d4af37]/10 p-6">
-        <Target className="text-[#d4af37]" size={30} />
+      <div className="mb-8 rounded-[30px] border border-[#a3ff12]/20 bg-[#a3ff12]/10 p-6">
+        <Target className="text-[#a3ff12]" size={30} />
 
         <h3 className="mt-4 text-3xl font-black uppercase">
           Dietas Bulking Premium
@@ -1764,7 +1764,7 @@ function DietasHomem({ card }) {
         <div className="mt-7 grid gap-5">
           {card.planos.map((grupo) => (
             <div key={grupo.grupo}>
-              <h4 className="mb-3 text-lg font-black uppercase text-[#d4af37]">
+              <h4 className="mb-3 text-lg font-black uppercase text-[#a3ff12]">
                 {grupo.grupo}
               </h4>
 
@@ -1775,7 +1775,7 @@ function DietasHomem({ card }) {
                     onClick={() => setPlanoAberto(plano)}
                     className={`rounded-2xl border px-5 py-4 text-left text-sm font-black uppercase transition ${
                       planoAberto.nome === plano.nome
-                        ? "border-[#d4af37] bg-[#d4af37] text-black"
+                        ? "border-[#a3ff12] bg-[#a3ff12] text-black"
                         : "border-white/10 bg-black/30 text-white/70"
                     }`}
                   >
@@ -1805,7 +1805,7 @@ function Texto({ card }) {
 
   if (isProtocolo) {
     return (
-      <div className="rounded-[34px] border border-[#d4af37]/25 bg-[#d4af37]/10 p-6 md:p-8">
+      <div className="rounded-[34px] border border-[#a3ff12]/25 bg-[#a3ff12]/10 p-6 md:p-8">
         <h3 className="text-4xl font-black uppercase text-white">
           Meu protocolo completo
         </h3>
@@ -1816,7 +1816,7 @@ function Texto({ card }) {
         </p>
 
         <div className="mt-7 rounded-[28px] border border-white/10 bg-black/35 p-5">
-          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-[#d4af37]">
+          <h4 className="text-xl font-black uppercase tracking-[0.18em] text-[#a3ff12]">
             Harmonização
           </h4>
 
@@ -1849,14 +1849,14 @@ function Texto({ card }) {
   const final = card.conteudo?.[card.conteudo.length - 1];
 
   return (
-    <div className="rounded-[34px] border border-[#d4af37]/25 bg-gradient-to-br from-[#d4af37]/10 via-white/[0.03] to-black p-6 md:p-8">
+    <div className="rounded-[34px] border border-[#a3ff12]/25 bg-gradient-to-br from-[#a3ff12]/10 via-white/[0.03] to-black p-6 md:p-8">
       <div className="flex items-center gap-3">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d4af37] text-black">
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#a3ff12] text-black">
           <Target size={24} />
         </div>
 
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#d4af37]">
+          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#a3ff12]">
             Conteúdo premium
           </p>
           <h3 className="mt-1 text-3xl font-black uppercase text-white md:text-4xl">
@@ -1875,7 +1875,7 @@ function Texto({ card }) {
             key={index}
             className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/35 p-4"
           >
-            <CheckCircle2 size={19} className="mt-0.5 min-w-[19px] text-[#d4af37]" />
+            <CheckCircle2 size={19} className="mt-0.5 min-w-[19px] text-[#a3ff12]" />
             <p className="text-sm leading-relaxed text-white/75">
               {item.replace(/^\d+\.\s*/, "")}
             </p>
@@ -1883,8 +1883,8 @@ function Texto({ card }) {
         ))}
       </div>
 
-      <div className="mt-7 rounded-[26px] border border-[#d4af37]/25 bg-[#d4af37]/10 p-5">
-        <p className="text-sm font-bold leading-relaxed text-[#f5e39d]">
+      <div className="mt-7 rounded-[26px] border border-[#a3ff12]/25 bg-[#a3ff12]/10 p-5">
+        <p className="text-sm font-bold leading-relaxed text-[#ddff8a]">
           {final}
         </p>
       </div>
@@ -1897,8 +1897,8 @@ function TreinosBulking({ card }) {
 
   return (
     <div>
-      <div className="mb-8 rounded-[30px] border border-[#d4af37]/20 bg-[#d4af37]/10 p-6">
-        <Target className="text-[#d4af37]" size={30} />
+      <div className="mb-8 rounded-[30px] border border-[#a3ff12]/20 bg-[#a3ff12]/10 p-6">
+        <Target className="text-[#a3ff12]" size={30} />
 
         <h3 className="mt-4 text-3xl font-black uppercase">
           Treinos Bulking Premium
@@ -1911,7 +1911,7 @@ function TreinosBulking({ card }) {
         <div className="mt-7 grid gap-5">
           {card.treinos.map((grupo) => (
             <div key={grupo.grupo}>
-              <h4 className="mb-3 text-lg font-black uppercase text-[#d4af37]">
+              <h4 className="mb-3 text-lg font-black uppercase text-[#a3ff12]">
                 {grupo.grupo}
               </h4>
 
@@ -1922,7 +1922,7 @@ function TreinosBulking({ card }) {
                     onClick={() => setTreinoAberto(treino)}
                     className={`rounded-2xl border px-5 py-4 text-left text-sm font-black uppercase transition ${
                       treinoAberto.nome === treino.nome
-                        ? "border-[#d4af37] bg-[#d4af37] text-black"
+                        ? "border-[#a3ff12] bg-[#a3ff12] text-black"
                         : "border-white/10 bg-black/30 text-white/70"
                     }`}
                   >
@@ -1945,7 +1945,7 @@ function TreinosBulking({ card }) {
             key={dia.dia}
             className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6"
           >
-            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#d4af37]">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#a3ff12]">
               {dia.grupo}
             </p>
 
@@ -1960,7 +1960,7 @@ function TreinosBulking({ card }) {
                   className="rounded-2xl border border-white/10 bg-black/30 p-4"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="flex h-9 w-9 min-w-9 items-center justify-center rounded-xl bg-[#d4af37] text-xs font-black text-black">
+                    <div className="flex h-9 w-9 min-w-9 items-center justify-center rounded-xl bg-[#a3ff12] text-xs font-black text-black">
                       {String(index + 1).padStart(2, "0")}
                     </div>
 
@@ -1989,12 +1989,12 @@ function Refeicao({ refeicao }) {
   return (
     <div className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6">
       <div className="flex items-center gap-3">
-        <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
+        <div className="flex h-12 w-12 min-w-12 items-center justify-center rounded-2xl bg-[#a3ff12]/10 text-[#a3ff12]">
           <Icon size={24} />
         </div>
 
         <div>
-          <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#d4af37]">
+          <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-[#a3ff12]">
             <Clock size={13} />
             {refeicao.horario}
           </p>
@@ -2013,7 +2013,7 @@ function Refeicao({ refeicao }) {
           >
             <CheckCircle2
               size={18}
-              className="mt-0.5 min-w-[18px] text-[#d4af37]"
+              className="mt-0.5 min-w-[18px] text-[#a3ff12]"
             />
 
             <p className="text-sm leading-relaxed text-white/75">{item}</p>
@@ -2022,8 +2022,8 @@ function Refeicao({ refeicao }) {
       </div>
 
       {refeicao.substituicoes?.length > 0 && (
-        <div className="mt-5 rounded-2xl border border-[#d4af37]/15 bg-[#d4af37]/10 p-4">
-          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#d4af37]">
+        <div className="mt-5 rounded-2xl border border-[#a3ff12]/15 bg-[#a3ff12]/10 p-4">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#a3ff12]">
             Substituições
           </p>
 
@@ -2043,7 +2043,7 @@ function Refeicao({ refeicao }) {
 function Resumo({ icon: Icon, titulo, valor }) {
   return (
     <div className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5">
-      <Icon className="text-[#d4af37]" size={28} />
+      <Icon className="text-[#a3ff12]" size={28} />
 
       <p className="mt-4 text-3xl font-black">{valor}</p>
 

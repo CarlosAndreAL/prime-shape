@@ -24,20 +24,20 @@ body{
 }
 
 ::-webkit-scrollbar-thumb{
-  background:#d4af37;
+  background:#a3ff12;
   border-radius:999px;
 }
 
-.gold-glow{
+.neon-glow{
   box-shadow:
-    0 0 25px rgba(212,175,55,.45),
-    0 0 80px rgba(212,175,55,.15);
+    0 0 25px rgba(163,255,18,.45),
+    0 0 80px rgba(163,255,18,.15);
 }
 
-.text-gold{
-  color:#d4af37;
+.text-neon{
+  color:#a3ff12;
 }
 
-.bg-gold{
-  background:#d4af37;
+.bg-neon{
+  background:#a3ff12;
 }

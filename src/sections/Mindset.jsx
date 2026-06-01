@@ -25,7 +25,7 @@ export default function Mindset() {
           <br />
           Você aparece.
           <br />
-          <span style={styles.gold}>Você se esforça.</span>
+          <span style={styles.neon}>Você se esforça.</span>
         </h2>
 
         <div style={styles.textBox}>
@@ -87,7 +87,7 @@ const styles = {
     position: "absolute",
     inset: 0,
     background:
-      "radial-gradient(circle at 50% 0%, rgba(212,175,55,0.14), transparent 35%), linear-gradient(180deg, #000 0%, #050505 55%, #000 100%)",
+      "radial-gradient(circle at 50% 0%, rgba(163,255,18,0.14), transparent 35%), linear-gradient(180deg, #000 0%, #050505 55%, #000 100%)",
   },
 
   topLine: {
@@ -98,8 +98,8 @@ const styles = {
     height: "2px",
     transform: "translateX(-50%)",
     background:
-      "linear-gradient(90deg, transparent, #d4af37, transparent)",
-    boxShadow: "0 0 35px rgba(212,175,55,0.8)",
+      "linear-gradient(90deg, transparent, #a3ff12, transparent)",
+    boxShadow: "0 0 35px rgba(163,255,18,0.8)",
   },
 
   topGlow: {
@@ -110,7 +110,7 @@ const styles = {
     height: "360px",
     transform: "translateX(-50%)",
     borderRadius: "999px",
-    background: "rgba(212,175,55,0.14)",
+    background: "rgba(163,255,18,0.14)",
     filter: "blur(120px)",
   },
 
@@ -123,15 +123,15 @@ const styles = {
     padding: "56px 72px",
     background:
       "linear-gradient(145deg, rgba(18,18,18,0.98), rgba(2,2,2,0.98))",
-    border: "1px solid rgba(212,175,55,0.22)",
+    border: "1px solid rgba(163,255,18,0.22)",
     boxShadow:
-      "0 0 90px rgba(212,175,55,0.10), inset 0 0 80px rgba(255,255,255,0.025)",
+      "0 0 90px rgba(163,255,18,0.10), inset 0 0 80px rgba(255,255,255,0.025)",
     textAlign: "center",
   },
 
   kicker: {
     marginBottom: "26px",
-    color: "#d4af37",
+    color: "#a3ff12",
     fontSize: "13px",
     fontWeight: 900,
     letterSpacing: "8px",
@@ -146,9 +146,9 @@ const styles = {
     fontWeight: 1000,
   },
 
-  gold: {
-    color: "#d4af37",
-    textShadow: "0 0 24px rgba(212,175,55,0.25)",
+  neon: {
+    color: "#a3ff12",
+    textShadow: "0 0 24px rgba(163,255,18,0.25)",
   },
 
   textBox: {
@@ -162,18 +162,18 @@ const styles = {
   question: {
     maxWidth: "820px",
     margin: "50px auto 0",
-    color: "#d4af37",
+    color: "#a3ff12",
     fontSize: "48px",
     lineHeight: "1.1",
     letterSpacing: "-2px",
     fontWeight: 1000,
-    textShadow: "0 0 28px rgba(212,175,55,0.35)",
+    textShadow: "0 0 28px rgba(163,255,18,0.35)",
   },
 
   arrow: {
     marginTop: "50px",
-    color: "#d4af37",
+    color: "#a3ff12",
     fontSize: "48px",
-    textShadow: "0 0 24px rgba(212,175,55,0.8)",
+    textShadow: "0 0 24px rgba(163,255,18,0.8)",
   },
 };

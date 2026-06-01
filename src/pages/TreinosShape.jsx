@@ -41,7 +41,7 @@ const cardTreinos = {
 export default function TreinosShape() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.22),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.22),transparent_35%),linear-gradient(180deg,#050403_0%,#000_55%,#050403_100%)]" />
 
       <div className="pointer-events-none fixed inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:42px_42px]" />
 
@@ -52,7 +52,7 @@ export default function TreinosShape() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#d4af37]">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#a3ff12]">
             <Crown size={14} />
             Treinos premium Shape Prime
           </div>
@@ -61,7 +61,7 @@ export default function TreinosShape() {
             TREINOS
           </h1>
 
-          <p className="mt-5 text-2xl font-black uppercase text-[#d4af37]">
+          <p className="mt-5 text-2xl font-black uppercase text-[#a3ff12]">
             Iniciante ao avançado
           </p>
 
@@ -88,8 +88,8 @@ function TreinosLista({ card }) {
 
   return (
     <div>
-      <div className="mb-8 rounded-[30px] border border-[#d4af37]/20 bg-[#d4af37]/10 p-6">
-        <Target className="text-[#d4af37]" size={30} />
+      <div className="mb-8 rounded-[30px] border border-[#a3ff12]/20 bg-[#a3ff12]/10 p-6">
+        <Target className="text-[#a3ff12]" size={30} />
 
         <h3 className="mt-4 text-3xl font-black uppercase">
           Treinos Premium
@@ -102,7 +102,7 @@ function TreinosLista({ card }) {
         <div className="mt-7 grid gap-5">
           {card.treinos.map((grupo) => (
             <div key={grupo.grupo}>
-              <h4 className="mb-3 text-lg font-black uppercase text-[#d4af37]">
+              <h4 className="mb-3 text-lg font-black uppercase text-[#a3ff12]">
                 {grupo.grupo}
               </h4>
 
@@ -113,7 +113,7 @@ function TreinosLista({ card }) {
                     onClick={() => setTreinoAberto(treino)}
                     className={`rounded-2xl border px-5 py-4 text-left text-sm font-black uppercase transition ${
                       treinoAberto.nome === treino.nome
-                        ? "border-[#d4af37] bg-[#d4af37] text-black"
+                        ? "border-[#a3ff12] bg-[#a3ff12] text-black"
                         : "border-white/10 bg-black/30 text-white/70"
                     }`}
                   >
@@ -136,7 +136,7 @@ function TreinosLista({ card }) {
             key={dia.dia}
             className="rounded-[30px] border border-white/10 bg-white/[0.03] p-6"
           >
-            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#d4af37]">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[#a3ff12]">
               {dia.grupo}
             </p>
 
@@ -149,7 +149,7 @@ function TreinosLista({ card }) {
                   className="rounded-2xl border border-white/10 bg-black/30 p-4"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="flex h-9 w-9 min-w-9 items-center justify-center rounded-xl bg-[#d4af37] text-xs font-black text-black">
+                    <div className="flex h-9 w-9 min-w-9 items-center justify-center rounded-xl bg-[#a3ff12] text-xs font-black text-black">
                       {String(index + 1).padStart(2, "0")}
                     </div>
 
@@ -177,7 +177,7 @@ function TreinosLista({ card }) {
 function Resumo({ icon: Icon, titulo, valor }) {
   return (
     <div className="rounded-[28px] border border-white/10 bg-white/[0.035] p-5 text-left">
-      <Icon className="text-[#d4af37]" size={28} />
+      <Icon className="text-[#a3ff12]" size={28} />
 
       <p className="mt-4 text-3xl font-black">{valor}</p>
 

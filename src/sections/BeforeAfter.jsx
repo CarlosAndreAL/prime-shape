@@ -102,7 +102,7 @@ const styles = {
     position: "absolute",
     inset: 0,
     background:
-      "radial-gradient(circle at center, rgba(212,175,55,0.15), transparent 55%)",
+      "radial-gradient(circle at center, rgba(163,255,18,0.15), transparent 55%)",
   },
 
   container: {
@@ -125,8 +125,8 @@ const styles = {
     cursor: "ew-resize",
     touchAction: "none",
     userSelect: "none",
-    border: "1px solid rgba(212,175,55,0.22)",
-    boxShadow: "0 0 90px rgba(212,175,55,0.15)",
+    border: "1px solid rgba(163,255,18,0.22)",
+    boxShadow: "0 0 90px rgba(163,255,18,0.15)",
   },
 
   image: {
@@ -150,9 +150,9 @@ const styles = {
     width: isMobile ? "4px" : "5px",
     height: "100%",
     background:
-      "linear-gradient(to bottom, #fff3b0, #d4af37, #fff3b0)",
+      "linear-gradient(to bottom, #efffc2, #a3ff12, #efffc2)",
     boxShadow:
-      "0 0 20px #d4af37, 0 0 50px rgba(212,175,55,0.8)",
+      "0 0 20px #a3ff12, 0 0 50px rgba(163,255,18,0.8)",
     zIndex: 20,
   },
 
@@ -164,7 +164,7 @@ const styles = {
     width: isMobile ? "54px" : "58px",
     height: isMobile ? "54px" : "58px",
     borderRadius: "50%",
-    background: "#d4af37",
+    background: "#a3ff12",
     color: "#000",
     display: "flex",
     alignItems: "center",
@@ -172,7 +172,7 @@ const styles = {
     fontWeight: 1000,
     fontSize: "22px",
     boxShadow:
-      "0 0 20px rgba(212,175,55,0.9), 0 0 60px rgba(212,175,55,0.4)",
+      "0 0 20px rgba(163,255,18,0.9), 0 0 60px rgba(163,255,18,0.4)",
   },
 
   beforeText: {
@@ -209,9 +209,9 @@ const styles = {
     marginBottom: "18px",
     padding: "10px 18px",
     borderRadius: "999px",
-    border: "1px solid rgba(212,175,55,0.3)",
-    background: "rgba(212,175,55,0.08)",
-    color: "#d4af37",
+    border: "1px solid rgba(163,255,18,0.3)",
+    background: "rgba(163,255,18,0.08)",
+    color: "#a3ff12",
     fontWeight: 700,
     fontSize: "13px",
     letterSpacing: "3px",
@@ -242,12 +242,12 @@ const styles = {
     padding: "20px 38px",
     borderRadius: "18px",
     background:
-      "linear-gradient(135deg, #f8dd78, #d4af37, #8f6d12)",
+      "linear-gradient(135deg, #caff4f, #a3ff12, #4fd000)",
     color: "#000",
     fontWeight: 1000,
     fontSize: "15px",
     letterSpacing: "1px",
     boxShadow:
-      "0 0 25px rgba(212,175,55,0.45), 0 0 70px rgba(212,175,55,0.18)",
+      "0 0 25px rgba(163,255,18,0.45), 0 0 70px rgba(163,255,18,0.18)",
   },
 };

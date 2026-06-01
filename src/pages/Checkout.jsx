@@ -30,8 +30,8 @@ const response = await axios.post(
 
   return (
     <main className="min-h-screen bg-black flex items-center justify-center px-6">
-      <div className="w-full max-w-xl rounded-[40px] border border-[#d4af37]/20 bg-[#0a0a0a] p-10 text-white">
-        <p className="text-xs font-black uppercase tracking-[0.25em] text-[#d4af37]">
+      <div className="w-full max-w-xl rounded-[40px] border border-[#a3ff12]/20 bg-[#0a0a0a] p-10 text-white">
+        <p className="text-xs font-black uppercase tracking-[0.25em] text-[#a3ff12]">
           Shape Prime
         </p>
 
@@ -60,7 +60,7 @@ const response = await axios.post(
                 Valor
               </p>
 
-              <h3 className="mt-2 text-4xl font-black text-[#d4af37]">
+              <h3 className="mt-2 text-4xl font-black text-[#a3ff12]">
                 R$79,90
               </h3>
             </div>
@@ -69,7 +69,7 @@ const response = await axios.post(
 
         <button
           onClick={pagar}
-          className="mt-8 w-full rounded-3xl bg-[#d4af37] px-6 py-5 text-lg font-black uppercase text-black transition hover:scale-[1.02]"
+          className="mt-8 w-full rounded-3xl bg-[#a3ff12] px-6 py-5 text-lg font-black uppercase text-black transition hover:scale-[1.02]"
         >
           Continuar pagamento
         </button>

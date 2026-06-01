@@ -55,7 +55,7 @@ const styles = {
     position: "absolute",
     inset: 0,
     background:
-      "radial-gradient(circle at 50% 35%, rgba(212,175,55,0.20), transparent 38%), linear-gradient(180deg, #000 0%, #080704 45%, #000 100%)",
+      "radial-gradient(circle at 50% 35%, rgba(163,255,18,0.20), transparent 38%), linear-gradient(180deg, #000 0%, #080704 45%, #000 100%)",
   },
 
   light: {
@@ -65,8 +65,8 @@ const styles = {
     width: "80%",
     height: "2px",
     transform: "translateX(-50%)",
-    background: "linear-gradient(90deg, transparent, #d4af37, transparent)",
-    boxShadow: "0 0 45px rgba(212,175,55,0.8)",
+    background: "linear-gradient(90deg, transparent, #a3ff12, transparent)",
+    boxShadow: "0 0 45px rgba(163,255,18,0.8)",
   },
 
   content: {
@@ -101,13 +101,13 @@ const styles = {
     cursor: "pointer",
     padding: "20px 44px",
     borderRadius: "14px",
-    background: "linear-gradient(135deg, #f8dd78, #d4af37, #8f6d12)",
+    background: "linear-gradient(135deg, #caff4f, #a3ff12, #4fd000)",
     color: "#000",
     fontSize: "16px",
     fontWeight: 1000,
     letterSpacing: "1px",
     boxShadow:
-      "0 0 22px rgba(212,175,55,0.55), 0 0 70px rgba(212,175,55,0.20)",
+      "0 0 22px rgba(163,255,18,0.55), 0 0 70px rgba(163,255,18,0.20)",
   },
 
   shine: {

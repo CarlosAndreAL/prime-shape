@@ -27,10 +27,7 @@ export default function MetodoShapePortal() {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-5xl text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-5 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#a3ff12]">
-            <Crown size={14} />
-            Plataforma premium Shape Prime
-          </div>
+          
 
           <h1 className="text-6xl font-black uppercase leading-[0.86] tracking-[-0.08em] md:text-8xl">
             SHAPE PRIME

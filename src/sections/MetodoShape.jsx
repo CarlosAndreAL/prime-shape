@@ -43,10 +43,7 @@ export default function MetodoShape() {
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.16),transparent_36%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_45%)]" />
 
   <div className="relative z-10">
-    <p className="mx-auto inline-flex items-center justify-center rounded-full border border-[#A3FF12]/25 bg-[#A3FF12]/10 px-4 py-2 text-[8px] font-black uppercase tracking-[0.22em] text-[#A3FF12] md:text-xs">
-      <Sparkles size={12} className="mr-2" />
-      Método Premium
-    </p>
+    
 
     <h1 className="mx-auto mt-6 max-w-[330px] text-[1.55rem] font-medium italic uppercase leading-[1.2] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
       O método que vai transformar seu

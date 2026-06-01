@@ -1516,7 +1516,7 @@ const cards = [
     categoria: "Protocolo",
     icon: Crown,
     imagem:
-      "/bulkingfoto.png",
+      "/cardcutting.png",
     descricao:
   "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
     tipo: "texto",

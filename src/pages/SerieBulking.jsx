@@ -1600,27 +1600,21 @@ export default function SerieBulking() {
           </div>
 
           <div className="overflow-hidden pb-6">
-            <motion.div
-              drag="x"
-              dragConstraints={{ left: -850, right: 0 }}
-              dragElastic={0.12}
-              whileTap={{ cursor: "grabbing" }}
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                duration: 26,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="flex w-max cursor-grab gap-6 active:cursor-grabbing"
-            >
-              {[...cards, ...cards].map((card, index) => (
-                <ModuloCard
-                  key={`${card.id}-${index}`}
-                  card={card}
-                  onClick={() => setCardAberto(card)}
-                />
-              ))}
-            </motion.div>
+          <motion.div
+  drag="x"
+  dragConstraints={{ left: -850, right: 0 }}
+  dragElastic={0.12}
+  whileTap={{ cursor: "grabbing" }}
+  className="flex w-max cursor-grab gap-6 active:cursor-grabbing"
+>
+  {cards.map((card) => (
+    <ModuloCard
+      key={card.id}
+      card={card}
+      onClick={() => setCardAberto(card)}
+    />
+  ))}
+</motion.div>
           </div>
         </section>
       </section>

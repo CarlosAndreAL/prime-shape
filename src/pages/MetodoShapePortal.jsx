@@ -80,6 +80,17 @@ export default function MetodoShapePortal() {
             onClick={() => navigate("/treinos")}
           />
         </div>
+        <div className="mt-12 flex justify-center">
+  <a
+    href="https://chat.whatsapp.com/GsK0Fl6QoGMDUN2VXOK3zE"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group inline-flex items-center gap-3 rounded-3xl bg-[#a3ff12] px-8 py-5 text-lg font-black uppercase tracking-[0.15em] text-black shadow-[0_0_60px_rgba(163,255,18,0.35)] transition hover:scale-105"
+  >
+    🚀 Grupo WhatsApp EVO 
+    <ArrowRight size={22} />
+  </a>
+</div>
       </section>
     </main>
   );

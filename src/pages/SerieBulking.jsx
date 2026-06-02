@@ -1459,7 +1459,7 @@ const cards = [
     categoria: "Bulking",
     icon: Target,
     imagem:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
+      "/cardbulking.png",
     descricao:
       "Estratégias para progredir carga, volume e intensidade com segurança e constância.",
     tipo: "texto",

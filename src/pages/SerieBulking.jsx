@@ -1575,8 +1575,8 @@ export default function SerieBulking() {
           </p>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/65 md:text-base">
-            Escolha o módulo que deseja acessar. Dietas masculinas, treinos,
-            execuções e protocolo oficial em cards premium.
+            Escolha o módulo que deseja acessar. Protocolos, Estratégias de progressão,
+          Ganho de massa e Dietas em cards premium.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">

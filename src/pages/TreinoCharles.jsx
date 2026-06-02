@@ -171,31 +171,52 @@ export default function TreinoCharles() {
           </div>
         </motion.div>
 
-        <div className="mt-14 rounded-[34px] border border-[#a3ff12]/20 bg-[#a3ff12]/10 p-6">
-          <Target className="text-[#a3ff12]" size={30} />
+        <div className="mt-14 rounded-[40px] border border-[#a3ff12]/20 bg-gradient-to-br from-[#a3ff12]/10 via-black/70 to-black p-6 md:p-8">
 
-          <h2 className="mt-4 text-3xl font-black uppercase">
-            Escolha o dia do treino
-          </h2>
+  <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <div>
+      <p className="text-xs font-black uppercase tracking-[0.25em] text-[#a3ff12]">
+        Método Charles
+      </p>
 
-          <div className="mt-7 grid gap-3 md:grid-cols-3">
-            {treinoCharles.map((dia) => (
-              <button
-                key={dia.dia}
-                onClick={() => setDiaAberto(dia)}
-                className={`rounded-2xl border px-5 py-4 text-left text-sm font-black uppercase transition ${
-                  diaAberto.dia === dia.dia
-                    ? "border-[#a3ff12] bg-[#a3ff12] text-black"
-                    : "border-white/10 bg-black/30 text-white/70"
-                }`}
-              >
-                {dia.dia}
-              </button>
-            ))}
-          </div>
-        </div>
+      <h2 className="mt-2 text-4xl font-black uppercase md:text-6xl">
+        Escolha o dia
+      </h2>
 
-        <div className="mt-10 rounded-[34px] border border-white/10 bg-white/[0.03] p-6">
+      <p className="mt-3 text-sm text-white/60">
+        Selecione o treino que deseja executar hoje.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-[#a3ff12]/20 bg-black/40 px-5 py-4">
+      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-white/40">
+        Exercícios
+      </p>
+
+      <p className="mt-1 text-3xl font-black text-[#a3ff12]">
+        {diaAberto.exercicios.length}
+      </p>
+    </div>
+  </div>
+
+  <div className="mt-8 flex gap-3 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    {treinoCharles.map((dia) => (
+      <button
+        key={dia.dia}
+        onClick={() => setDiaAberto(dia)}
+        className={`shrink-0 rounded-2xl border px-6 py-4 text-sm font-black uppercase transition ${
+          diaAberto.dia === dia.dia
+            ? "border-[#a3ff12] bg-[#a3ff12] text-black shadow-[0_0_35px_rgba(163,255,18,.4)]"
+            : "border-white/10 bg-black/40 text-white/60"
+        }`}
+      >
+        {dia.dia}
+      </button>
+    ))}
+  </div>
+</div>
+
+        <div className="mt-10 rounded-[40px] border border-white/10 bg-gradient-to-br from-white/[0.04] to-black p-6 md:p-8 shadow-[0_0_80px_rgba(0,0,0,.4)]">
           <p className="text-xs font-black uppercase tracking-[0.22em] text-[#a3ff12]">
             {diaAberto.grupo}
           </p>
@@ -208,7 +229,7 @@ export default function TreinoCharles() {
             {diaAberto.exercicios.map((exercicio, index) => (
               <div
                 key={`${diaAberto.dia}-${index}`}
-                className="rounded-2xl border border-white/10 bg-black/30 p-4"
+                className="group rounded-3xl border border-white/10 bg-black/40 p-4 transition hover:border-[#a3ff12]/40 hover:bg-[#a3ff12]/5"
               >
                 <div className="flex items-start gap-3">
                   <div className="flex h-10 w-10 min-w-10 items-center justify-center rounded-xl bg-[#a3ff12] text-xs font-black text-black">

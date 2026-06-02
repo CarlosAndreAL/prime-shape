@@ -1567,8 +1567,8 @@ export default function SerieCutting() {
           </p>
 
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/65 md:text-base">
-            Escolha o módulo que deseja acessar. Dietas, treinos, execuções e o
-            protocolo oficial organizados em cards premium.
+            Escolha o módulo que deseja acessar. Protoclos, Estraégias de Definição, Preservação de Massa Muscular e Dietas
+            organizados em cards premium.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">

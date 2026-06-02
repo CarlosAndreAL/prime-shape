@@ -87,7 +87,7 @@ export default function MetodoShapePortal() {
     rel="noopener noreferrer"
     className="group inline-flex items-center gap-3 rounded-3xl bg-[#a3ff12] px-8 py-5 text-lg font-black uppercase tracking-[0.15em] text-black shadow-[0_0_60px_rgba(163,255,18,0.35)] transition hover:scale-105"
   >
-    🚀 Grupo EVO Alunos 
+GRUPO EXCLUSIVO EVO 💚📲
     <ArrowRight size={22} />
   </a>
 </div>

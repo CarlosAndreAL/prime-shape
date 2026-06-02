@@ -18,15 +18,37 @@ import {
   HelpCircle,
 } from "lucide-react";
 
-const COLORS = {
-  bg: "#0F1115",
-  text: "#F5F5F5",
-  muted: "#A0A7B4",
-  neon: "#A3FF12",
-  lime: "#7CFF00",
-};
-
 export default function MetodoShape() {
+  const heroIndicators = [
+    { icon: Dumbbell, label: "Treinos avançados" },
+    { icon: Utensils, label: "Dietas estratégicas" },
+    { icon: ShieldCheck, label: "Método comprovado" },
+    { icon: Lock, label: "Acesso exclusivo" },
+  ];
+
+  const platformPreview = [
+    {
+      icon: Dumbbell,
+      title: "Treinos",
+      text: "Protocolos para hipertrofia, definição e evolução real.",
+    },
+    {
+      icon: Utensils,
+      title: "Dietas",
+      text: "Estratégias prontas para secar ou ganhar massa.",
+    },
+    {
+      icon: Target,
+      title: "Métodos",
+      text: "Rotas claras para parar de improvisar e executar.",
+    },
+    {
+      icon: Crown,
+      title: "Acesso exclusivo",
+      text: "Área premium com tudo organizado em um só lugar.",
+    },
+  ];
+
   return (
     <section className="relative overflow-hidden bg-[#0F1115] px-4 py-12 text-[#F5F5F5] md:px-6 md:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.11),transparent_34%),radial-gradient(circle_at_bottom,rgba(124,255,0,0.06),transparent_42%),linear-gradient(180deg,#0F1115_0%,#090B0F_55%,#0F1115_100%)]" />
@@ -34,78 +56,124 @@ export default function MetodoShape() {
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
-  initial={{ opacity: 0, y: 35 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-  viewport={{ once: true }}
-  className="relative mx-auto max-w-5xl overflow-hidden rounded-[28px] border border-white/10 bg-[#050608] px-4 py-7 text-center shadow-[0_0_80px_rgba(0,0,0,0.7)] md:rounded-[42px] md:px-10 md:py-12"
->
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.16),transparent_36%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_45%)]" />
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="relative mx-auto max-w-6xl overflow-hidden rounded-[24px] border border-[#a3ff12]/20 bg-[#050608] shadow-[0_0_90px_rgba(0,0,0,0.75)] md:rounded-[36px]"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(163,255,18,0.18),transparent_30%),radial-gradient(circle_at_85%_0%,rgba(163,255,18,0.08),transparent_28%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_46%)]" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#a3ff12] to-transparent opacity-70" />
 
-  <div className="relative z-10">
-    
+          <div className="relative z-10 grid gap-6 px-4 py-6 md:grid-cols-[0.92fr_1.08fr] md:items-center md:px-8 md:py-9 lg:px-10">
+            <div className="text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-3 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#a3ff12]">
+                <Sparkles size={14} />
+                Plataforma fitness premium
+              </div>
 
-    <h1 className="mx-auto mt-6 max-w-[330px] text-[1.55rem] font-medium italic uppercase leading-[1.2] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
-      O método que vai transformar seu
-      <span className="text-[#A3FF12]"> shape de uma vez.</span>
-    </h1>
-<div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[22px] border border-[#A3FF12]/20 bg-black shadow-[0_0_55px_rgba(163,255,18,0.16)] md:max-w-2xl">
+              <h1 className="mt-5 max-w-[620px] text-[2.25rem] font-black uppercase leading-[0.9] text-[#F5F5F5] md:text-6xl lg:text-7xl">
+                O método que vai transformar seu
+                <span className="block text-[#a3ff12] drop-shadow-[0_0_28px_rgba(163,255,18,0.25)]">
+                  shape de uma vez.
+                </span>
+              </h1>
 
-  <div className="grid grid-cols-2">
-    
-    {/* ANTES */}
-    <div className="relative overflow-hidden">
-      <img
-        src="/IMG_1637.png"
-        alt="Antes"
-        className="h-[320px] w-full object-cover md:h-[520px]"
-      />
+              <p className="mt-5 max-w-xl text-sm font-semibold leading-relaxed text-[#D7DBE2] md:text-lg">
+                Treino, dieta e estratégia em uma estrutura direta para evoluir
+                com intensidade, controle e execução de verdade.
+              </p>
 
-      <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-white backdrop-blur-md">
-        ANTES
-      </div>
-    </div>
+              <div className="mt-5 grid grid-cols-2 gap-2.5">
+                {heroIndicators.map(({ icon: Icon, label }) => (
+                  <div
+                    key={label}
+                    className="flex min-h-[58px] items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.035] px-3 py-3 text-xs font-black uppercase leading-tight text-[#F5F5F5] backdrop-blur-md"
+                  >
+                    <span className="flex h-9 w-9 min-w-9 items-center justify-center rounded-xl bg-[#a3ff12] text-black shadow-[0_0_22px_rgba(163,255,18,0.22)]">
+                      <Icon size={18} />
+                    </span>
+                    {label}
+                  </div>
+                ))}
+              </div>
 
-    {/* DEPOIS */}
-    <div className="relative overflow-hidden">
-      <img
-        src="/IMG_1667.png"
-        alt="Depois"
-        className="h-[320px] w-full object-cover md:h-[520px]"
-      />
+              <button
+                onClick={() =>
+                  (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
+                }
+                className="mt-6 inline-flex w-full max-w-[320px] items-center justify-center gap-3 rounded-2xl bg-[#a3ff12] px-5 py-4 text-sm font-black uppercase tracking-[0.08em] text-black shadow-[0_0_45px_rgba(163,255,18,0.32)] transition hover:scale-[1.02] hover:bg-[#7CFF00] md:text-base"
+              >
+                Quero ter acesso
+                <ArrowRight size={20} />
+              </button>
 
-      <div className="absolute right-3 top-3 rounded-full border border-[#A3FF12]/20 bg-[#A3FF12]/10 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-[#A3FF12] backdrop-blur-md">
-        DEPOIS
-      </div>
-    </div>
-  </div>
+              <p className="mt-4 text-center text-[11px] font-black uppercase tracking-[0.16em] text-[#a3ff12] md:text-left">
+                Role para conhecer tudo que você vai receber
+              </p>
+            </div>
 
-  {/* DIVISOR */}
-  <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#A3FF12] to-transparent opacity-80" />
-</div>
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-[32px] bg-[radial-gradient(circle,rgba(163,255,18,0.14),transparent_68%)] blur-2xl" />
 
-    <p className="mx-auto mt-5 max-w-[330px] text-[14px] italic leading-relaxed text-[#F5F5F5] md:max-w-2xl md:text-xl">
-      Treinos, dietas e métodos prontos para você construir um shape de
-      respeito sem perder tempo no achismo.
-    </p>
+              <div className="relative overflow-hidden rounded-[22px] border border-[#a3ff12]/25 bg-black shadow-[0_0_60px_rgba(163,255,18,0.16)] md:rounded-[28px]">
+                <div className="grid grid-cols-2">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/IMG_1637.png"
+                      alt="Antes"
+                      className="h-[300px] w-full object-cover md:h-[500px]"
+                    />
 
-    <button
-      onClick={() =>
-        (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
-      }
-      className="mx-auto mt-6 inline-flex w-full max-w-[300px] items-center justify-center gap-3 rounded-xl bg-[#A3FF12] px-5 py-4 text-base font-black text-black shadow-[0_0_45px_rgba(163,255,18,0.28)] transition hover:scale-[1.02] hover:bg-[#7CFF00]"
-    >
-      Quero ter acesso
-      <ArrowRight size={20} />
-    </button>
+                    <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/65 px-3 py-1 text-[10px] font-black tracking-[0.22em] text-white backdrop-blur-md">
+                      ANTES
+                    </div>
+                  </div>
 
-    <p className="mt-5 text-[13px] font-black leading-relaxed text-white md:text-lg">
-     
-      <br />
-      
-    </p>
-  </div>
-</motion.div>
+                  <div className="relative overflow-hidden">
+                    <img
+                      src="/IMG_1667.png"
+                      alt="Depois"
+                      className="h-[300px] w-full object-cover md:h-[500px]"
+                    />
+
+                    <div className="absolute right-3 top-3 rounded-full border border-[#a3ff12]/25 bg-[#a3ff12]/15 px-3 py-1 text-[10px] font-black tracking-[0.22em] text-[#a3ff12] backdrop-blur-md">
+                      DEPOIS
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#a3ff12] to-transparent opacity-90" />
+                <div className="absolute inset-x-3 bottom-3 rounded-2xl border border-white/10 bg-black/70 px-3 py-3 text-center text-[11px] font-black uppercase tracking-[0.14em] text-white backdrop-blur-xl">
+                  Transformação guiada por método, não por achismo
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative z-10 border-t border-white/10 bg-[#090B0F]/85 px-4 py-4 md:px-8 md:py-6 lg:px-10">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+              {platformPreview.map(({ icon: Icon, title, text }) => (
+                <div
+                  key={title}
+                  className="rounded-2xl border border-white/10 bg-[#0F1115] p-3 transition hover:border-[#a3ff12]/35 hover:bg-[#12161D] md:p-4"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#a3ff12]/10 text-[#a3ff12]">
+                    <Icon size={20} />
+                  </div>
+
+                  <h3 className="mt-3 text-sm font-black uppercase text-[#F5F5F5] md:text-base">
+                    {title}
+                  </h3>
+
+                  <p className="mt-2 text-[11px] leading-relaxed text-[#A0A7B4] md:text-xs">
+                    {text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}

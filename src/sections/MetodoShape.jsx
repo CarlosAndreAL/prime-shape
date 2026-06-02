@@ -50,7 +50,7 @@ export default function MetodoShape() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#0F1115] px-4 py-12 text-[#F5F5F5] md:px-6 md:py-24">
+    <section className="relative overflow-hidden bg-[#0F1115] px-4 py-8 text-[#F5F5F5] md:px-6 md:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.11),transparent_34%),radial-gradient(circle_at_bottom,rgba(124,255,0,0.06),transparent_42%),linear-gradient(180deg,#0F1115_0%,#090B0F_55%,#0F1115_100%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,.22)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.22)_1px,transparent_1px)] [background-size:42px_42px]" />
 
@@ -65,33 +65,39 @@ export default function MetodoShape() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(163,255,18,0.18),transparent_30%),radial-gradient(circle_at_85%_0%,rgba(163,255,18,0.08),transparent_28%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_46%)]" />
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#a3ff12] to-transparent opacity-70" />
 
-          <div className="relative z-10 grid gap-6 px-4 py-6 md:grid-cols-[0.92fr_1.08fr] md:items-center md:px-8 md:py-9 lg:px-10">
-            <div className="text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-3 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-[#a3ff12]">
+          <div className="relative z-10 grid gap-5 px-4 py-5 text-center md:grid-cols-[0.92fr_1.08fr] md:items-center md:px-8 md:py-9 md:text-left lg:px-10">
+            <div>
+              <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-[#a3ff12]/30 bg-[#a3ff12]/10 px-3 py-2 text-[9px] font-black uppercase tracking-[0.18em] text-[#a3ff12] md:mx-0 md:text-[10px] md:tracking-[0.22em]">
                 <Sparkles size={14} />
                 Plataforma fitness premium
               </div>
 
-              <h1 className="mt-5 max-w-[620px] text-[2.25rem] font-black uppercase leading-[0.9] text-[#F5F5F5] md:text-6xl lg:text-7xl">
-                O método que vai transformar seu
-                <span className="block text-[#a3ff12] drop-shadow-[0_0_28px_rgba(163,255,18,0.25)]">
-                  shape de uma vez.
+              <h1 className="mx-auto mt-5 max-w-[340px] text-[1.72rem] font-medium italic uppercase leading-[1.08] text-[#F5F5F5] md:mx-0 md:max-w-[620px] md:text-6xl md:font-black md:leading-[0.9] lg:text-7xl">
+                <span className="block">O método que vai</span>
+                <span className="block">
+                  transformar seu{" "}
+                  <span className="text-[#a3ff12] drop-shadow-[0_0_24px_rgba(163,255,18,0.25)]">
+                    shape
+                  </span>
+                </span>
+                <span className="block text-[#a3ff12] drop-shadow-[0_0_24px_rgba(163,255,18,0.25)]">
+                  de uma vez.
                 </span>
               </h1>
 
-              <p className="mt-5 max-w-xl text-sm font-semibold leading-relaxed text-[#D7DBE2] md:text-lg">
+              <p className="mx-auto mt-4 max-w-[320px] text-[13px] font-semibold leading-relaxed text-[#D7DBE2] md:mx-0 md:mt-5 md:max-w-xl md:text-lg">
                 Treino, dieta e estratégia em uma estrutura direta para evoluir
                 com intensidade, controle e execução de verdade.
               </p>
 
-              <div className="mt-5 grid grid-cols-2 gap-2.5">
+              <div className="mx-auto mt-4 grid max-w-[340px] grid-cols-2 gap-2 md:mx-0 md:mt-5 md:max-w-none md:gap-2.5">
                 {heroIndicators.map(({ icon: Icon, label }) => (
                   <div
                     key={label}
-                    className="flex min-h-[58px] items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.035] px-3 py-3 text-xs font-black uppercase leading-tight text-[#F5F5F5] backdrop-blur-md"
+                    className="flex min-h-[46px] items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.035] px-2.5 py-2 text-center text-[10px] font-black uppercase leading-tight text-[#F5F5F5] backdrop-blur-md md:min-h-[58px] md:justify-start md:rounded-2xl md:px-3 md:py-3 md:text-left md:text-xs"
                   >
-                    <span className="flex h-9 w-9 min-w-9 items-center justify-center rounded-xl bg-[#a3ff12] text-black shadow-[0_0_22px_rgba(163,255,18,0.22)]">
-                      <Icon size={18} />
+                    <span className="flex h-8 w-8 min-w-8 items-center justify-center rounded-lg bg-[#a3ff12] text-black shadow-[0_0_22px_rgba(163,255,18,0.22)] md:h-9 md:w-9 md:min-w-9 md:rounded-xl">
+                      <Icon size={16} className="md:h-[18px] md:w-[18px]" />
                     </span>
                     {label}
                   </div>
@@ -102,18 +108,18 @@ export default function MetodoShape() {
                 onClick={() =>
                   (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
                 }
-                className="mt-6 inline-flex w-full max-w-[320px] items-center justify-center gap-3 rounded-2xl bg-[#a3ff12] px-5 py-4 text-sm font-black uppercase tracking-[0.08em] text-black shadow-[0_0_45px_rgba(163,255,18,0.32)] transition hover:scale-[1.02] hover:bg-[#7CFF00] md:text-base"
+                className="mx-auto mt-5 inline-flex w-full max-w-[310px] items-center justify-center gap-3 rounded-2xl bg-[#a3ff12] px-5 py-3.5 text-sm font-black uppercase tracking-[0.08em] text-black shadow-[0_0_45px_rgba(163,255,18,0.32)] transition hover:scale-[1.02] hover:bg-[#7CFF00] md:mx-0 md:mt-6 md:py-4 md:text-base"
               >
-                Quero ter acesso
+                QUERO TER ACESSO
                 <ArrowRight size={20} />
               </button>
 
-              <p className="mt-4 text-center text-[11px] font-black uppercase tracking-[0.16em] text-[#a3ff12] md:text-left">
+              <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.14em] text-[#a3ff12] md:text-left md:text-[11px] md:tracking-[0.16em]">
                 Role para conhecer tudo que você vai receber
               </p>
             </div>
 
-            <div className="relative">
+            <div className="relative mx-auto w-full max-w-[360px] md:max-w-none">
               <div className="absolute -inset-4 rounded-[32px] bg-[radial-gradient(circle,rgba(163,255,18,0.14),transparent_68%)] blur-2xl" />
 
               <div className="relative overflow-hidden rounded-[22px] border border-[#a3ff12]/25 bg-black shadow-[0_0_60px_rgba(163,255,18,0.16)] md:rounded-[28px]">
@@ -122,7 +128,7 @@ export default function MetodoShape() {
                     <img
                       src="/IMG_1637.png"
                       alt="Antes"
-                      className="h-[300px] w-full object-cover md:h-[500px]"
+                      className="h-[280px] w-full object-cover object-top md:h-[500px]"
                     />
 
                     <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/65 px-3 py-1 text-[10px] font-black tracking-[0.22em] text-white backdrop-blur-md">
@@ -134,7 +140,7 @@ export default function MetodoShape() {
                     <img
                       src="/IMG_1667.png"
                       alt="Depois"
-                      className="h-[300px] w-full object-cover md:h-[500px]"
+                      className="h-[280px] w-full object-cover object-top md:h-[500px]"
                     />
 
                     <div className="absolute right-3 top-3 rounded-full border border-[#a3ff12]/25 bg-[#a3ff12]/15 px-3 py-1 text-[10px] font-black tracking-[0.22em] text-[#a3ff12] backdrop-blur-md">
@@ -144,29 +150,29 @@ export default function MetodoShape() {
                 </div>
 
                 <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#a3ff12] to-transparent opacity-90" />
-                <div className="absolute inset-x-3 bottom-3 rounded-2xl border border-white/10 bg-black/70 px-3 py-3 text-center text-[11px] font-black uppercase tracking-[0.14em] text-white backdrop-blur-xl">
+                <div className="absolute inset-x-3 bottom-3 rounded-xl border border-white/10 bg-black/70 px-3 py-2.5 text-center text-[10px] font-black uppercase tracking-[0.11em] text-white backdrop-blur-xl md:rounded-2xl md:py-3 md:text-[11px] md:tracking-[0.14em]">
                   Transformação guiada por método, não por achismo
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative z-10 border-t border-white/10 bg-[#090B0F]/85 px-4 py-4 md:px-8 md:py-6 lg:px-10">
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          <div className="relative z-10 border-t border-white/10 bg-[#090B0F]/85 px-3 py-3 md:px-8 md:py-6 lg:px-10">
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
               {platformPreview.map(({ icon: Icon, title, text }) => (
                 <div
                   key={title}
-                  className="rounded-2xl border border-white/10 bg-[#0F1115] p-3 transition hover:border-[#a3ff12]/35 hover:bg-[#12161D] md:p-4"
+                  className="rounded-xl border border-white/10 bg-[#0F1115] p-2.5 text-center transition hover:border-[#a3ff12]/35 hover:bg-[#12161D] md:rounded-2xl md:p-4 md:text-left"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#a3ff12]/10 text-[#a3ff12]">
-                    <Icon size={20} />
+                  <div className="mx-auto flex h-8 w-8 items-center justify-center rounded-lg bg-[#a3ff12]/10 text-[#a3ff12] md:mx-0 md:h-10 md:w-10 md:rounded-xl">
+                    <Icon size={17} className="md:h-5 md:w-5" />
                   </div>
 
-                  <h3 className="mt-3 text-sm font-black uppercase text-[#F5F5F5] md:text-base">
+                  <h3 className="mt-2 text-xs font-black uppercase text-[#F5F5F5] md:mt-3 md:text-base">
                     {title}
                   </h3>
 
-                  <p className="mt-2 text-[11px] leading-relaxed text-[#A0A7B4] md:text-xs">
+                  <p className="mt-1.5 text-[10px] leading-snug text-[#A0A7B4] md:mt-2 md:text-xs md:leading-relaxed">
                     {text}
                   </p>
                 </div>

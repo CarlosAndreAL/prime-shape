@@ -1422,118 +1422,126 @@ const treinoHomemAvancado = [
 
 const cards = [
   {
-  id: "dietas",
-  titulo: "Dietas Cutting",
-  subtitulo: "Masculino e feminino",
-  categoria: "Dietas",
-  icon: Salad,
-  imagem:
-    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop",
-  descricao:
-    "Dietas completas para definição muscular, separadas entre masculino e feminino.",
-  tipo: "dietas",
-  planos: [
-    {
-      grupo: "Cutting Homem",
-      itens: [
-        {
-          nome: "Cutting Homem 1600 kcal",
-          refeicoes: dietaHomem1600,
-        },
-        {
-          nome: "Cutting Homem 1700 kcal",
-          refeicoes: dietaHomem1700,
-        },
-      ],
-    },
-    {
-      grupo: "Cutting Mulher",
-      itens: [
-        {
-          nome: "Cutting Mulher 1200 kcal",
-          refeicoes: dietaMulher1200,
-        },
-        {
-          nome: "Cutting Mulher 1400 kcal",
-          refeicoes: dietaMulher1400,
-        },
-      ],
-    },
-  ],
-},
-  
-{
-  id: "estrategias-definicao",
-  titulo: "Estratégias de Definição",
-  subtitulo: "Secar com inteligência",
-  categoria: "Cutting",
-  icon: Flame,
-  imagem: "/cuttingfoto.png",
-  descricao: "Estratégias para acelerar a definição muscular mantendo performance, energia e controle no processo.",
-  tipo: "texto",
-  conteudo: [
-    "ESTRATÉGIAS DE DEFINIÇÃO",
-    "O objetivo do cutting não é apenas perder peso, é reduzir gordura mantendo o máximo de massa muscular possível.",
-    "1. Mantenha proteína alta em todas as refeições.",
-    "2. Reduza calorias de forma progressiva, sem cortar tudo de uma vez.",
-    "3. Priorize treinos intensos para sinalizar ao corpo que ele precisa manter músculo.",
-    "4. Use cardio como ferramenta, não como punição.",
-    "5. Acompanhe medidas, fotos e evolução semanal.",
-    "Definição vem de consistência, estratégia e controle."
-  ],
-},
+    id: "protocolo",
+    titulo: "Protocolo Charles Bulking",
+    subtitulo: "Método oficial",
+    categoria: "Protocolo",
+    icon: Crown,
+    imagem: "/cardcutting.png",
+    descricao:
+      "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
+    tipo: "texto",
+    conteudo: [
+      "MEU PROTOCOLO COMPLETO",
+      "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança, performance e evolução física.",
 
-{
-  id: "preservacao-massa",
-  titulo: "Preservação de Massa Muscular",
-  subtitulo: "Mantenha músculo no déficit",
-  categoria: "Cutting",
-  icon: ShieldCheck,
-  imagem: "/bulkingfoto.png",
-  descricao: "Métodos para preservar força e massa magra durante o déficit calórico.",
-  tipo: "texto",
-  conteudo: [
-    "PRESERVAÇÃO DE MASSA MUSCULAR",
-    "Durante o cutting, o foco é perder gordura sem sacrificar o shape construído.",
-    "1. Não reduza proteína.",
-    "2. Não abandone cargas altas no treino.",
-    "3. Evite déficits calóricos agressivos.",
-    "4. Durma bem para manter recuperação e hormônios regulados.",
-    "5. Controle o cardio para não prejudicar a recuperação.",
-    "O segredo é secar mantendo força, volume e densidade muscular."
-  ],
-},
+      "HORMONIZAÇÃO",
+      "• 1ml de Durateston — terça-feira",
+      "• 1ml de Deca — terça-feira",
+      "• 30mg de Hemogenin no pré-treino",
 
-{
-  id: "protocolo-charles-cutting",
-  titulo: "Protocolo Charles Cutting",
-  subtitulo: "Método oficial",
-  categoria: "Protocolo",
-  icon: Crown,
-  imagem: "/cardcutting.png",
-  descricao:
-    "Protocolo utilizado pelo Charles durante sua fase de definição muscular.",
-  tipo: "texto",
-  conteudo: [
-    "MEU PROTOCOLO COMPLETO",
-    "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança e eficiência.",
+      "DISCIPLINA",
+      "Todo o protocolo foi seguido com treino intenso, dieta ajustada, constância e acompanhamento da evolução semanal.",
 
-    "2ml de Enantato de Testosterona por semana (400mg)",
-    "Segunda-feira: 1ml (200mg)",
-    "Quinta-feira: 1ml (200mg)",
-    "30mg de Oxandrolona no pré-treino",
+      "IMPORTANTE",
+      "Esse é apenas o protocolo que EU utilizei durante minha evolução.",
+      "Não recomendo que ninguém utilize qualquer tipo de hormônio por conta própria.",
 
-    "Esse protocolo foi seguido de forma disciplinada, aliado a um treino e dieta ajustados.",
+      "ORIENTAÇÃO PROFISSIONAL",
+      "Se você pretende seguir qualquer protocolo hormonal, procure um médico especializado, faça exames e tenha acompanhamento profissional adequado.",
+    ],
+  },
 
-    "IMPORTANTE",
+  {
+    id: "estrategias-progressao",
+    titulo: "Estratégias de Progressão",
+    subtitulo: "Evolução constante",
+    categoria: "Bulking",
+    icon: Target,
+    imagem:
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
+    descricao:
+      "Estratégias para progredir carga, volume e intensidade com segurança e constância.",
+    tipo: "texto",
+    conteudo: [
+      "ESTRATÉGIAS DE PROGRESSÃO",
+      "A progressão é o principal indicador de crescimento muscular. Sem evolução de performance, dificilmente haverá evolução física consistente.",
 
-    "Esse é apenas o protocolo que EU utilizei. Não recomendo que ninguém utilize por conta própria.",
+      "1. Busque aumentar carga ou repetições semanalmente.",
+      "2. Mantenha a execução perfeita antes de subir peso.",
+      "3. Registre todos os treinos para acompanhar sua evolução.",
+      "4. Utilize sobrecarga progressiva nos exercícios principais.",
+      "5. Quando estagnar, aumente volume ou frequência de forma estratégica.",
+      "6. Priorize força nos exercícios compostos e qualidade nos isoladores.",
 
-    "Se você está pensando em seguir qualquer protocolo, procure um médico especializado, faça exames e tenha acompanhamento profissional."
-  ],
-},
+      "Quem treina com método e acompanha números cresce mais rápido do que quem apenas treina pesado.",
+    ],
+  },
+
+  {
+    id: "ganho-massa-inteligente",
+    titulo: "Ganho de Massa Inteligente",
+    subtitulo: "Crescer com qualidade",
+    categoria: "Bulking",
+    icon: Dumbbell,
+    imagem: "/cuttingfoto.png",
+    descricao:
+      "Métodos para ganhar massa muscular com qualidade, evitando excesso de gordura.",
+    tipo: "texto",
+    conteudo: [
+      "GANHO DE MASSA INTELIGENTE",
+      "Bulking bem feito é construir músculo sem transformar o processo em ganho descontrolado de gordura.",
+      "1. Use superávit calórico moderado.",
+      "2. Mantenha proteína adequada todos os dias.",
+      "3. Distribua carboidratos próximos ao treino.",
+      "4. Ajuste calorias conforme o peso e o espelho evoluem.",
+      "5. Não confunda comer muito com comer certo.",
+      "O objetivo é ganhar volume, força e densidade muscular com qualidade.",
+    ],
+  },
+
+  {
+    id: "dietas",
+    titulo: "Dietas Bulking",
+    subtitulo: "Masculino e feminino",
+    categoria: "Dietas",
+    icon: Salad,
+    imagem:
+      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop",
+    descricao:
+      "Dietas completas separadas entre masculino e feminino para ganho de massa muscular.",
+    tipo: "dietas",
+    planos: [
+      {
+        grupo: "Bulking Homem",
+        itens: [
+          {
+            nome: "Bulking Homem 2500 kcal",
+            refeicoes: dieta2500,
+          },
+          {
+            nome: "Bulking Homem 3000 kcal",
+            refeicoes: dieta3000,
+          },
+        ],
+      },
+
+      {
+        grupo: "Bulking Mulher",
+        itens: [
+          {
+            nome: "Bulking Mulher 2000 kcal",
+            refeicoes: dietaMulher2000,
+          },
+          {
+            nome: "Bulking Mulher 2200 kcal",
+            refeicoes: dietaMulher2200,
+          },
+        ],
+      },
+    ],
+  },
 ];
-
 export default function SerieCutting() {
   const [cardAberto, setCardAberto] = useState(null);
 

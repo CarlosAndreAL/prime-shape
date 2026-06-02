@@ -1420,16 +1420,91 @@ export const treinoHomemAvancado = [
     ],
   },
 ];
-
 const cards = [
-   {
+
+{
+  id: "protocolo",
+  titulo: "Protocolo Charles Bulking",
+  subtitulo: "Método oficial",
+  categoria: "Protocolo",
+  icon: Crown,
+  imagem: "/cardcutting.png",
+  descricao:
+    "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
+  tipo: "texto",
+  conteudo: [
+    "MEU PROTOCOLO COMPLETO",
+    "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança, performance e evolução física.",
+
+    "HORMONIZAÇÃO",
+    "• 1ml de Durateston — terça-feira",
+    "• 1ml de Deca — terça-feira",
+    "• 30mg de Hemogenin no pré-treino",
+
+    "DISCIPLINA",
+    "Todo o protocolo foi seguido com treino intenso, dieta ajustada, constância e acompanhamento da evolução semanal.",
+
+    "IMPORTANTE",
+    "Esse é apenas o protocolo que EU utilizei durante minha evolução.",
+    "Não recomendo que ninguém utilize qualquer tipo de hormônio por conta própria.",
+
+    "ORIENTAÇÃO PROFISSIONAL",
+    "Se você pretende seguir qualquer protocolo hormonal, procure um médico especializado, faça exames e tenha acompanhamento profissional adequado.",
+  ],
+},
+
+{
+  id: "estrategias-progressao",
+  titulo: "Estratégias de Progressão",
+  subtitulo: "Evolução constante",
+  categoria: "Bulking",
+  icon: Target,
+  imagem: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
+  descricao: "Estratégias para progredir carga, volume e intensidade com segurança e constância.",
+  tipo: "texto",
+  conteudo: [
+    "ESTRATÉGIAS DE PROGRESSÃO",
+    "A progressão é o principal indicador de crescimento muscular. Sem evolução de performance, dificilmente haverá evolução física consistente.",
+
+    "1. Busque aumentar carga ou repetições semanalmente.",
+    "2. Mantenha a execução perfeita antes de subir peso.",
+    "3. Registre todos os treinos para acompanhar sua evolução.",
+    "4. Utilize sobrecarga progressiva nos exercícios principais.",
+    "5. Quando estagnar, aumente volume ou frequência de forma estratégica.",
+    "6. Priorize força nos exercícios compostos e qualidade nos isoladores.",
+
+    "Quem treina com método e acompanha números cresce mais rápido do que quem apenas treina pesado."
+  ]
+},
+
+{
+  id: "ganho-massa-inteligente",
+  titulo: "Ganho de Massa Inteligente",
+  subtitulo: "Crescer com qualidade",
+  categoria: "Bulking",
+  icon: Dumbbell,
+  imagem: "/cuttingfoto.png",
+  descricao: "Métodos para ganhar massa muscular com qualidade, evitando excesso de gordura.",
+  tipo: "texto",
+  conteudo: [
+    "GANHO DE MASSA INTELIGENTE",
+    "Bulking bem feito é construir músculo sem transformar o processo em ganho descontrolado de gordura.",
+    "1. Use superávit calórico moderado.",
+    "2. Mantenha proteína adequada todos os dias.",
+    "3. Distribua carboidratos próximos ao treino.",
+    "4. Ajuste calorias conforme o peso e o espelho evoluem.",
+    "5. Não confunda comer muito com comer certo.",
+    "O objetivo é ganhar volume, força e densidade muscular com qualidade."
+  ],
+},
+
+{
   id: "dietas",
   titulo: "Dietas Bulking",
   subtitulo: "Masculino e feminino",
   categoria: "Dietas",
   icon: Salad,
-  imagem:
-    "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop",
+  imagem: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop",
   descricao:
     "Dietas completas separadas entre masculino e feminino para ganho de massa muscular.",
   tipo: "dietas",
@@ -1463,85 +1538,8 @@ const cards = [
     },
   ],
 },
-  
-  {
-  id: "estrategias-progressao",
-  titulo: "Estratégias de Progressão",
-  subtitulo: "Evolução constante",
-  categoria: "Bulking",
-  icon: Target,
-  imagem: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop",
-  descricao: "Estratégias para progredir carga, volume e intensidade com segurança e constância.",
-  tipo: "texto",
-  conteudo: [
-  "ESTRATÉGIAS DE PROGRESSÃO",
-  "A progressão é o principal indicador de crescimento muscular. Sem evolução de performance, dificilmente haverá evolução física consistente.",
 
-  "1. Busque aumentar carga ou repetições semanalmente.",
-  "2. Mantenha a execução perfeita antes de subir peso.",
-  "3. Registre todos os treinos para acompanhar sua evolução.",
-  "4. Utilize sobrecarga progressiva nos exercícios principais.",
-  "5. Quando estagnar, aumente volume ou frequência de forma estratégica.",
-  "6. Priorize força nos exercícios compostos e qualidade nos isoladores.",
-
-  "Quem treina com método e acompanha números cresce mais rápido do que quem apenas treina pesado."
-]
-},
-
-{
-  id: "ganho-massa-inteligente",
-  titulo: "Ganho de Massa Inteligente",
-  subtitulo: "Crescer com qualidade",
-  categoria: "Bulking",
-  icon: Dumbbell,
-  imagem: "/cuttingfoto.png",
-  descricao: "Métodos para ganhar massa muscular com qualidade, evitando excesso de gordura.",
-  tipo: "texto",
-  conteudo: [
-    "GANHO DE MASSA INTELIGENTE",
-    "Bulking bem feito é construir músculo sem transformar o processo em ganho descontrolado de gordura.",
-    "1. Use superávit calórico moderado.",
-    "2. Mantenha proteína adequada todos os dias.",
-    "3. Distribua carboidratos próximos ao treino.",
-    "4. Ajuste calorias conforme o peso e o espelho evoluem.",
-    "5. Não confunda comer muito com comer certo.",
-    "O objetivo é ganhar volume, força e densidade muscular com qualidade."
-  ],
-},
-
-  {
-    id: "protocolo",
-    titulo: "Protocolo Charles Bulking",
-    subtitulo: "Método oficial",
-    categoria: "Protocolo",
-    icon: Crown,
-    imagem:
-      "/cardcutting.png",
-    descricao:
-  "O protocolo pessoal utilizado pelo Charles, com aviso de segurança e orientação profissional.",
-    tipo: "texto",
-conteudo: [
-  "MEU PROTOCOLO COMPLETO",
-  "Meu protocolo foi cuidadosamente estruturado para maximizar os resultados com segurança, performance e evolução física.",
-
-  "HORMONIZAÇÃO",
-  "• 1ml de Durateston — terça-feira",
-  "• 1ml de Deca — terça-feira",
-  "• 30mg de Hemogenin no pré-treino",
-
-  "DISCIPLINA",
-  "Todo o protocolo foi seguido com treino intenso, dieta ajustada, constância e acompanhamento da evolução semanal.",
-
-  "IMPORTANTE",
-  "Esse é apenas o protocolo que EU utilizei durante minha evolução.",
-  "Não recomendo que ninguém utilize qualquer tipo de hormônio por conta própria.",
-
-  "ORIENTAÇÃO PROFISSIONAL",
-  "Se você pretende seguir qualquer protocolo hormonal, procure um médico especializado, faça exames e tenha acompanhamento profissional adequado.",
-    ],
-  },
 ];
-
 export default function SerieBulking() {
   const [cardAberto, setCardAberto] = useState(null);
 

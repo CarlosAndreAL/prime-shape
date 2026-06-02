@@ -19,36 +19,6 @@ import {
 } from "lucide-react";
 
 export default function MetodoShape() {
-  const heroIndicators = [
-    { icon: Dumbbell, label: "Treinos avançados" },
-    { icon: Utensils, label: "Dietas estratégicas" },
-    { icon: ShieldCheck, label: "Método comprovado" },
-    { icon: Lock, label: "Acesso exclusivo" },
-  ];
-
-  const platformPreview = [
-    {
-      icon: Dumbbell,
-      title: "Treinos",
-      text: "Protocolos para hipertrofia, definição e evolução real.",
-    },
-    {
-      icon: Utensils,
-      title: "Dietas",
-      text: "Estratégias prontas para secar ou ganhar massa.",
-    },
-    {
-      icon: Target,
-      title: "Métodos",
-      text: "Rotas claras para parar de improvisar e executar.",
-    },
-    {
-      icon: Crown,
-      title: "Acesso exclusivo",
-      text: "Área premium com tudo organizado em um só lugar.",
-    },
-  ];
-
   return (
     <section className="relative overflow-hidden bg-[#0F1115] px-4 py-8 text-[#F5F5F5] md:px-6 md:py-24">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.11),transparent_34%),radial-gradient(circle_at_bottom,rgba(124,255,0,0.06),transparent_42%),linear-gradient(180deg,#0F1115_0%,#090B0F_55%,#0F1115_100%)]" />
@@ -86,23 +56,9 @@ export default function MetodoShape() {
               </h1>
 
               <p className="mx-auto mt-4 max-w-[320px] text-[13px] font-semibold leading-relaxed text-[#D7DBE2] md:mx-0 md:mt-5 md:max-w-xl md:text-lg">
-                Treino, dieta e estratégia em uma estrutura direta para evoluir
-                com intensidade, controle e execução de verdade.
+                Os protocolos responsáveis pela transformação do meu físico,
+                organizados em um passo a passo completo para você evoluir.
               </p>
-
-              <div className="mx-auto mt-4 grid max-w-[340px] grid-cols-2 gap-2 md:mx-0 md:mt-5 md:max-w-none md:gap-2.5">
-                {heroIndicators.map(({ icon: Icon, label }) => (
-                  <div
-                    key={label}
-                    className="flex min-h-[46px] items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.035] px-2.5 py-2 text-center text-[10px] font-black uppercase leading-tight text-[#F5F5F5] backdrop-blur-md md:min-h-[58px] md:justify-start md:rounded-2xl md:px-3 md:py-3 md:text-left md:text-xs"
-                  >
-                    <span className="flex h-8 w-8 min-w-8 items-center justify-center rounded-lg bg-[#a3ff12] text-black shadow-[0_0_22px_rgba(163,255,18,0.22)] md:h-9 md:w-9 md:min-w-9 md:rounded-xl">
-                      <Icon size={16} className="md:h-[18px] md:w-[18px]" />
-                    </span>
-                    {label}
-                  </div>
-                ))}
-              </div>
 
               <button
                 onClick={() =>
@@ -157,28 +113,6 @@ export default function MetodoShape() {
             </div>
           </div>
 
-          <div className="relative z-10 border-t border-white/10 bg-[#090B0F]/85 px-3 py-3 md:px-8 md:py-6 lg:px-10">
-            <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
-              {platformPreview.map(({ icon: Icon, title, text }) => (
-                <div
-                  key={title}
-                  className="rounded-xl border border-white/10 bg-[#0F1115] p-2.5 text-center transition hover:border-[#a3ff12]/35 hover:bg-[#12161D] md:rounded-2xl md:p-4 md:text-left"
-                >
-                  <div className="mx-auto flex h-8 w-8 items-center justify-center rounded-lg bg-[#a3ff12]/10 text-[#a3ff12] md:mx-0 md:h-10 md:w-10 md:rounded-xl">
-                    <Icon size={17} className="md:h-5 md:w-5" />
-                  </div>
-
-                  <h3 className="mt-2 text-xs font-black uppercase text-[#F5F5F5] md:mt-3 md:text-base">
-                    {title}
-                  </h3>
-
-                  <p className="mt-1.5 text-[10px] leading-snug text-[#A0A7B4] md:mt-2 md:text-xs md:leading-relaxed">
-                    {text}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </motion.div>
 
         <motion.div

@@ -8,7 +8,6 @@ import {
   CheckCircle2,
   Sparkles,
   Target,
-  Lock,
   PlayCircle,
   Users,
   Utensils,
@@ -16,86 +15,84 @@ import {
   Gift,
   ArrowRight,
   HelpCircle,
+  ChevronDown,
 } from "lucide-react";
-
-const COLORS = {
-  bg: "#0F1115",
-  text: "#F5F5F5",
-  muted: "#A0A7B4",
-  neon: "#A3FF12",
-  lime: "#7CFF00",
-};
 
 export default function MetodoShape() {
   return (
-    <section className="relative overflow-hidden bg-[#0F1115] px-4 py-12 text-[#F5F5F5] md:px-6 md:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.11),transparent_34%),radial-gradient(circle_at_bottom,rgba(124,255,0,0.06),transparent_42%),linear-gradient(180deg,#0F1115_0%,#090B0F_55%,#0F1115_100%)]" />
+    <section className="relative overflow-hidden bg-[#0F1115] px-4 py-10 text-[#F5F5F5] md:px-6 md:py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.13),transparent_34%),radial-gradient(circle_at_bottom,rgba(124,255,0,0.06),transparent_42%),linear-gradient(180deg,#0F1115_0%,#090B0F_55%,#0F1115_100%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,.22)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.22)_1px,transparent_1px)] [background-size:42px_42px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <motion.div
-  initial={{ opacity: 0, y: 35 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-  viewport={{ once: true }}
-  className="relative mx-auto max-w-5xl overflow-hidden rounded-[28px] border border-white/10 bg-[#050608] px-4 py-7 text-center shadow-[0_0_80px_rgba(0,0,0,0.7)] md:rounded-[42px] md:px-10 md:py-12"
->
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.16),transparent_36%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_45%)]" />
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="relative mx-auto max-w-5xl overflow-hidden rounded-[30px] border border-[#A3FF12]/15 bg-[#050608] px-4 py-7 text-center shadow-[0_0_80px_rgba(0,0,0,0.7)] md:rounded-[42px] md:px-10 md:py-12"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.18),transparent_38%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_45%)]" />
 
-  <div className="relative z-10">
-    
+          <div className="relative z-10">
+            <h1 className="mx-auto max-w-[340px] text-[1.6rem] font-medium italic uppercase leading-[1.18] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
+              O método que vai transformar seu
+              <span className="text-[#A3FF12]"> shape de uma vez.</span>
+            </h1>
 
-    <h1 className="mx-auto mt-6 max-w-[330px] text-[1.55rem] font-medium italic uppercase leading-[1.2] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
-      O método que vai transformar seu
-      <span className="text-[#A3FF12]"> shape de uma vez.</span>
-    </h1>
-<div className="relative mx-auto mt-6 max-w-[340px] overflow-hidden rounded-[22px] border border-[#A3FF12]/20 bg-black shadow-[0_0_55px_rgba(163,255,18,0.16)] md:max-w-2xl">
+            <p className="mx-auto mt-5 max-w-[340px] text-[13.5px] font-semibold leading-relaxed text-white/80 md:max-w-2xl md:text-xl">
+              Os protocolos responsáveis pela transformação do meu físico,
+              organizados em um passo a passo completo para você evoluir.
+            </p>
 
-  <div className="grid grid-cols-2">
-    
-    {/* ANTES */}
-    <div className="relative overflow-hidden">
-      <img
-        src="/IMG_1637.png"
-        alt="Antes"
-        className="h-[320px] w-full object-cover md:h-[520px]"
-      />
+            <div className="relative mx-auto mt-6 max-w-[350px] overflow-hidden rounded-[24px] border border-[#A3FF12]/20 bg-black shadow-[0_0_55px_rgba(163,255,18,0.16)] md:max-w-2xl">
+              <div className="grid grid-cols-2">
+                <div className="relative overflow-hidden">
+                  <img
+                    src="/IMG_1637.png"
+                    alt="Antes"
+                    className="h-[315px] w-full object-cover md:h-[520px]"
+                  />
 
-      <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-white backdrop-blur-md">
-        ANTES
-      </div>
-    </div>
+                  <div className="absolute left-3 top-3 rounded-full border border-white/10 bg-black/60 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-white backdrop-blur-md">
+                    ANTES
+                  </div>
+                </div>
 
-    {/* DEPOIS */}
-    <div className="relative overflow-hidden">
-      <img
-        src="/IMG_1667.png"
-        alt="Depois"
-        className="h-[320px] w-full object-cover md:h-[520px]"
-      />
+                <div className="relative overflow-hidden">
+                  <img
+                    src="/IMG_1667.png"
+                    alt="Depois"
+                    className="h-[315px] w-full object-cover md:h-[520px]"
+                  />
 
-      <div className="absolute right-3 top-3 rounded-full border border-[#A3FF12]/20 bg-[#A3FF12]/10 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-[#A3FF12] backdrop-blur-md">
-        DEPOIS
-      </div>
-    </div>
-  </div>
+                  <div className="absolute right-3 top-3 rounded-full border border-[#A3FF12]/20 bg-[#A3FF12]/10 px-3 py-1 text-[10px] font-black tracking-[0.25em] text-[#A3FF12] backdrop-blur-md">
+                    DEPOIS
+                  </div>
+                </div>
+              </div>
 
-  {/* DIVISOR */}
-  <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#A3FF12] to-transparent opacity-80" />
-</div>
+              <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#A3FF12] to-transparent opacity-80" />
+            </div>
 
-    <p className="mx-auto mt-5 max-w-[330px] text-[14px] italic leading-relaxed text-[#F5F5F5] md:max-w-2xl md:text-xl">
-      Os protocolos responsáveis pela transformação do meu físico,
-       organizados em um passo a passo completo para você evoluir
-    </p>
+            <div className="mx-auto mt-6 grid max-w-[350px] grid-cols-3 gap-2 text-center md:max-w-2xl">
+              <MiniInfo titulo="Treinos" />
+              <MiniInfo titulo="Dietas" />
+              <MiniInfo titulo="Métodos" />
+            </div>
 
-    <p className="mt-5 text-[13px] font-black leading-relaxed text-white md:text-lg">
-     
-      <br />
-      
-    </p>
-  </div>
-</motion.div>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.8, repeat: Infinity }}
+              className="mt-7 flex flex-col items-center justify-center text-[#A3FF12]"
+            >
+              <p className="text-[10px] font-black uppercase tracking-[0.22em]">
+                Role para ver tudo que você recebe
+              </p>
+              <ChevronDown size={24} className="mt-2" />
+            </motion.div>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -116,10 +113,6 @@ export default function MetodoShape() {
               />
             </div>
           </div>
-
-          <p className="mt-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-[#A3FF12] md:text-xs">
-            
-          </p>
         </motion.div>
 
         <section className="mx-auto mt-14 max-w-5xl md:mt-20">
@@ -164,8 +157,6 @@ export default function MetodoShape() {
                 <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle,rgba(163,255,18,0.10),transparent_70%)] blur-3xl" />
 
                 <div className="relative overflow-hidden rounded-[2.4rem] border border-white/10 bg-[#0F1115] p-3 shadow-[0_0_80px_rgba(0,0,0,0.55)]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.06),transparent_55%)]" />
-
                   <div className="absolute left-5 top-5 z-20 rounded-full border border-white/10 bg-black/70 px-4 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#F5F5F5] backdrop-blur-xl">
                     Antes
                   </div>
@@ -174,13 +165,13 @@ export default function MetodoShape() {
                     Depois
                   </div>
 
-                <div className="relative z-10 overflow-hidden rounded-[2rem]">
-  <img
-    src="/evolucao-charles.jpg"
-    alt="Evolução Charles"
-    className="h-full w-full object-cover"
-  />
-</div>
+                  <div className="relative z-10 overflow-hidden rounded-[2rem]">
+                    <img
+                      src="/evolucao-charles.jpg"
+                      alt="Evolução Charles"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -268,7 +259,6 @@ export default function MetodoShape() {
               resposta="O Shape Prime possui estrutura para iniciantes, intermediários e avançados."
             />
 
-        
             <Faq
               pergunta="Preciso seguir dieta 100%?"
               resposta="Não. O objetivo é te ensinar consistência, não perfeição impossível."
@@ -299,22 +289,28 @@ export default function MetodoShape() {
           </p>
 
           <button
-            onClick={() => (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")}
+            onClick={() =>
+              (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
+            }
             className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#A3FF12] px-6 py-4 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[0_0_45px_rgba(163,255,18,0.28)] transition hover:scale-[1.03] hover:bg-[#7CFF00] md:w-auto md:px-10 md:py-5 md:text-sm"
           >
             COMEÇAR AGORA
             <ArrowRight size={20} />
           </button>
         </section>
-
-        <div className="mt-10 flex items-center justify-center gap-2 text-[#A3FF12]">
-          <Lock size={18} />
-          <p className="text-center text-xs font-bold uppercase tracking-[0.16em] md:text-sm">
-            Plataforma premium Shape Prime
-          </p>
-        </div>
       </div>
     </section>
+  );
+}
+
+function MiniInfo({ titulo }) {
+  return (
+    <div className="rounded-2xl border border-[#A3FF12]/15 bg-[#A3FF12]/5 px-3 py-3">
+      <Sparkles className="mx-auto text-[#A3FF12]" size={17} />
+      <p className="mt-2 text-[10px] font-black uppercase tracking-[0.13em] text-white/75">
+        {titulo}
+      </p>
+    </div>
   );
 }
 
@@ -325,7 +321,7 @@ function OfertaPrincipal() {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
-      className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-[34px] border border-[#A3FF12]/10 bg-[#08090C] p-5 text-center shadow-[0_0_100px_rgba(0,0,0,0.65)] md:mt-24 md:rounded-[44px] md:p-10"
+      className="relative mx-auto mt-14 max-w-4xl overflow-hidden rounded-[34px] border border-[#A3FF12]/10 bg-[#08090C] p-5 text-center shadow-[0_0_100px_rgba(0,0,0,0.65)] md:mt-24 md:rounded-[44px] md:p-10"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.08),transparent_50%)]" />
 
@@ -353,16 +349,13 @@ function OfertaPrincipal() {
           </div>
         </div>
 
-        {/* BADGE PROMO */}
         <div className="mt-7 flex items-center justify-center">
           <div className="rounded-full border border-red-500/20 bg-red-500/10 px-5 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-red-400 shadow-[0_0_30px_rgba(239,68,68,0.18)]">
             🔥 50% OFF HOJE
           </div>
         </div>
 
-        {/* PREÇO */}
         <div className="relative mx-auto mt-6 max-w-2xl overflow-hidden rounded-[34px] border border-[#A3FF12]/20 bg-[linear-gradient(180deg,#071405_0%,#0B0D11_100%)] px-5 py-8 shadow-[0_0_70px_rgba(163,255,18,0.18)] md:px-10 md:py-12">
-
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.12),transparent_55%)]" />
 
           <div className="relative z-10">
@@ -380,7 +373,6 @@ function OfertaPrincipal() {
           </div>
         </div>
 
-        {/* BOTÃO */}
         <button
           onClick={() =>
             (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
@@ -499,15 +491,6 @@ function Faq({ pergunta, resposta }) {
           </p>
         </div>
       </div>
-    </div>
-  );
-}
-
-function OfertaItem({ texto }) {
-  return (
-    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#0F1115] p-3 text-xs font-bold text-[#A0A7B4] md:p-4 md:text-sm">
-      <CheckCircle2 size={16} className="min-w-[16px] text-[#A3FF12]" />
-      {texto}
     </div>
   );
 }

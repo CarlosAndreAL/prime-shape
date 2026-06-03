@@ -35,10 +35,11 @@ export default function MetodoShape() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.18),transparent_38%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_45%)]" />
 
           <div className="relative z-10">
-            <h1 className="mx-auto max-w-[340px] text-[1.6rem] font-medium italic uppercase leading-[1.18] tracking-[-0.02em] text-[#F5F5F5] md:max-w-3xl md:text-5xl">
-              O método que vai transformar seu
-              <span className="text-[#A3FF12]"> shape de uma vez.</span>
-            </h1>
+           <h1 className="text-center italic font-light leading-[1.05]">
+  O MÉTODO QUE VAI TRANSFORMAR
+  <br />
+  SEU <span className="text-[#A3FF12]">SHAPE DE UMA VEZ.</span>
+</h1>
 
             <p className="mx-auto mt-5 max-w-[340px] text-[13.5px] font-semibold leading-relaxed text-white/80 md:max-w-2xl md:text-xl">
               Os protocolos responsáveis pela transformação do meu físico,

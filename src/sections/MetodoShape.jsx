@@ -75,11 +75,6 @@ export default function MetodoShape() {
               <div className="pointer-events-none absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#A3FF12] to-transparent opacity-80" />
             </div>
 
-            <div className="mx-auto mt-6 grid max-w-[350px] grid-cols-3 gap-2 text-center md:max-w-2xl">
-              <MiniInfo titulo="Treinos" />
-              <MiniInfo titulo="Dietas" />
-              <MiniInfo titulo="Métodos" />
-            </div>
 
             <motion.div
               animate={{ y: [0, 8, 0] }}

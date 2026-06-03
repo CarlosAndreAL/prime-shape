@@ -89,16 +89,6 @@ export default function MetodoShape() {
        organizados em um passo a passo completo para você evoluir
     </p>
 
-    <button
-      onClick={() =>
-        (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
-      }
-      className="mx-auto mt-6 inline-flex w-full max-w-[300px] items-center justify-center gap-3 rounded-xl bg-[#A3FF12] px-5 py-4 text-base font-black text-black shadow-[0_0_45px_rgba(163,255,18,0.28)] transition hover:scale-[1.02] hover:bg-[#7CFF00]"
-    >
-      Quero ter acesso
-      <ArrowRight size={20} />
-    </button>
-
     <p className="mt-5 text-[13px] font-black leading-relaxed text-white md:text-lg">
      
       <br />

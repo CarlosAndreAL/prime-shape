@@ -35,7 +35,7 @@ export default function MetodoShape() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.18),transparent_38%),linear-gradient(180deg,rgba(163,255,18,0.08),transparent_45%)]" />
 
           <div className="relative z-10">
-           <h1 className="text-center italic font-light leading-[1.05]">
+           <h1 className="text-center text-6xl italic font-light leading-[1.05]">
   O MÉTODO QUE VAI TRANSFORMAR
   <br />
   SEU <span className="text-[#A3FF12]">SHAPE DE UMA VEZ.</span>

@@ -287,7 +287,7 @@ export default function MetodoShape() {
 
           <button
             onClick={() =>
-              (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
+              (window.location.href = "https://pay.kiwify.com.br/eti0jNo")
             }
             className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-[#A3FF12] px-6 py-4 text-xs font-black uppercase tracking-[0.14em] text-black shadow-[0_0_45px_rgba(163,255,18,0.28)] transition hover:scale-[1.03] hover:bg-[#7CFF00] md:w-auto md:px-10 md:py-5 md:text-sm"
           >
@@ -372,7 +372,7 @@ function OfertaPrincipal() {
 
         <button
           onClick={() =>
-            (window.location.href = "https://pay.kiwify.com.br/RDfSY5P")
+            (window.location.href = "https://pay.kiwify.com.br/eti0jNo")
           }
           className="mt-7 inline-flex w-full max-w-[340px] items-center justify-center gap-3 rounded-[22px] bg-[#A3FF12] px-6 py-5 text-[13px] font-black uppercase tracking-[0.14em] text-black shadow-[0_0_50px_rgba(163,255,18,0.35)] transition hover:scale-[1.03] hover:bg-[#7CFF00] md:max-w-none md:w-auto md:px-12 md:text-base"
         >

@@ -1,9 +1,11 @@
+import TrocaSenhaInicial from "../components/TrocaSenhaInicial";
 import { useState } from "react";
 import { Mail, Lock, ArrowRight } from "lucide-react";
 import API_URL from "../config/api";
 
 
 export default function LoginMetodo() {
+  const [troca, setTroca] = useState(null);
   const [form, setForm] = useState({ email: "", senha: "" });
 
   function handleChange(e) {
@@ -24,12 +26,18 @@ export default function LoginMetodo() {
       return;
     }
 
+    if (dados.precisaTrocarSenha) {
+      localStorage.removeItem("prime_shape_token");
+      localStorage.removeItem("prime_shape_usuario");
+      setTroca({ token: dados.token, email: form.email, senhaAtual: form.senha });
+      return;
+    }
     localStorage.setItem("prime_shape_token", dados.token);
     localStorage.setItem("prime_shape_usuario", JSON.stringify(dados.usuario));
 
     window.location.href = "/#/portal-aluno";
   }
-
+  if (troca) return <TrocaSenhaInicial {...troca} />;
   return (
     <section className="relative min-h-screen overflow-hidden bg-black px-6 py-16 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,255,18,0.15),transparent_60%)]" />

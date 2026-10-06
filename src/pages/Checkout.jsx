@@ -61,7 +61,7 @@ const response = await axios.post(
               </p>
 
               <h3 className="mt-2 text-4xl font-black text-[#a3ff12]">
-                R$79,90
+                R$ 39,90
               </h3>
             </div>
           </div>

@@ -346,11 +346,7 @@ function OfertaPrincipal() {
           </div>
         </div>
 
-        <div className="mt-7 flex items-center justify-center">
-          <div className="rounded-full border border-red-500/20 bg-red-500/10 px-5 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-red-400 shadow-[0_0_30px_rgba(239,68,68,0.18)]">
-            🔥 50% OFF HOJE
-          </div>
-        </div>
+        
 
         <div className="relative mx-auto mt-6 max-w-2xl overflow-hidden rounded-[34px] border border-[#A3FF12]/20 bg-[linear-gradient(180deg,#071405_0%,#0B0D11_100%)] px-5 py-8 shadow-[0_0_70px_rgba(163,255,18,0.18)] md:px-10 md:py-12">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(163,255,18,0.12),transparent_55%)]" />

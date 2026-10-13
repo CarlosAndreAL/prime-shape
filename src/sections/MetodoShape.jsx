@@ -358,7 +358,7 @@ DE <span className="line-through opacity-70">R$ 159,90</span> POR APENAS:
             </p>
 
             <h3 className="mt-4 text-[4rem] font-black leading-none tracking-[-0.06em] text-[#A3FF12] drop-shadow-[0_0_25px_rgba(163,255,18,0.35)] md:text-[7rem]">
-              R$ 39,90
+              R$ 79,90
             </h3>
 
             <p className="mt-4 text-[11px] font-black uppercase tracking-[0.18em] text-[#F5F5F5] md:text-sm">
